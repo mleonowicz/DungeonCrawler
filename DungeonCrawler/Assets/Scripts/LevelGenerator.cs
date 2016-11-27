@@ -25,13 +25,15 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField]
     private float ChanceDown;
 
-    public float MaxY = 0;
-    public float MinY = 999;
-    public float MaxX = 0;
-    public float MinX = 999;
-    public float XWallsNumber;
-    public float YWallsNumber;
+    private float MaxY = 0;
+    private float MinY = 999;
+    private float MaxX = 0;
+    private float MinX = 999;
+    private float XWallsNumber;
+    private float YWallsNumber;
+    [SerializeField]
     private float ExtraWallX = 4;
+    [SerializeField]
     private float ExtraWallY = 4;
 
 
