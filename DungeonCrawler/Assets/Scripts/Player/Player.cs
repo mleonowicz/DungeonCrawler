@@ -14,11 +14,15 @@ public struct LikeControlScheme
 public class Player : MonoBehaviour
 {
     public LikeControlScheme[] ControlSchemes;
+    public PlayerData PlayerData;
 
-    // Use this for initialization
+    public int CurrentHP;
+    public int CurrentMP;
+
     void Start()
     {
-
+        CurrentHP = PlayerData.MaxHP * PlayerData.Str;
+        CurrentMP = PlayerData.MaxMP * PlayerData.Int;
     }
 
     // Update is called once per frame
@@ -57,11 +61,9 @@ public class Player : MonoBehaviour
         if (Physics2D.OverlapPoint(transform.localPosition + (myVector * 0.5f) + Vector3.one * 0.5f))
         // if (Physics2D.Raycast(transform.localPosition + Vector3.up * 0.5f, myVector, 0.5f))
         {
-            Debug.Log("Nie moszna");
+            // Debug.Log("Nie moszna");
             return false;
         }
         return true;
     }
-
-
 }

@@ -168,25 +168,6 @@ public class LevelGenerator : MonoBehaviour
         Random.InitState(CurrentSeed);
 
     }
-
-#if UNITY_EDITOR
-    [ContextMenu("Save Seed")]
-    public void SaveCurrentSeed()
-    {
-        AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(Settings), "Assets\\Settings\\" + CurrentSeed + ".asset");
-        var newSettings = AssetDatabase.LoadAssetAtPath<LevelGenaratorSettings>("Assets\\Settings\\" + CurrentSeed + ".asset");
-
-        newSettings.Seed = CurrentSeed;
-
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
-        if (Settings.Seed == 0)
-        {
-            EditorApplication.isPlaying = false;
-            //    EditorApplication.isPlaying = true;
-        }
-    }
-#endif
     /* IEnumerator SeedCoroutine()
     {
         mySeed.text = Seed.ToString();
@@ -238,4 +219,23 @@ public class LevelGenerator : MonoBehaviour
             gm.Enemies.Add(x);
         }
     }
+
+#if UNITY_EDITOR
+    [ContextMenu("Save Seed")]
+    public void SaveCurrentSeed()
+    {
+        AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(Settings), "Assets\\Settings\\" + CurrentSeed + ".asset");
+        var newSettings = AssetDatabase.LoadAssetAtPath<LevelGenaratorSettings>("Assets\\Settings\\" + CurrentSeed + ".asset");
+
+        newSettings.Seed = CurrentSeed;
+
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+        if (Settings.Seed == 0)
+        {
+            EditorApplication.isPlaying = false;
+            //    EditorApplication.isPlaying = true;
+        }
+    }
+#endif
 }

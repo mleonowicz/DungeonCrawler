@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae9117440dc36645a914a9aa7d589d3, type: 3}
+  m_Name: Goblin
+  m_EditorClassIdentifier: 
+  Brain: {fileID: 11400000, guid: d4113437b253d614d8c9b60a2cb39100, type: 2}
+  Name: Goblin
+  MaxHp: 32
+  Str: 10
+  Dex: 10
+  Int: 5
