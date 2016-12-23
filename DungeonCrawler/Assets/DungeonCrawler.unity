@@ -134,6 +134,15 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 50000012628327640, guid: d4efbe9956dfca340a440f2859a1e39b,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013208091954, guid: d4efbe9956dfca340a440f2859a1e39b, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4efbe9956dfca340a440f2859a1e39b, type: 2}
   m_IsPrefabParent: 0
@@ -147,6 +156,20 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012984143086, guid: d4efbe9956dfca340a440f2859a1e39b,
     type: 2}
   m_PrefabInternal: {fileID: 294018963}
+--- !u!61 &294018966
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 294018964}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.5, y: 0.5}
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 0.8}
 --- !u!114 &294018967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4e29f7526eb7748b49e5688faf2cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Items: []
   ControlSchemes:
   - Left: 97
     Right: 100
