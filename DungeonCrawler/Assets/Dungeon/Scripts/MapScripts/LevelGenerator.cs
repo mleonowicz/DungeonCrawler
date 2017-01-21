@@ -14,10 +14,10 @@ public class LevelGenerator : MonoBehaviour
 {
     public LevelGenaratorSettings Settings;
 
-    private List<Vector3> CreatedTiles;
-    private List<Vector3> Borders;
+    public List<Vector3> CreatedTiles;
+    public List<Vector3> Borders;
     private int LastPosition;
-
+        
     private Vector3 PlayerPosition;
     private Vector3 ExitPosition;
 
@@ -25,6 +25,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject TileParent;
     public GameObject ItemParent;
     public GameObject EnemyParent;
+    public GameObject FogOfWar;
 
     public GameObject Player;
 
@@ -37,10 +38,27 @@ public class LevelGenerator : MonoBehaviour
     private float XWallsNumber;
     private float YWallsNumber;
 
+    public static LevelGenerator instance = null;
+    public int CurrentSeed;
+
     void Awake()
     {
         CreatedTiles = new List<Vector3>();
         Borders = new List<Vector3>();
+
+        if (instance == null)
+
+            //if not, set instance to this
+            instance = this;
+
+        //If instance already exists and it's not this:
+        else if (instance != this)
+
+            //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
+            Destroy(gameObject);
+
+        //Sets this to not be destroyed when reloading scene
+        // DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -149,18 +167,18 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int y = 1; y < YWallsNumber; y++)
             {
-                if (!CreatedTiles.Contains(new Vector3(MinX + x - Settings.ExtraWallX / 2, MinY + y - Settings.ExtraWallY / 2)))
+                if (
+                    !CreatedTiles.Contains(new Vector3(MinX + x - Settings.ExtraWallX/2,
+                        MinY + y - Settings.ExtraWallY/2)))
                 {
                     var g = Instantiate(Settings.WallTiles[Random.Range(0, Settings.WallTiles.Length)],
-                        new Vector3(MinX + x - Settings.ExtraWallX / 2, MinY + y - Settings.ExtraWallY / 2),
+                        new Vector3(MinX + x - Settings.ExtraWallX/2, MinY + y - Settings.ExtraWallY/2),
                         Quaternion.identity) as GameObject;
                     g.transform.SetParent(WallParent.transform, false);
                 }
             }
         }
     }
-
-    public int CurrentSeed;
 
     void GenerateSeed()
     {
@@ -227,8 +245,8 @@ public class LevelGenerator : MonoBehaviour
     [ContextMenu("Save Seed")]
     public void SaveCurrentSeed()
     {
-        AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(Settings), "Assets\\Settings\\" + CurrentSeed + ".asset");
-        var newSettings = AssetDatabase.LoadAssetAtPath<LevelGenaratorSettings>("Assets\\Settings\\" + CurrentSeed + ".asset");
+        AssetDatabase.CopyAsset(AssetDatabase.GetAssetPath(Settings), "Assets\\Dungeon\\Settings\\" + CurrentSeed + ".asset");
+        var newSettings = AssetDatabase.LoadAssetAtPath<LevelGenaratorSettings>("Assets\\Dungeon\\Settings\\" + CurrentSeed + ".asset");
 
         newSettings.Seed = CurrentSeed;
 

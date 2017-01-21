@@ -29,13 +29,15 @@ public class GameManager : MonoBehaviour
         if (myPlayer.Movement())
         {
             TurnCount++;
-            UpdateUI();
+            
             foreach (var enemy in Enemies)
             {
                 enemy.GetComponent<Enemy>().MakeTurn(myPlayer);
             }
 
         }
+        UpdateUI();
+
 
     }
     void UpdateUI()
@@ -46,14 +48,15 @@ public class GameManager : MonoBehaviour
         MP.text = myPlayer.CurrentMP.ToString();
     }
 
-    public void OnDrawGizmos()
-    {
-        foreach (var enemy in Enemies)
-        {
-            Gizmos.DrawSphere(enemy.transform.localPosition + (Vector3.up) + Vector3.one * 0.5f, 0.2f);
-            Gizmos.DrawSphere(enemy.transform.localPosition + (Vector3.down) + Vector3.one * 0.5f, 0.2f);
-            Gizmos.DrawSphere(enemy.transform.localPosition + (Vector3.left) + Vector3.one * 0.5f, 0.2f);
-            Gizmos.DrawSphere(enemy.transform.localPosition + (Vector3.right) + Vector3.one * 0.5f, 0.2f);
-        }
-    }
+    //public void OnDrawGizmos()
+    //{
+    //    foreach (var enemy in Enemies)
+    //    {
+    //        Gizmos.DrawSphere(enemy.transform.localPosition + (Vector3.up) + Vector3.one * 0.5f, 0.2f);
+    //        Gizmos.DrawSphere(enemy.transform.localPosition + (Vector3.down) + Vector3.one * 0.5f, 0.2f);
+    //        Gizmos.DrawSphere(enemy.transform.localPosition + (Vector3.left) + Vector3.one * 0.5f, 0.2f);
+    //        Gizmos.DrawSphere(enemy.transform.localPosition + (Vector3.right) + Vector3.one * 0.5f, 0.2f);
+    //    }
+    //}
+
 }

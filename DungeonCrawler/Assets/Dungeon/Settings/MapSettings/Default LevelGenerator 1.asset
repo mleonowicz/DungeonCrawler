@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 1000010717018332, guid: acea2ab4f3669f0459460833f35e3027, type: 2}
   - {fileID: 1000010396624284, guid: f19b3d2cbfa952c488b8ee6f16ab0dc1, type: 2}
   WallTiles:
-  - {fileID: 1000013707013502, guid: 9f334708b734c094c9cb9d211e9b2e98, type: 2}
+  - {fileID: 1000011618336692, guid: 9f334708b734c094c9cb9d211e9b2e98, type: 2}
   Items:
   - {fileID: 1000012075413280, guid: 204c1c991f49d7e43adec88a32b60dfe, type: 2}
   Enemies:
@@ -25,8 +25,8 @@ MonoBehaviour:
   Exit: {fileID: 1000012935256338, guid: 89aa9d9cf299d5f4cb04c9fdc7fda84a, type: 2}
   NumberOfTiles: 100
   TileSize: 1
-  NumberOfItems: 32
-  NumberOfEnemies: 2
+  NumberOfItems: 2
+  NumberOfEnemies: 7
   ChanceUp: 0.25
   ChanceRight: 0.5
   ChanceDown: 0.75

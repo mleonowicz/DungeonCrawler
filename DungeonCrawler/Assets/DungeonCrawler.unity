@@ -127,7 +127,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012984143086, guid: d4efbe9956dfca340a440f2859a1e39b, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212000013597204010, guid: d4efbe9956dfca340a440f2859a1e39b,
         type: 2}
@@ -143,7 +143,21 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1000013208091954, guid: d4efbe9956dfca340a440f2859a1e39b, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013208091954, guid: d4efbe9956dfca340a440f2859a1e39b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000013597204010, guid: d4efbe9956dfca340a440f2859a1e39b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 50000012628327640, guid: d4efbe9956dfca340a440f2859a1e39b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d4efbe9956dfca340a440f2859a1e39b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &294018964 stripped
@@ -194,6 +208,23 @@ MonoBehaviour:
   PlayerData: {fileID: 11400000, guid: ee28956dee44d714aa19d26d33ab5350, type: 2}
   CurrentHP: 0
   CurrentMP: 0
+--- !u!50 &294018968
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 294018964}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &495424315
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,10 +518,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Settings: {fileID: 11400000, guid: c5fd48ca6ad15d84897f0543c8525904, type: 2}
+  CreatedTiles: []
+  Borders: []
   WallParent: {fileID: 1121843171}
   TileParent: {fileID: 2138756560}
   ItemParent: {fileID: 1654902381}
   EnemyParent: {fileID: 1699368699}
+  FogOfWar: {fileID: 1000010413043766, guid: 5a9a8acd8e0ee614896cea1dc0fc811d, type: 2}
   Player: {fileID: 294018964}
   CurrentSeed: 0
 --- !u!4 &795265873
@@ -533,7 +567,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1375396894
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +700,7 @@ GameObject:
   - 124: {fileID: 1520721959}
   - 92: {fileID: 1520721958}
   - 81: {fileID: 1520721957}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +737,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -768,7 +802,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1699368699
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +830,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &2094422255
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,4 +932,4 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4

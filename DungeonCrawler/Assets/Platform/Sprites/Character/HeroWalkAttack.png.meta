@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: b819c5203ffe2b44f95cb794f782b403
-timeCreated: 1482543195
+guid: a93320a65ac455c498cc9b0dafe8d356
+timeCreated: 1482544051
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: HeroJumpAttack_0
-    21300002: HeroJumpAttack_1
-    21300004: HeroJumpAttack_2
-    21300006: HeroJumpAttack_3
-    21300008: HeroJumpAttack_4
+    21300000: HeroWalkAttack_0
+    21300002: HeroWalkAttack_1
+    21300004: HeroWalkAttack_2
+    21300006: HeroWalkAttack_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -46,7 +45,7 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
+  alignment: 9
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
@@ -58,7 +57,20 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HeroJumpAttack_0
+      name: HeroWalkAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 125
+        width: 100
+        height: 125
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HeroWalkAttack_1
       rect:
         serializedVersion: 2
         x: 100
@@ -71,20 +83,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: HeroJumpAttack_1
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 125
-        width: 100
-        height: 125
-      alignment: 9
-      pivot: {x: 0.4, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: HeroJumpAttack_2
+      name: HeroWalkAttack_2
       rect:
         serializedVersion: 2
         x: 0
@@ -97,7 +96,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: HeroJumpAttack_3
+      name: HeroWalkAttack_3
       rect:
         serializedVersion: 2
         x: 100

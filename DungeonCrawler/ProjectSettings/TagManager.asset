@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Exit
   - Floor
+  - Wall
   layers:
   - Default
   - TransparentFX

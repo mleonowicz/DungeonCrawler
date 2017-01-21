@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 [Serializable]
 public struct LikeControlScheme
@@ -19,13 +20,14 @@ public class Player : MonoBehaviour
     public LikeControlScheme[] ControlSchemes;
     public PlayerData PlayerData;
 
+
     public int CurrentHP;
     public int CurrentMP;
 
     void Start()
     {
-        CurrentHP = PlayerData.MaxHP * PlayerData.Str;
-        CurrentMP = PlayerData.MaxMP * PlayerData.Int;
+        CurrentHP = PlayerData.MaxHP*PlayerData.Str;
+        CurrentMP = PlayerData.MaxMP*PlayerData.Int;
     }
 
     // Update is called once per frame
@@ -39,6 +41,8 @@ public class Player : MonoBehaviour
 
     public bool Movement()
     {
+        CreatingLight();
+
         foreach (var ControlScheme in ControlSchemes)
         {
             if (Move(ControlScheme.Left, Vector3.left)) return true;
@@ -64,8 +68,8 @@ public class Player : MonoBehaviour
 
     private bool CanMove(Vector3 myVector)
     {
-        if (Physics2D.OverlapPoint(transform.localPosition + (myVector * 0.5f) + Vector3.one * 0.5f, layerMask))
-        // if (Physics2D.Raycast(transform.localPosition + Vector3.up * 0.5f, myVector, 0.5f))
+        if (Physics2D.OverlapPoint(transform.localPosition + (myVector*0.5f) + Vector3.one*0.5f, layerMask))
+            // if (Physics2D.Raycast(transform.localPosition + Vector3.up * 0.5f, myVector, 0.5f))
         {
             // Debug.Log("Nie moszna");
             return false;
@@ -81,7 +85,7 @@ public class Player : MonoBehaviour
         {
             CurrentHP += 50;
             if (CurrentHP > PlayerData.MaxHP)
-                CurrentHP = PlayerData.MaxHP * PlayerData.Str;
+                CurrentHP = PlayerData.MaxHP*PlayerData.Str;
             other.gameObject.SetActive(false);
         }
 
@@ -103,7 +107,49 @@ public class Player : MonoBehaviour
         if (other.tag == "Exit")
         {
             IsOnExit = false;
-
         }
     }
-} 
+
+    private void CreatingLight()
+    {
+        for (int x = -2; x < 2; x++)
+        {
+            for (int y = -2; y < 2; y++)
+            {
+                if (CanMove(new Vector3(x, y, 0)))
+                {
+                }
+
+                //Gizmos.DrawSphere(new Vector3(x, y, 0), 0.2f);
+            }
+        }
+    }
+
+
+    // TODO
+
+    public void OnDrawGizmos()
+    {
+        for (int x = -2; x <= 2; x++)
+        {
+            for (int y = -2; y <= 2; y++)
+            {
+                Collider2D[] hitColliders =
+                    Physics2D.OverlapPointAll(new Vector3(transform.position.x - x + 0.5f,
+                        transform.position.y - y + 0.5f,
+                        0));
+
+                if (hitColliders != null)
+                {
+                    // Gizmos.DrawSphere(new Vector3(transform.position.x - x + 0.5f, transform.position.y - y + 0.5f, 0), 0.2f);
+                    foreach (var d in hitColliders)
+                    {
+                        d.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                    }
+                }
+                //LevelGenerator.instance.CreatedTiles
+                // Gizmos.DrawSphere(new Vector3(x, y, 0), 0.2f);
+            }
+        }
+    }
+}

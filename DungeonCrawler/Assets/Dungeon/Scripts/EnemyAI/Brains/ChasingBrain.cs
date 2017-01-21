@@ -7,13 +7,13 @@ public class ChasingBrain : EnemyBrain
     public override void Think(Enemy enemy, Player myPlayer)
     {
         // var disc = Vector3.Distance(myPlayer.transform.position, enemy.transform.position);
-
+    
         if (enemy.transform.position == myPlayer.transform.position)
         {
             return;
         }
 
-        if (!(Vector3.Distance(myPlayer.transform.position, enemy.transform.position) < PlayerDetectionRange))
+        if (Vector3.Distance(enemy.transform.position, myPlayer.transform.position) > PlayerDetectionRange)
         {
             Movement(enemy.transform);
         }
@@ -21,6 +21,7 @@ public class ChasingBrain : EnemyBrain
         {
             var dir = myPlayer.transform.position - enemy.transform.position;
             dir = dir.normalized;
+ 
 
             /* 
             var cpV = new Vector3(Mathf.Abs(v.x), Mathf.Abs(v.y)); // Made using Sinus <3
