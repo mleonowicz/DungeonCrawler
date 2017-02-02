@@ -17,7 +17,8 @@ public class LevelGenerator : MonoBehaviour
     public List<Vector3> CreatedTiles;
     public List<Vector3> Borders;
     private int LastPosition;
-        
+    public LayerMask myLayer;
+
     private Vector3 PlayerPosition;
     private Vector3 ExitPosition;
 
@@ -47,25 +48,16 @@ public class LevelGenerator : MonoBehaviour
         Borders = new List<Vector3>();
 
         if (instance == null)
-
-            //if not, set instance to this
             instance = this;
-
-        //If instance already exists and it's not this:
         else if (instance != this)
-
-            //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
             Destroy(gameObject);
-
-        //Sets this to not be destroyed when reloading scene
-        // DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
         GenerateSeed();
         GenerateLevel();
-        SettingBorders();
+        GettingBorders();
         GeneratingStartPositions();
         GeneratingItems();
         GeneratingEnemies();
@@ -85,7 +77,6 @@ public class LevelGenerator : MonoBehaviour
 
     void ChanceGenerator(float rnd)
     {
-
         if (rnd < Settings.ChanceUp)
             MoveGenerator(1);
         else if (rnd < Settings.ChanceRight)
@@ -137,7 +128,6 @@ public class LevelGenerator : MonoBehaviour
     {
         CountingWallValues();
         CreatingWalls();
-
     }
 
     void CountingWallValues()
@@ -167,18 +157,24 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int y = 1; y < YWallsNumber; y++)
             {
-                if (
-                    !CreatedTiles.Contains(new Vector3(MinX + x - Settings.ExtraWallX/2,
-                        MinY + y - Settings.ExtraWallY/2)))
+                var pos = new Vector3(MinX + x - Settings.ExtraWallX / 2, MinY + y - Settings.ExtraWallY / 2);
+
+                if (!CreatedTiles.Contains(pos))
                 {
-                    var g = Instantiate(Settings.WallTiles[Random.Range(0, Settings.WallTiles.Length)],
-                        new Vector3(MinX + x - Settings.ExtraWallX/2, MinY + y - Settings.ExtraWallY/2),
-                        Quaternion.identity) as GameObject;
+                    GameObject g;
+                                
+                    if (Physics2D.OverlapPoint(pos + Vector3.down + Vector3.one * 0.5f, myLayer))                     
+                        g = Instantiate(Settings.WallTiles[Random.Range(0, Settings.WallTiles.Length)],
+                        pos, Quaternion.identity) as GameObject;
+                    else
+                        g = Instantiate(Settings.Ceiling, pos, Quaternion.identity) as GameObject;
+
                     g.transform.SetParent(WallParent.transform, false);
                 }
             }
         }
     }
+
 
     void GenerateSeed()
     {
@@ -193,6 +189,8 @@ public class LevelGenerator : MonoBehaviour
 
     } */
 
+
+    
     void GeneratingStartPositions()
     {
         if (Borders[0].y > Borders[1].y)
@@ -208,12 +206,15 @@ public class LevelGenerator : MonoBehaviour
         Instantiate(Settings.Exit, ExitPosition, Quaternion.identity);
     }
 
-    void SettingBorders()
+    void GettingBorders()
     {
         Borders.Add(CreatedTiles.Find(v => v.x == MaxX));
         Borders.Add(CreatedTiles.Find(v => v.x == MinX));
     }
 
+    /// <summary>
+    /// Generates random items
+    /// </summary>
     void GeneratingItems()
     {
         for (int i = 0; i < Settings.NumberOfItems; i++)
@@ -227,6 +228,9 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Generates random enemies
+    /// </summary>
     void GeneratingEnemies()
     {
         var gm = FindObjectOfType<GameManager>();

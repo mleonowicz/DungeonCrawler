@@ -99,11 +99,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012984143086, guid: d4efbe9956dfca340a440f2859a1e39b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.018
       objectReference: {fileID: 0}
     - target: {fileID: 4000012984143086, guid: d4efbe9956dfca340a440f2859a1e39b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.067
       objectReference: {fileID: 0}
     - target: {fileID: 4000012984143086, guid: d4efbe9956dfca340a440f2859a1e39b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -520,6 +520,9 @@ MonoBehaviour:
   Settings: {fileID: 11400000, guid: c5fd48ca6ad15d84897f0543c8525904, type: 2}
   CreatedTiles: []
   Borders: []
+  myLayer:
+    serializedVersion: 2
+    m_Bits: 2048
   WallParent: {fileID: 1121843171}
   TileParent: {fileID: 2138756560}
   ItemParent: {fileID: 1654902381}

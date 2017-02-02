@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c403084c294b94c4fbad7753a0b6ce6b
-timeCreated: 1484516148
+timeCreated: 1486046935
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -21,18 +21,18 @@ TextureImporter:
     21300028: 16111158_1211919422190536_975559820_n_14
     21300030: 16111158_1211919422190536_975559820_n_15
     21300032: 16111158_1211919422190536_975559820_n_16
-    21300034: 16111158_1211919422190536_975559820_n_17
+    21300034: BottomWall
     21300036: 16111158_1211919422190536_975559820_n_18
     21300038: 16111158_1211919422190536_975559820_n_19
     21300040: 16111158_1211919422190536_975559820_n_20
-    21300042: 16111158_1211919422190536_975559820_n_21
-    21300044: 16111158_1211919422190536_975559820_n_22
+    21300042: Floor2
+    21300044: Floor1
     21300046: 16111158_1211919422190536_975559820_n_23
     21300048: 16111158_1211919422190536_975559820_n_24
     21300050: 16111158_1211919422190536_975559820_n_25
-    21300052: 16111158_1211919422190536_975559820_n_26
-    21300054: 16111158_1211919422190536_975559820_n_27
-    21300056: 16111158_1211919422190536_975559820_n_28
+    21300052: UpperWall1
+    21300054: UpperWall2
+    21300056: UpperWall3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -124,7 +124,7 @@ TextureImporter:
       name: 16111158_1211919422190536_975559820_n_3
       rect:
         serializedVersion: 2
-        x: 300
+        x: 302
         y: 400
         width: 100
         height: 100
@@ -216,7 +216,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 500
-        y: 300
+        y: 298
         width: 100
         height: 100
       alignment: 0
@@ -229,7 +229,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
+        y: 199
         width: 100
         height: 100
       alignment: 0
@@ -303,15 +303,15 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 16111158_1211919422190536_975559820_n_17
+      name: BottomWall
       rect:
         serializedVersion: 2
         x: 0
         y: 100
         width: 100
         height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -320,7 +320,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 100
-        y: 100
+        y: 101
         width: 100
         height: 100
       alignment: 0
@@ -355,28 +355,28 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 16111158_1211919422190536_975559820_n_21
+      name: Floor2
       rect:
         serializedVersion: 2
         x: 400
         y: 100
         width: 100
         height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 16111158_1211919422190536_975559820_n_22
+      name: Floor1
       rect:
         serializedVersion: 2
         x: 500
         y: 100
         width: 100
         height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -420,7 +420,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 16111158_1211919422190536_975559820_n_26
+      name: UpperWall1
       rect:
         serializedVersion: 2
         x: 300
@@ -433,7 +433,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 16111158_1211919422190536_975559820_n_27
+      name: UpperWall2
       rect:
         serializedVersion: 2
         x: 400
@@ -446,7 +446,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 16111158_1211919422190536_975559820_n_28
+      name: UpperWall3
       rect:
         serializedVersion: 2
         x: 500

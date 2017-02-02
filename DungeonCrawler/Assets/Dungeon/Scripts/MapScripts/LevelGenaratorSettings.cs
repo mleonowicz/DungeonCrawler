@@ -11,6 +11,7 @@ public class LevelGenaratorSettings : ScriptableObject
     public GameObject[] Items;
     public GameObject[] Enemies;
     public GameObject Exit;
+    public GameObject Ceiling;
 
     [Header("Object Ammount")]
 

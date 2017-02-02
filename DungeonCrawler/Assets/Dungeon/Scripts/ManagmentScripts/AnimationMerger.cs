@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
@@ -48,4 +49,6 @@ public class AnimationMerger : EditorWindow
         }
 
     }
+
 }
+#endif

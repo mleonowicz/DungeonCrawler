@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public LikeControlScheme[] ControlSchemes;
     public PlayerData PlayerData;
 
-
+    private bool IsOnExit;
     public int CurrentHP;
     public int CurrentMP;
 
@@ -42,7 +42,6 @@ public class Player : MonoBehaviour
     public bool Movement()
     {
         CreatingLight();
-
         foreach (var ControlScheme in ControlSchemes)
         {
             if (Move(ControlScheme.Left, Vector3.left)) return true;
@@ -76,8 +75,6 @@ public class Player : MonoBehaviour
         }
         return true;
     }
-
-    private bool IsOnExit;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -116,28 +113,10 @@ public class Player : MonoBehaviour
         {
             for (int y = -2; y < 2; y++)
             {
-                if (CanMove(new Vector3(x, y, 0)))
-                {
-                }
-
-                //Gizmos.DrawSphere(new Vector3(x, y, 0), 0.2f);
-            }
-        }
-    }
-
-
-    // TODO
-
-    public void OnDrawGizmos()
-    {
-        for (int x = -2; x <= 2; x++)
-        {
-            for (int y = -2; y <= 2; y++)
-            {
                 Collider2D[] hitColliders =
-                    Physics2D.OverlapPointAll(new Vector3(transform.position.x - x + 0.5f,
-                        transform.position.y - y + 0.5f,
-                        0));
+                   Physics2D.OverlapPointAll(new Vector3(transform.position.x - x + 0.5f,
+                       transform.position.y - y + 0.5f,
+                       0));
 
                 if (hitColliders != null)
                 {
@@ -147,8 +126,7 @@ public class Player : MonoBehaviour
                         d.gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     }
                 }
-                //LevelGenerator.instance.CreatedTiles
-                // Gizmos.DrawSphere(new Vector3(x, y, 0), 0.2f);
+                //Gizmos.DrawSphere(new Vector3(x, y, 0), 0.2f);
             }
         }
     }
