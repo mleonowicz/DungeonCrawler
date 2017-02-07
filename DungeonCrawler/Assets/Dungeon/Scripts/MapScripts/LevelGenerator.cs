@@ -16,30 +16,36 @@ public class LevelGenerator : MonoBehaviour
 
     public List<Vector3> CreatedTiles;
     public List<Vector3> Borders;
-    private int LastPosition;
+    private int lastPosition;
     public LayerMask myLayer;
 
     private Vector3 PlayerPosition;
     private Vector3 ExitPosition;
+    private Vector3 minimapCameraPosition;
+
+
+    public RawImage Minimap;
+    public RectTransform LayoutMinimap;
 
     public GameObject WallParent;
     public GameObject TileParent;
     public GameObject ItemParent;
     public GameObject EnemyParent;
-    public GameObject FogOfWar;
 
     public GameObject Player;
 
-    private int AdditionalTiles = 0;
+    private int additionalTiles = 0;
 
-    private float MaxY = 0;
-    private float MinY = 999;
-    private float MaxX = 0;
-    private float MinX = 999;
-    private float XWallsNumber;
-    private float YWallsNumber;
+    public float MinimapCameraOrthographicSize;
+    public Vector3 MinimapCameraPosition;
+    private float maxY = 0;
+    private float minY = 999;
+    private float maxX = 0;
+    private float minX = 999;
+    private float maxWallsX;
+    private float maxWallsY;
 
-    public static LevelGenerator instance = null;
+    public static LevelGenerator instance;
     public int CurrentSeed;
 
     void Awake()
@@ -61,12 +67,13 @@ public class LevelGenerator : MonoBehaviour
         GeneratingStartPositions();
         GeneratingItems();
         GeneratingEnemies();
+        SettingCameraPosition();
         // Destroy(gameObject);
     }
 
     void GenerateLevel()
     {
-        for (int i = 0; i < Settings.NumberOfTiles + AdditionalTiles; i++)
+        for (int i = 0; i < Settings.NumberOfTiles + additionalTiles; i++)
         {
             InstantiateTile(Random.Range(0, Settings.FloorTiles.Length));
             ChanceGenerator(Random.Range(0f, 1f));
@@ -94,12 +101,12 @@ public class LevelGenerator : MonoBehaviour
             CreatedTiles.Add(transform.position);
             g.transform.SetParent(TileParent.transform, false);
         }
-        else AdditionalTiles++;
+        else additionalTiles++;
     }
 
     void MoveGenerator(int rnd)
     {
-        if (LastPosition * -1 == rnd)
+        if (lastPosition * -1 == rnd)
             return;
 
         switch (rnd)
@@ -120,7 +127,7 @@ public class LevelGenerator : MonoBehaviour
                 transform.position = new Vector3(transform.position.x - Settings.TileSize, transform.position.y);
                 break;
         }
-        LastPosition = rnd;
+        lastPosition = rnd;
         // Debug.Log(rnd);
     }
 
@@ -134,30 +141,33 @@ public class LevelGenerator : MonoBehaviour
     {
         for (int i = 0; i < CreatedTiles.Count; i++)
         {
-            if (CreatedTiles[i].y < MinY)
-                MinY = CreatedTiles[i].y;
+            if (CreatedTiles[i].y < minY)
+                minY = CreatedTiles[i].y;
 
-            if (CreatedTiles[i].y > MaxY)
-                MaxY = CreatedTiles[i].y;
+            if (CreatedTiles[i].y > maxY)
+                maxY = CreatedTiles[i].y;
 
-            if (CreatedTiles[i].x < MinX)
-                MinX = CreatedTiles[i].x;
+            if (CreatedTiles[i].x < minX)
+                minX = CreatedTiles[i].x;
 
-            if (CreatedTiles[i].x > MaxX)
-                MaxX = CreatedTiles[i].x;
+            if (CreatedTiles[i].x > maxX)
+                maxX = CreatedTiles[i].x;
         }
 
-        XWallsNumber = (MaxX - MinX) + Settings.ExtraWallX;
-        YWallsNumber = (MaxY - MinY) + Settings.ExtraWallY;
+        maxWallsX = (maxX - minX) + Settings.ExtraWallX;
+         Debug.Log("Szerokosc " + maxWallsX);
+        maxWallsY = (maxY - minY) + Settings.ExtraWallY;
+        Debug.Log("Dlugosc " + maxWallsY);
+
     }
 
     void CreatingWalls()
     {
-        for (int x = 1; x < XWallsNumber; x++)
+        for (int x = 1; x < maxWallsX; x++)
         {
-            for (int y = 1; y < YWallsNumber; y++)
+            for (int y = 1; y < maxWallsY; y++)
             {
-                var pos = new Vector3(MinX + x - Settings.ExtraWallX / 2, MinY + y - Settings.ExtraWallY / 2);
+                var pos = new Vector3(minX + x - Settings.ExtraWallX / 2, minY + y - Settings.ExtraWallY / 2);
 
                 if (!CreatedTiles.Contains(pos))
                 {
@@ -208,8 +218,8 @@ public class LevelGenerator : MonoBehaviour
 
     void GettingBorders()
     {
-        Borders.Add(CreatedTiles.Find(v => v.x == MaxX));
-        Borders.Add(CreatedTiles.Find(v => v.x == MinX));
+        Borders.Add(CreatedTiles.Find(v => v.x == maxX));
+        Borders.Add(CreatedTiles.Find(v => v.x == minX));
     }
 
     /// <summary>
@@ -243,6 +253,32 @@ public class LevelGenerator : MonoBehaviour
             x.transform.SetParent(EnemyParent.transform);
             gm.Enemies.Add(x);
         }
+    }
+
+    void SettingCameraPosition()
+    {
+        var centerX = (maxX + minX)/2;
+        var centerY = (maxY + minY)/2;
+
+        minimapCameraPosition = new Vector3(centerX + 0.5f, centerY + 0.5f, -5);
+        MinimapCameraPosition = minimapCameraPosition;
+
+        float aspect = (float)Screen.width/Screen.height;
+
+        if (maxWallsY * aspect  > maxWallsX)
+            MinimapCameraOrthographicSize = maxWallsY / 2 - 0.5f;
+        else MinimapCameraOrthographicSize = maxWallsX / (aspect * 2.0f) - 0.3f;
+
+        //Minimap.texture = GenerateAndSetMinimapTexture(MinimapCamera);
+        //LayoutMinimap.sizeDelta= new Vector2(Minimap.texture.width, Minimap.texture.height);
+    }
+
+    public RenderTexture GenerateAndSetMinimapTexture(Camera c)
+    {
+        RenderTexture MiniMapTexture = new RenderTexture(Screen.width,Screen.height,16);
+        c.targetTexture = MiniMapTexture;
+
+        return MiniMapTexture;
     }
 
 #if UNITY_EDITOR
