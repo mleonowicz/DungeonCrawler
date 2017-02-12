@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 using System.Linq;
+using UnityEngine.Events;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -48,6 +49,8 @@ public class LevelGenerator : MonoBehaviour
     public static LevelGenerator instance;
     public int CurrentSeed;
 
+    public List<Transform> transy = new List<Transform>();
+
     void Awake()
     {
         CreatedTiles = new List<Vector3>();
@@ -64,9 +67,9 @@ public class LevelGenerator : MonoBehaviour
         GenerateSeed();
         GenerateLevel();
         GettingBorders();
-        GeneratingStartPositions();
-        GeneratingItems();
-        GeneratingEnemies();
+        GenerateStartPositions();
+        GenerateItems();
+        GenerateEnemies();
         SettingCameraPosition();
         // Destroy(gameObject);
     }
@@ -201,7 +204,7 @@ public class LevelGenerator : MonoBehaviour
 
 
     
-    void GeneratingStartPositions()
+    void GenerateStartPositions()
     {
         if (Borders[0].y > Borders[1].y)
             PlayerPosition = Borders[1];
@@ -225,7 +228,7 @@ public class LevelGenerator : MonoBehaviour
     /// <summary>
     /// Generates random items
     /// </summary>
-    void GeneratingItems()
+    void GenerateItems()
     {
         for (int i = 0; i < Settings.NumberOfItems; i++)
         {
@@ -241,7 +244,7 @@ public class LevelGenerator : MonoBehaviour
     /// <summary>
     /// Generates random enemies
     /// </summary>
-    void GeneratingEnemies()
+    void GenerateEnemies()
     {
         var gm = FindObjectOfType<GameManager>();
         for (int i = 0; i < Settings.NumberOfEnemies; i++)
@@ -273,13 +276,13 @@ public class LevelGenerator : MonoBehaviour
         //LayoutMinimap.sizeDelta= new Vector2(Minimap.texture.width, Minimap.texture.height);
     }
 
-    public RenderTexture GenerateAndSetMinimapTexture(Camera c)
-    {
-        RenderTexture MiniMapTexture = new RenderTexture(Screen.width,Screen.height,16);
-        c.targetTexture = MiniMapTexture;
+    //public RenderTexture GenerateAndSetMinimapTexture(Camera c)
+    //{
+    //    RenderTexture MiniMapTexture = new RenderTexture(Screen.width,Screen.height,16);
+    //    c.targetTexture = MiniMapTexture;
 
-        return MiniMapTexture;
-    }
+    //    return MiniMapTexture;
+    //}
 
 #if UNITY_EDITOR
     [ContextMenu("Save Seed")]

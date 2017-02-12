@@ -14,6 +14,7 @@ public abstract class EnemyBrain : ScriptableObject
         if (Physics2D.OverlapPoint(currentPosition + myVector + Vector3.one * 0.5f, layerMask))
         {
             // Debug.Log("Cant'Move");    
+            
             return false; 
         }
         return true;
@@ -27,23 +28,44 @@ public abstract class EnemyBrain : ScriptableObject
         {
             case 1:
                 if (CanMove(thinkerTransform.position, Vector3.left))
-                    thinkerTransform.localPosition += Vector3.left;
+                    thinkerTransform.position += Vector3.left;
+                    
                 break;
 
             case 2:
                 if (CanMove(thinkerTransform.position, Vector3.right))
-                    thinkerTransform.localPosition += Vector3.right;
+                    thinkerTransform.position += Vector3.right;
                 break;
 
             case 3:
                 if (CanMove(thinkerTransform.position, Vector3.up))
-                    thinkerTransform.localPosition += Vector3.up;
+                    thinkerTransform.position += Vector3.up;
                 break;
 
             case 4:
                 if (CanMove(thinkerTransform.position, Vector3.down))
-                    thinkerTransform.localPosition += Vector3.down;
+                    thinkerTransform.position += Vector3.down;
                 break;
         }
     }
+
+    public IEnumerator EnemyMoveAnim(Vector3 dir, Transform thinkerTransform)
+    {
+        var time = 0f;
+        var startPos = thinkerTransform.position;
+        var endPos = thinkerTransform.position += dir;
+
+        while (time < 1)
+        {
+            Debug.Log(startPos + " " + endPos);
+            time += Time.deltaTime * 5;
+            thinkerTransform.position = Vector3.Lerp(startPos, endPos, time);
+
+            yield return new WaitForEndOfFrame();
+        }
+        //transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
+    }
+
+
+
 }

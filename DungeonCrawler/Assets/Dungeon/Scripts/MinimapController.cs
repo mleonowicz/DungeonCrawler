@@ -30,7 +30,7 @@ public class MinimapController : MonoBehaviour
 
         while (time < 1f)
         {
-            time += Time.deltaTime;
+            time += Time.deltaTime * 2;
 
             main.orthographicSize = Mathf.Lerp(mainCameraSize, LevelGenerator.instance.MinimapCameraOrthographicSize, time);
             main.transform.position = Vector3.Lerp(transform.position + MainCameraPos, LevelGenerator.instance.MinimapCameraPosition, time);
@@ -47,7 +47,7 @@ public class MinimapController : MonoBehaviour
         animMap = true;
         while (time < 1f)
         {
-            time += Time.deltaTime;
+            time += Time.deltaTime * 2;
 
             main.orthographicSize = Mathf.Lerp(LevelGenerator.instance.MinimapCameraOrthographicSize, mainCameraSize, time);
             main.transform.position = Vector3.Lerp(LevelGenerator.instance.MinimapCameraPosition, transform.position + MainCameraPos, time);

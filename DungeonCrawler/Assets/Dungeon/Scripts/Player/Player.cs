@@ -2,9 +2,6 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEditor;
-using UnityEngine.UI;
 
 [Serializable]
 public struct LikeControlScheme
@@ -17,6 +14,7 @@ public struct LikeControlScheme
 
 public class Player : MonoBehaviour
 {
+    private bool isMoving = false;
     int layerMask = 1 << 8;
     public List<GameObject> Items;
     public LikeControlScheme[] ControlSchemes;
@@ -41,6 +39,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+
         if (IsOnExit && Input.GetKeyDown(KeyCode.H))
         {
             Debug.Log("You Win");
@@ -108,9 +107,10 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(kc))
         {
-            if (!CanMove(dir))
+            if (!CanMove(dir) || isMoving)
                 return false;
-            transform.localPosition += dir;
+            isMoving = true;
+            StartCoroutine(MoveAnim(dir));
             return true;
         }
         return false;
@@ -180,5 +180,22 @@ public class Player : MonoBehaviour
                 //Gizmos.DrawSphere(new Vector3(x, y, 0), 0.2f);
             }
         }
+    }
+
+    private IEnumerator MoveAnim(Vector3 dir)
+    {
+        var time = 0f;
+        var startPos = transform.position;
+        var endPos = transform.position += dir;
+
+        while (time < 1)
+        {
+            //Debug.Log(startPos + " " + endPos);
+            time += Time.deltaTime * 5;
+            transform.position = Vector3.Lerp(startPos, endPos, time);
+            yield return new WaitForEndOfFrame();
+        }
+        isMoving = false;
+        //transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
     }
 }
