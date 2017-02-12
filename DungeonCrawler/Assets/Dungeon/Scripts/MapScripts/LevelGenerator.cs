@@ -252,7 +252,7 @@ public class LevelGenerator : MonoBehaviour
             var x = Instantiate(Settings.Enemies[Random.Range(0, Settings.Enemies.Length)], CreatedTiles[Random.Range(0, CreatedTiles.Count)],
                 Quaternion.identity) as GameObject;
 
-            x.name = i + "Hearth";
+            // x.name = i + "Hearth";
             x.transform.SetParent(EnemyParent.transform);
             gm.Enemies.Add(x);
         }

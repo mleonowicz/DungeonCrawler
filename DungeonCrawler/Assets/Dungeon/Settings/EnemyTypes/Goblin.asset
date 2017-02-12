@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Name: Goblin
   m_EditorClassIdentifier: 
   PlayerDetectionRange: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 768
+  layerMaskGround:
+    serializedVersion: 2
+    m_Bits: 2048

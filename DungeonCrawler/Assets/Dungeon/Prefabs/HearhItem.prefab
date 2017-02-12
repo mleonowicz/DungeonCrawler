@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000011908656750}
   - 212: {fileID: 212000013194090944}
   - 61: {fileID: 61000013330764320}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HearhItem
   m_TagString: Hearth
   m_Icon: {fileID: 0}

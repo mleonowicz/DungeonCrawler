@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -37,8 +38,6 @@ public class GameManager : MonoBehaviour
 
         }
         UpdateUI();
-
-
     }
     void UpdateUI()
     {

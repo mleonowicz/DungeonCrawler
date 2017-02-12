@@ -11,10 +11,13 @@ public class Enemy : MonoBehaviour
     {
         CurrentHP = EnemyData.MaxHp;
         this.transform.name = EnemyData.Name;
+        //EnemyData.Brain.SetCallback(CheckGround);
     }
 
     public void MakeTurn(Player myPlayer)
     {
-        EnemyData.Brain.Think(this, myPlayer);
+        EnemyData.Brain.Think(this, myPlayer);    
     }
+
+    
 }

@@ -19,9 +19,9 @@ public class Player : MonoBehaviour
     public List<GameObject> Items;
     public LikeControlScheme[] ControlSchemes;
     public PlayerData PlayerData;
-    
+
     //  private Vector3 miniCameraPos;
-    
+
     private bool IsOnExit;
     public int CurrentHP;
     public int CurrentMP;
@@ -45,52 +45,51 @@ public class Player : MonoBehaviour
             Debug.Log("You Win");
         }
         if (Input.GetKeyDown(KeyCode.M) && !minimapController.animMap)
-        {  
-            StartCoroutine(!minimapController.minimapIsActive ? minimapController.LerpOutMinimap() : minimapController.LerpInMinimap());           
+        {
+            StartCoroutine(!minimapController.minimapIsActive ? minimapController.LerpOutMinimap() : minimapController.LerpInMinimap());
         }
     }
 
-    
 
-//    private void CameraToMinimap()
-//    {
-//        if (!minimapIsActive)
-//        {
-//            Debug.Log(minimapIsActive);
-//            StartCoroutine(LerpOutMinimap());
-//
-//            Debug.Log("MiniSize " + LevelGenerator.instance.MinimapCameraOrthographicSize + " mainSize " + mainCameraSize);
-//            //            if (Math.Abs(main.orthographicSize - LevelGenerator.instance.MinimapCameraOrthographicSize) < 0.5f)
-//            //            {
-//            //                Debug.Log("anim ended");
-//            //                mapAnim = false;
-//            //                minimapIsActive = true;
-//            //            }
-//        }
-//        else
-//        {
-//            Debug.Log(minimapIsActive);
-//            main.transform.position = Vector3.Lerp(LevelGenerator.instance.MinimapCameraPosition, Vector3.zero, Time.deltaTime * 4);
-//            main.orthographicSize = Mathf.Lerp(LevelGenerator.instance.MinimapCameraOrthographicSize, 3, Time.deltaTime * 4);
-//
-//            Debug.Log("MiniSize " + LevelGenerator.instance.MinimapCameraOrthographicSize + " mainSize " + mainCameraSize);
-//
-//            if (Math.Abs(main.orthographicSize - mainCameraSize) < 0.1f)
-//            {
-//                mapAnim = false;
-//                minimapIsActive = false;
-//            }
-//        }
-//
-//    }
+
+    //    private void CameraToMinimap()
+    //    {
+    //        if (!minimapIsActive)
+    //        {
+    //            Debug.Log(minimapIsActive);
+    //            StartCoroutine(LerpOutMinimap());
+    //
+    //            Debug.Log("MiniSize " + LevelGenerator.instance.MinimapCameraOrthographicSize + " mainSize " + mainCameraSize);
+    //            //            if (Math.Abs(main.orthographicSize - LevelGenerator.instance.MinimapCameraOrthographicSize) < 0.5f)
+    //            //            {
+    //            //                Debug.Log("anim ended");
+    //            //                mapAnim = false;
+    //            //                minimapIsActive = true;
+    //            //            }
+    //        }
+    //        else
+    //        {
+    //            Debug.Log(minimapIsActive);
+    //            main.transform.position = Vector3.Lerp(LevelGenerator.instance.MinimapCameraPosition, Vector3.zero, Time.deltaTime * 4);
+    //            main.orthographicSize = Mathf.Lerp(LevelGenerator.instance.MinimapCameraOrthographicSize, 3, Time.deltaTime * 4);
+    //
+    //            Debug.Log("MiniSize " + LevelGenerator.instance.MinimapCameraOrthographicSize + " mainSize " + mainCameraSize);
+    //
+    //            if (Math.Abs(main.orthographicSize - mainCameraSize) < 0.1f)
+    //            {
+    //                mapAnim = false;
+    //                minimapIsActive = false;
+    //            }
+    //        }
+    //
+    //    }
 
     public bool Movement()
     {
-        if (minimapController.minimapIsActive) 
-            return false; 
+        if (minimapController.minimapIsActive)
+            return false;
 
-        CreatingLight(); 
-
+        CreatingLight();
 
         foreach (var ControlScheme in ControlSchemes)
         {
@@ -100,7 +99,7 @@ public class Player : MonoBehaviour
             if (Move(ControlScheme.Down, Vector3.down)) return true;
             // return false;
         }
-        return false; 
+        return false;
     }
 
     private bool Move(KeyCode kc, Vector3 dir)
@@ -158,8 +157,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    void CreatingLight()
+    private void CreatingLight()
     {
+
         for (int x = -2; x <= 2; x++)
         {
             for (int y = -2; y <= 2; y++)
@@ -168,12 +168,17 @@ public class Player : MonoBehaviour
                    Physics2D.OverlapPointAll(new Vector3(transform.position.x - x + 0.5f,
                        transform.position.y - y + 0.5f,
                        0));
-
+                var pos = new Vector3(transform.position.x - x + 0.5f,
+                    transform.position.y - y + 0.5f,
+                    0);
+                //Debug.DrawLine(pos,pos+Vector3.forward,Color.blue,2f);
                 if (hitColliders != null)
                 {
                     // Gizmos.DrawSphere(new Vector3(transform.position.x - x + 0.5f, transform.position.y - y + 0.5f, 0), 0.2f);
                     foreach (var d in hitColliders)
                     {
+                        //if (d.GetComponent<Enemy>())
+                        //    d.GetComponent<Enemy>().isVisible = true;
                         d.gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     }
                 }

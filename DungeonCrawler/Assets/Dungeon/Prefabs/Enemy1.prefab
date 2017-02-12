@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000011411638560}
   - 212: {fileID: 212000012490873408}
   - 114: {fileID: 114000010685168210}
-  - 61: {fileID: 61000013688883234}
+  - 61: {fileID: 61000013664324226}
   m_Layer: 9
   m_Name: Enemy1
   m_TagString: Enemy
@@ -42,7 +42,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &61000013688883234
+--- !u!61 &61000013664324226
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

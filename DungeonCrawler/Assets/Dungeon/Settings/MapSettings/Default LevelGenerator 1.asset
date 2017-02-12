@@ -26,10 +26,10 @@ MonoBehaviour:
   - {fileID: 1000010737239792, guid: cacecf8cf0b93cc4e9f6f22a4ecfa2d0, type: 2}
   Exit: {fileID: 1000012935256338, guid: 89aa9d9cf299d5f4cb04c9fdc7fda84a, type: 2}
   Ceiling: {fileID: 1000010619461834, guid: c90542e9063b60d40a6ff45e03abdfb5, type: 2}
-  NumberOfTiles: 200
+  NumberOfTiles: 100
   TileSize: 1
-  NumberOfItems: 2
-  NumberOfEnemies: 7
+  NumberOfItems: 4
+  NumberOfEnemies: 10
   ChanceUp: 0.25
   ChanceRight: 0.5
   ChanceDown: 0.75
