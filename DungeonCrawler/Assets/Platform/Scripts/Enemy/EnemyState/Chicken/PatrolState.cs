@@ -38,6 +38,6 @@ public class PatrolState : IEnemyPlatformState
             //currentState.
         }
 
-        Debug.Log("dsa"); ;
+        //Debug.Log("dsa"); ;
     }
 }

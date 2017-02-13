@@ -8,7 +8,7 @@ public class LevelGenaratorSettings : ScriptableObject
     [Header("Prefabs")]
     public GameObject[] FloorTiles;
     public GameObject[] WallTiles;
-    public GameObject[] Items;
+    public GameObject[] Potions;
     public GameObject[] Enemies;
     public GameObject Exit;
     public GameObject Ceiling;
@@ -17,7 +17,7 @@ public class LevelGenaratorSettings : ScriptableObject
 
     public int NumberOfTiles;
     public int TileSize;
-    public int NumberOfItems;
+    public int NumberOfPotions;
     public int NumberOfEnemies;
 
     [Header("Move Chance")]

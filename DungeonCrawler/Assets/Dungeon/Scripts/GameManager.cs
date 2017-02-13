@@ -57,5 +57,4 @@ public class GameManager : MonoBehaviour
     //        Gizmos.DrawSphere(enemy.transform.localPosition + (Vector3.right) + Vector3.one * 0.5f, 0.2f);
     //    }
     //}
-
 }

@@ -26,36 +26,32 @@ public abstract class EnemyBrain : ScriptableObject
     protected void Movement(Transform thinkerTransform)
     {
         int d = Random.Range(1, 5);
-        // Debug.Log(d);
+        // Debug.Log(d); // TODO naprawić dać courutiny
+		
+		// EASTEREGG JAK SIĘ WPISZE FINSKI SNIPER TO WYSKAKUJE MASTERMIND
         switch (d)
         {
             case 1:
                 if (CanMove(thinkerTransform.position, Vector3.left))
-                    thinkerTransform.position += Vector3.left;
-                    
+                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.left, thinkerTransform));
+
                 break;
 
             case 2:
                 if (CanMove(thinkerTransform.position, Vector3.right))
-                    thinkerTransform.position += Vector3.right;
+                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.right, thinkerTransform));
                 break;
 
             case 3:
                 if (CanMove(thinkerTransform.position, Vector3.up))
-                    thinkerTransform.position += Vector3.up;
+                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.up, thinkerTransform));
                 break;
 
             case 4:
                 if (CanMove(thinkerTransform.position, Vector3.down))
-                    thinkerTransform.position += Vector3.down;
+                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.down, thinkerTransform));
                 break;
         }
-    }
-
-    private Action callback;
-    public void SetCallback(Action callback)
-    {
-        this.callback = callback;
     }
 
     public IEnumerator EnemyMoveAnim(Vector3 dir, Transform thinkerTransform)
@@ -83,7 +79,7 @@ public abstract class EnemyBrain : ScriptableObject
     {
         Collider2D hit = Physics2D.OverlapPoint(thinkerTransform.position + Vector3.one * 0.5f, layerMaskGround);
         
-        Debug.Log(hit.name + " "+hit.gameObject.GetComponent<SpriteRenderer>().enabled);
+        //Debug.Log(hit.name + " "+hit.gameObject.GetComponent<SpriteRenderer>().enabled);
 
         thinkerTransform.GetComponent<SpriteRenderer>().enabled = hit.gameObject.GetComponent<SpriteRenderer>().enabled;
     }

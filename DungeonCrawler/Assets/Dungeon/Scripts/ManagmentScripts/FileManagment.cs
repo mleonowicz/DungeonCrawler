@@ -91,7 +91,7 @@ public static class FileManagment
         {
             path = Path.Combine(path, pathElements[0]);
             pathElements.RemoveAt(0);
-            Debug.Log(path);
+            // Debug.Log(path);
 
             if (!Directory.Exists(path))
                 Directory.CreateDirectory(path);

@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 [Serializable]
 public struct LikeControlScheme
@@ -14,9 +15,9 @@ public struct LikeControlScheme
 
 public class Player : MonoBehaviour
 {
+    public GameObject Inventory;
     private bool isMoving = false;
     int layerMask = 1 << 8;
-    public List<GameObject> Items;
     public LikeControlScheme[] ControlSchemes;
     public PlayerData PlayerData;
 
@@ -47,6 +48,10 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M) && !minimapController.animMap)
         {
             StartCoroutine(!minimapController.minimapIsActive ? minimapController.LerpOutMinimap() : minimapController.LerpInMinimap());
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            Inventory.SetActive(!Inventory.activeSelf);
         }
     }
 
@@ -138,10 +143,14 @@ public class Player : MonoBehaviour
 
         if (other.tag == "Enemy")
         {
+            other.gameObject.SetActive(false);
             CurrentHP -= 30;
             if (CurrentHP < 0)
-                Debug.Log("- 30");
-            other.gameObject.SetActive(false);
+            {
+                // Debug.Log("- 30");
+            }
+
+            
         }
         if (other.tag == "Exit")
         {
@@ -168,9 +177,7 @@ public class Player : MonoBehaviour
                    Physics2D.OverlapPointAll(new Vector3(transform.position.x - x + 0.5f,
                        transform.position.y - y + 0.5f,
                        0));
-                var pos = new Vector3(transform.position.x - x + 0.5f,
-                    transform.position.y - y + 0.5f,
-                    0);
+                
                 //Debug.DrawLine(pos,pos+Vector3.forward,Color.blue,2f);
                 if (hitColliders != null)
                 {

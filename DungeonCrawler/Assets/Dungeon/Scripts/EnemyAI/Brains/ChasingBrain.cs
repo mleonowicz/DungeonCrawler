@@ -10,6 +10,7 @@ public class ChasingBrain : EnemyBrain
     
         if (enemy.transform.position == myPlayer.transform.position)
         {
+            //Debug.Log("Topkek");
             return;
         }
 

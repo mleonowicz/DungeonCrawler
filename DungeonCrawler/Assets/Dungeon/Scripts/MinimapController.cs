@@ -5,14 +5,13 @@ using System.Threading;
 
 public class MinimapController : MonoBehaviour
 {
-
     public bool animMap = false;
     public bool minimapIsActive;
     public Camera main;
 
-    public float mainCameraSize;
+    private float mainCameraSize;
 
-    public Vector3 MainCameraPos = new Vector3(0, 0, -10);
+    private readonly Vector3 MainCameraPos = new Vector3(0, 0, -10);
 
     // Use this for initialization
     void Start()

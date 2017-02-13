@@ -1,0 +1,5939 @@
+fileFormatVersion: 2
+guid: 8c90a5af5c77f0542a6679704091893c
+timeCreated: 1487014146
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ItemsTileSetpng_0
+    21300002: ItemsTileSetpng_1
+    21300004: ItemsTileSetpng_2
+    21300006: ItemsTileSetpng_3
+    21300008: ItemsTileSetpng_4
+    21300010: ItemsTileSetpng_5
+    21300012: ItemsTileSetpng_6
+    21300014: ItemsTileSetpng_7
+    21300016: ItemsTileSetpng_8
+    21300018: ItemsTileSetpng_9
+    21300020: ItemsTileSetpng_10
+    21300022: ItemsTileSetpng_11
+    21300024: ItemsTileSetpng_12
+    21300026: ItemsTileSetpng_13
+    21300028: ItemsTileSetpng_14
+    21300030: ItemsTileSetpng_15
+    21300032: ItemsTileSetpng_16
+    21300034: ItemsTileSetpng_17
+    21300036: ItemsTileSetpng_18
+    21300038: ItemsTileSetpng_19
+    21300040: ItemsTileSetpng_20
+    21300042: ItemsTileSetpng_21
+    21300044: ItemsTileSetpng_22
+    21300046: ItemsTileSetpng_23
+    21300048: ItemsTileSetpng_24
+    21300050: ItemsTileSetpng_25
+    21300052: ItemsTileSetpng_26
+    21300054: ItemsTileSetpng_27
+    21300056: ItemsTileSetpng_28
+    21300058: ItemsTileSetpng_29
+    21300060: ItemsTileSetpng_30
+    21300062: ItemsTileSetpng_31
+    21300064: ItemsTileSetpng_32
+    21300066: ItemsTileSetpng_33
+    21300068: ItemsTileSetpng_34
+    21300070: ItemsTileSetpng_35
+    21300072: ItemsTileSetpng_36
+    21300074: ItemsTileSetpng_37
+    21300076: ItemsTileSetpng_38
+    21300078: ItemsTileSetpng_39
+    21300080: ItemsTileSetpng_40
+    21300082: ItemsTileSetpng_41
+    21300084: ItemsTileSetpng_42
+    21300086: ItemsTileSetpng_43
+    21300088: ItemsTileSetpng_44
+    21300090: ItemsTileSetpng_45
+    21300092: ItemsTileSetpng_46
+    21300094: ItemsTileSetpng_47
+    21300096: ItemsTileSetpng_48
+    21300098: ItemsTileSetpng_49
+    21300100: ItemsTileSetpng_50
+    21300102: ItemsTileSetpng_51
+    21300104: ItemsTileSetpng_52
+    21300106: ItemsTileSetpng_53
+    21300108: ItemsTileSetpng_54
+    21300110: ItemsTileSetpng_55
+    21300112: ItemsTileSetpng_56
+    21300114: ItemsTileSetpng_57
+    21300116: ItemsTileSetpng_58
+    21300118: ItemsTileSetpng_59
+    21300120: ItemsTileSetpng_60
+    21300122: ItemsTileSetpng_61
+    21300124: ItemsTileSetpng_62
+    21300126: ItemsTileSetpng_63
+    21300128: ItemsTileSetpng_64
+    21300130: ItemsTileSetpng_65
+    21300132: ItemsTileSetpng_66
+    21300134: ItemsTileSetpng_67
+    21300136: ItemsTileSetpng_68
+    21300138: ItemsTileSetpng_69
+    21300140: ItemsTileSetpng_70
+    21300142: ItemsTileSetpng_71
+    21300144: ItemsTileSetpng_72
+    21300146: ItemsTileSetpng_73
+    21300148: ItemsTileSetpng_74
+    21300150: ItemsTileSetpng_75
+    21300152: ItemsTileSetpng_76
+    21300154: ItemsTileSetpng_77
+    21300156: ItemsTileSetpng_78
+    21300158: ItemsTileSetpng_79
+    21300160: ItemsTileSetpng_80
+    21300162: ItemsTileSetpng_81
+    21300164: ItemsTileSetpng_82
+    21300166: ItemsTileSetpng_83
+    21300168: ItemsTileSetpng_84
+    21300170: ItemsTileSetpng_85
+    21300172: ItemsTileSetpng_86
+    21300174: ItemsTileSetpng_87
+    21300176: ItemsTileSetpng_88
+    21300178: ItemsTileSetpng_89
+    21300180: ItemsTileSetpng_90
+    21300182: ItemsTileSetpng_91
+    21300184: ItemsTileSetpng_92
+    21300186: ItemsTileSetpng_93
+    21300188: ItemsTileSetpng_94
+    21300190: ItemsTileSetpng_95
+    21300192: ItemsTileSetpng_96
+    21300194: ItemsTileSetpng_97
+    21300196: ItemsTileSetpng_98
+    21300198: ItemsTileSetpng_99
+    21300200: ItemsTileSetpng_100
+    21300202: ItemsTileSetpng_101
+    21300204: ItemsTileSetpng_102
+    21300206: ItemsTileSetpng_103
+    21300208: ItemsTileSetpng_104
+    21300210: ItemsTileSetpng_105
+    21300212: ItemsTileSetpng_106
+    21300214: ItemsTileSetpng_107
+    21300216: ItemsTileSetpng_108
+    21300218: ItemsTileSetpng_109
+    21300220: ItemsTileSetpng_110
+    21300222: ItemsTileSetpng_111
+    21300224: ItemsTileSetpng_112
+    21300226: ItemsTileSetpng_113
+    21300228: ItemsTileSetpng_114
+    21300230: ItemsTileSetpng_115
+    21300232: ItemsTileSetpng_116
+    21300234: ItemsTileSetpng_117
+    21300236: ItemsTileSetpng_118
+    21300238: ItemsTileSetpng_119
+    21300240: ItemsTileSetpng_120
+    21300242: ItemsTileSetpng_121
+    21300244: ItemsTileSetpng_122
+    21300246: ItemsTileSetpng_123
+    21300248: ItemsTileSetpng_124
+    21300250: ItemsTileSetpng_125
+    21300252: ItemsTileSetpng_126
+    21300254: ItemsTileSetpng_127
+    21300256: ItemsTileSetpng_128
+    21300258: ItemsTileSetpng_129
+    21300260: ItemsTileSetpng_130
+    21300262: ItemsTileSetpng_131
+    21300264: ItemsTileSetpng_132
+    21300266: ItemsTileSetpng_133
+    21300268: ItemsTileSetpng_134
+    21300270: ItemsTileSetpng_135
+    21300272: ItemsTileSetpng_136
+    21300274: ItemsTileSetpng_137
+    21300276: ItemsTileSetpng_138
+    21300278: ItemsTileSetpng_139
+    21300280: ItemsTileSetpng_140
+    21300282: ItemsTileSetpng_141
+    21300284: ItemsTileSetpng_142
+    21300286: ItemsTileSetpng_143
+    21300288: ItemsTileSetpng_144
+    21300290: ItemsTileSetpng_145
+    21300292: ItemsTileSetpng_146
+    21300294: ItemsTileSetpng_147
+    21300296: ItemsTileSetpng_148
+    21300298: ItemsTileSetpng_149
+    21300300: ItemsTileSetpng_150
+    21300302: ItemsTileSetpng_151
+    21300304: ItemsTileSetpng_152
+    21300306: ItemsTileSetpng_153
+    21300308: ItemsTileSetpng_154
+    21300310: ItemsTileSetpng_155
+    21300312: ItemsTileSetpng_156
+    21300314: ItemsTileSetpng_157
+    21300316: ItemsTileSetpng_158
+    21300318: ItemsTileSetpng_159
+    21300320: ItemsTileSetpng_160
+    21300322: ItemsTileSetpng_161
+    21300324: ItemsTileSetpng_162
+    21300326: ItemsTileSetpng_163
+    21300328: ItemsTileSetpng_164
+    21300330: ItemsTileSetpng_165
+    21300332: ItemsTileSetpng_166
+    21300334: ItemsTileSetpng_167
+    21300336: ItemsTileSetpng_168
+    21300338: ItemsTileSetpng_169
+    21300340: ItemsTileSetpng_170
+    21300342: ItemsTileSetpng_171
+    21300344: ItemsTileSetpng_172
+    21300346: ItemsTileSetpng_173
+    21300348: ItemsTileSetpng_174
+    21300350: ItemsTileSetpng_175
+    21300352: ItemsTileSetpng_176
+    21300354: ItemsTileSetpng_177
+    21300356: ItemsTileSetpng_178
+    21300358: ItemsTileSetpng_179
+    21300360: ItemsTileSetpng_180
+    21300362: ItemsTileSetpng_181
+    21300364: ItemsTileSetpng_182
+    21300366: ItemsTileSetpng_183
+    21300368: ItemsTileSetpng_184
+    21300370: ItemsTileSetpng_185
+    21300372: ItemsTileSetpng_186
+    21300374: ItemsTileSetpng_187
+    21300376: ItemsTileSetpng_188
+    21300378: ItemsTileSetpng_189
+    21300380: ItemsTileSetpng_190
+    21300382: ItemsTileSetpng_191
+    21300384: ItemsTileSetpng_192
+    21300386: ItemsTileSetpng_193
+    21300388: ItemsTileSetpng_194
+    21300390: ItemsTileSetpng_195
+    21300392: ItemsTileSetpng_196
+    21300394: ItemsTileSetpng_197
+    21300396: ItemsTileSetpng_198
+    21300398: ItemsTileSetpng_199
+    21300400: ItemsTileSetpng_200
+    21300402: ItemsTileSetpng_201
+    21300404: ItemsTileSetpng_202
+    21300406: ItemsTileSetpng_203
+    21300408: ItemsTileSetpng_204
+    21300410: ItemsTileSetpng_205
+    21300412: ItemsTileSetpng_206
+    21300414: ItemsTileSetpng_207
+    21300416: ItemsTileSetpng_208
+    21300418: ItemsTileSetpng_209
+    21300420: ItemsTileSetpng_210
+    21300422: ItemsTileSetpng_211
+    21300424: ItemsTileSetpng_212
+    21300426: ItemsTileSetpng_213
+    21300428: ItemsTileSetpng_214
+    21300430: ItemsTileSetpng_215
+    21300432: ItemsTileSetpng_216
+    21300434: ItemsTileSetpng_217
+    21300436: ItemsTileSetpng_218
+    21300438: ItemsTileSetpng_219
+    21300440: ItemsTileSetpng_220
+    21300442: ItemsTileSetpng_221
+    21300444: ItemsTileSetpng_222
+    21300446: ItemsTileSetpng_223
+    21300448: ItemsTileSetpng_224
+    21300450: ItemsTileSetpng_225
+    21300452: ItemsTileSetpng_226
+    21300454: ItemsTileSetpng_227
+    21300456: ItemsTileSetpng_228
+    21300458: ItemsTileSetpng_229
+    21300460: ItemsTileSetpng_230
+    21300462: ItemsTileSetpng_231
+    21300464: ItemsTileSetpng_232
+    21300466: ItemsTileSetpng_233
+    21300468: ItemsTileSetpng_234
+    21300470: ItemsTileSetpng_235
+    21300472: ItemsTileSetpng_236
+    21300474: ItemsTileSetpng_237
+    21300476: ItemsTileSetpng_238
+    21300478: ItemsTileSetpng_239
+    21300480: ItemsTileSetpng_240
+    21300482: ItemsTileSetpng_241
+    21300484: ItemsTileSetpng_242
+    21300486: ItemsTileSetpng_243
+    21300488: ItemsTileSetpng_244
+    21300490: ItemsTileSetpng_245
+    21300492: ItemsTileSetpng_246
+    21300494: ItemsTileSetpng_247
+    21300496: ItemsTileSetpng_248
+    21300498: ItemsTileSetpng_249
+    21300500: ItemsTileSetpng_250
+    21300502: ItemsTileSetpng_251
+    21300504: ItemsTileSetpng_252
+    21300506: ItemsTileSetpng_253
+    21300508: ItemsTileSetpng_254
+    21300510: ItemsTileSetpng_255
+    21300512: ItemsTileSetpng_256
+    21300514: ItemsTileSetpng_257
+    21300516: ItemsTileSetpng_258
+    21300518: ItemsTileSetpng_259
+    21300520: ItemsTileSetpng_260
+    21300522: ItemsTileSetpng_261
+    21300524: ItemsTileSetpng_262
+    21300526: ItemsTileSetpng_263
+    21300528: ItemsTileSetpng_264
+    21300530: ItemsTileSetpng_265
+    21300532: ItemsTileSetpng_266
+    21300534: ItemsTileSetpng_267
+    21300536: ItemsTileSetpng_268
+    21300538: ItemsTileSetpng_269
+    21300540: ItemsTileSetpng_270
+    21300542: ItemsTileSetpng_271
+    21300544: ItemsTileSetpng_272
+    21300546: ItemsTileSetpng_273
+    21300548: ItemsTileSetpng_274
+    21300550: ItemsTileSetpng_275
+    21300552: ItemsTileSetpng_276
+    21300554: ItemsTileSetpng_277
+    21300556: ItemsTileSetpng_278
+    21300558: ItemsTileSetpng_279
+    21300560: ItemsTileSetpng_280
+    21300562: ItemsTileSetpng_281
+    21300564: ItemsTileSetpng_282
+    21300566: ItemsTileSetpng_283
+    21300568: ItemsTileSetpng_284
+    21300570: ItemsTileSetpng_285
+    21300572: ItemsTileSetpng_286
+    21300574: ItemsTileSetpng_287
+    21300576: ItemsTileSetpng_288
+    21300578: ItemsTileSetpng_289
+    21300580: ItemsTileSetpng_290
+    21300582: ItemsTileSetpng_291
+    21300584: ItemsTileSetpng_292
+    21300586: ItemsTileSetpng_293
+    21300588: ItemsTileSetpng_294
+    21300590: ItemsTileSetpng_295
+    21300592: ItemsTileSetpng_296
+    21300594: ItemsTileSetpng_297
+    21300596: ItemsTileSetpng_298
+    21300598: ItemsTileSetpng_299
+    21300600: ItemsTileSetpng_300
+    21300602: ItemsTileSetpng_301
+    21300604: ItemsTileSetpng_302
+    21300606: ItemsTileSetpng_303
+    21300608: ItemsTileSetpng_304
+    21300610: ItemsTileSetpng_305
+    21300612: ItemsTileSetpng_306
+    21300614: ItemsTileSetpng_307
+    21300616: ItemsTileSetpng_308
+    21300618: ItemsTileSetpng_309
+    21300620: ItemsTileSetpng_310
+    21300622: ItemsTileSetpng_311
+    21300624: ItemsTileSetpng_312
+    21300626: ItemsTileSetpng_313
+    21300628: ItemsTileSetpng_314
+    21300630: ItemsTileSetpng_315
+    21300632: ItemsTileSetpng_316
+    21300634: ItemsTileSetpng_317
+    21300636: ItemsTileSetpng_318
+    21300638: ItemsTileSetpng_319
+    21300640: ItemsTileSetpng_320
+    21300642: ItemsTileSetpng_321
+    21300644: ItemsTileSetpng_322
+    21300646: ItemsTileSetpng_323
+    21300648: ItemsTileSetpng_324
+    21300650: ItemsTileSetpng_325
+    21300652: ItemsTileSetpng_326
+    21300654: ItemsTileSetpng_327
+    21300656: ItemsTileSetpng_328
+    21300658: ItemsTileSetpng_329
+    21300660: ItemsTileSetpng_330
+    21300662: ItemsTileSetpng_331
+    21300664: ItemsTileSetpng_332
+    21300666: ItemsTileSetpng_333
+    21300668: ItemsTileSetpng_334
+    21300670: ItemsTileSetpng_335
+    21300672: ItemsTileSetpng_336
+    21300674: ItemsTileSetpng_337
+    21300676: ItemsTileSetpng_338
+    21300678: ItemsTileSetpng_339
+    21300680: ItemsTileSetpng_340
+    21300682: ItemsTileSetpng_341
+    21300684: ItemsTileSetpng_342
+    21300686: ItemsTileSetpng_343
+    21300688: ItemsTileSetpng_344
+    21300690: ItemsTileSetpng_345
+    21300692: ItemsTileSetpng_346
+    21300694: ItemsTileSetpng_347
+    21300696: ItemsTileSetpng_348
+    21300698: ItemsTileSetpng_349
+    21300700: ItemsTileSetpng_350
+    21300702: ItemsTileSetpng_351
+    21300704: ItemsTileSetpng_352
+    21300706: ItemsTileSetpng_353
+    21300708: ItemsTileSetpng_354
+    21300710: ItemsTileSetpng_355
+    21300712: ItemsTileSetpng_356
+    21300714: ItemsTileSetpng_357
+    21300716: ItemsTileSetpng_358
+    21300718: ItemsTileSetpng_359
+    21300720: ItemsTileSetpng_360
+    21300722: ItemsTileSetpng_361
+    21300724: ItemsTileSetpng_362
+    21300726: ItemsTileSetpng_363
+    21300728: ItemsTileSetpng_364
+    21300730: ItemsTileSetpng_365
+    21300732: ItemsTileSetpng_366
+    21300734: ItemsTileSetpng_367
+    21300736: ItemsTileSetpng_368
+    21300738: ItemsTileSetpng_369
+    21300740: ItemsTileSetpng_370
+    21300742: ItemsTileSetpng_371
+    21300744: ItemsTileSetpng_372
+    21300746: ItemsTileSetpng_373
+    21300748: ItemsTileSetpng_374
+    21300750: ItemsTileSetpng_375
+    21300752: ItemsTileSetpng_376
+    21300754: ItemsTileSetpng_377
+    21300756: ItemsTileSetpng_378
+    21300758: ItemsTileSetpng_379
+    21300760: ItemsTileSetpng_380
+    21300762: ItemsTileSetpng_381
+    21300764: ItemsTileSetpng_382
+    21300766: ItemsTileSetpng_383
+    21300768: ItemsTileSetpng_384
+    21300770: ItemsTileSetpng_385
+    21300772: ItemsTileSetpng_386
+    21300774: ItemsTileSetpng_387
+    21300776: ItemsTileSetpng_388
+    21300778: ItemsTileSetpng_389
+    21300780: ItemsTileSetpng_390
+    21300782: ItemsTileSetpng_391
+    21300784: ItemsTileSetpng_392
+    21300786: ItemsTileSetpng_393
+    21300788: ItemsTileSetpng_394
+    21300790: ItemsTileSetpng_395
+    21300792: ItemsTileSetpng_396
+    21300794: ItemsTileSetpng_397
+    21300796: ItemsTileSetpng_398
+    21300798: ItemsTileSetpng_399
+    21300800: ItemsTileSetpng_400
+    21300802: ItemsTileSetpng_401
+    21300804: ItemsTileSetpng_402
+    21300806: ItemsTileSetpng_403
+    21300808: ItemsTileSetpng_404
+    21300810: ItemsTileSetpng_405
+    21300812: ItemsTileSetpng_406
+    21300814: ItemsTileSetpng_407
+    21300816: ItemsTileSetpng_408
+    21300818: ItemsTileSetpng_409
+    21300820: ItemsTileSetpng_410
+    21300822: ItemsTileSetpng_411
+    21300824: ItemsTileSetpng_412
+    21300826: ItemsTileSetpng_413
+    21300828: ItemsTileSetpng_414
+    21300830: ItemsTileSetpng_415
+    21300832: ItemsTileSetpng_416
+    21300834: ItemsTileSetpng_417
+    21300836: ItemsTileSetpng_418
+    21300838: ItemsTileSetpng_419
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ItemsTileSetpng_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_6
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_7
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_8
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_10
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_11
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_12
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_13
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 986
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_15
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_16
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_17
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_18
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_19
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_20
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_21
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_22
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_23
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_24
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_25
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_26
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_27
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 952
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_29
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_30
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_31
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_32
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_33
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_34
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_35
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_36
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_37
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_38
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_39
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_40
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_41
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 918
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_43
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_44
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_45
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_46
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_47
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_48
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_49
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_50
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_51
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_52
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_53
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_54
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_55
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 884
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_57
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_58
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_59
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_60
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_61
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_62
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_63
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_64
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_65
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_66
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_67
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_68
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_69
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 850
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_71
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_72
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_73
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_74
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_75
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_76
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_77
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_78
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_79
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_80
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_81
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_82
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_83
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 816
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_85
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_86
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_87
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_88
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_89
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_90
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_91
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_92
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_93
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_94
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_95
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_96
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_97
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 782
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_99
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_100
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_101
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_102
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_103
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_104
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_105
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_106
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_107
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_108
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_109
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_110
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_111
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 748
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_113
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_114
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_115
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_116
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_117
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_118
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_119
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_120
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_121
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_122
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_123
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_124
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_125
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 714
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_127
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_128
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_129
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_130
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_131
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_132
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_133
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_134
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_135
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_136
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_137
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_138
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_139
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 680
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_141
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_142
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_143
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_144
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_145
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_146
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_147
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_148
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_149
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_150
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_151
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_152
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_153
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 646
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_155
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_156
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_157
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_158
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_159
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_160
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_161
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_162
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_163
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_164
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_165
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_166
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_167
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 612
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_169
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_170
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_171
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_172
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_173
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_174
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_175
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_176
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_177
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_178
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_179
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_180
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_181
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 578
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_182
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_183
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_184
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_185
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_186
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_187
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_188
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_189
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_190
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_191
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_192
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_193
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_194
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_195
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 544
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_196
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_197
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_198
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_199
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_200
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_201
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_202
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_203
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_204
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_205
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_206
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_207
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_208
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_209
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 510
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_210
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_211
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_212
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_213
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_214
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_215
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_216
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_217
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_218
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_219
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_220
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_221
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_222
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_223
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 476
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_224
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_225
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_226
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_227
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_228
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_229
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_230
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_231
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_232
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_233
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_234
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_235
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_236
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_237
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 442
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_238
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_239
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_240
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_241
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_242
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_243
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_244
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_245
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_246
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_247
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_248
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_249
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_250
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_251
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 408
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_252
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_253
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_254
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_255
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_256
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_257
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_258
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_259
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_260
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_261
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_262
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_263
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_264
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_265
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 374
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_266
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_267
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_268
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_269
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_270
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_271
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_272
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_273
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_274
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_275
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_276
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_277
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_278
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_279
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 340
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_280
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_281
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_282
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_283
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_284
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_285
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_286
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_287
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_288
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_289
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_290
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_291
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_292
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_293
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 306
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_294
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_295
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_296
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_297
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_298
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_299
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_300
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_301
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_302
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_303
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_304
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_305
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_306
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_307
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 272
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_308
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_309
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_310
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_311
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_312
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_313
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_314
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_315
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_316
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_317
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_318
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_319
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_320
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_321
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 238
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_322
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_323
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_324
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_325
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_326
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_327
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_328
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_329
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_330
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_331
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_332
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_333
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_334
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_335
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 204
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_336
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_337
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_338
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_339
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_340
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_341
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_342
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_343
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_344
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_345
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_346
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_347
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_348
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_349
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 170
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_350
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_351
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_352
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_353
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_354
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_355
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_356
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_357
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_358
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_359
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_360
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_361
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_362
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_363
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 136
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_364
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_365
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_366
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_367
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_368
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_369
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_370
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_371
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_372
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_373
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_374
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_375
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_376
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_377
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 102
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_378
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_379
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_380
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_381
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_382
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_383
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_384
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_385
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_386
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_387
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_388
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_389
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_390
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_391
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_392
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_393
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_394
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_395
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_396
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_397
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_398
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_399
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_400
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_401
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_402
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_403
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_404
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_405
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_406
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_407
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_408
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_409
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_410
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_411
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_412
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_413
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_414
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_415
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_416
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_417
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_418
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ItemsTileSetpng_419
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 0
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

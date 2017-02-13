@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 using System.Linq;
-using UnityEngine.Events;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -23,10 +21,6 @@ public class LevelGenerator : MonoBehaviour
     private Vector3 PlayerPosition;
     private Vector3 ExitPosition;
     private Vector3 minimapCameraPosition;
-
-
-    public RawImage Minimap;
-    public RectTransform LayoutMinimap;
 
     public GameObject WallParent;
     public GameObject TileParent;
@@ -49,8 +43,6 @@ public class LevelGenerator : MonoBehaviour
     public static LevelGenerator instance;
     public int CurrentSeed;
 
-    public List<Transform> transy = new List<Transform>();
-
     void Awake()
     {
         CreatedTiles = new List<Vector3>();
@@ -68,7 +60,7 @@ public class LevelGenerator : MonoBehaviour
         GenerateLevel();
         GettingBorders();
         GenerateStartPositions();
-        GenerateItems();
+        GeneratePotions();
         GenerateEnemies();
         SettingCameraPosition();
         // Destroy(gameObject);
@@ -158,9 +150,9 @@ public class LevelGenerator : MonoBehaviour
         }
 
         maxWallsX = (maxX - minX) + Settings.ExtraWallX;
-         Debug.Log("Szerokosc " + maxWallsX);
+        //Debug.Log("Szerokosc " + maxWallsX);
         maxWallsY = (maxY - minY) + Settings.ExtraWallY;
-        Debug.Log("Dlugosc " + maxWallsY);
+        //Debug.Log("Dlugosc " + maxWallsY);
 
     }
 
@@ -188,7 +180,6 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-
     void GenerateSeed()
     {
         CurrentSeed = Settings.Seed == 0 ? Random.Range(Int32.MinValue, Int32.MaxValue) : Settings.Seed;
@@ -202,8 +193,6 @@ public class LevelGenerator : MonoBehaviour
 
     } */
 
-
-    
     void GenerateStartPositions()
     {
         if (Borders[0].y > Borders[1].y)
@@ -228,16 +217,14 @@ public class LevelGenerator : MonoBehaviour
     /// <summary>
     /// Generates random items
     /// </summary>
-    void GenerateItems()
+    void GeneratePotions()
     {
-        for (int i = 0; i < Settings.NumberOfItems; i++)
+        for (int i = 0; i < Settings.NumberOfPotions; i++)
         {
-            var p = FindObjectOfType<Player>();
-            var x = Instantiate(Settings.Items[Random.Range(0, Settings.Items.Length)], CreatedTiles[Random.Range(0, CreatedTiles.Count)],
+            var x = Instantiate(Settings.Potions[Random.Range(0, Settings.Potions.Length)], CreatedTiles[Random.Range(0, CreatedTiles.Count)],
                 Quaternion.identity) as GameObject;
 
             x.transform.SetParent(ItemParent.transform);
-            p.Items.Add(x);
         }
     }
 
