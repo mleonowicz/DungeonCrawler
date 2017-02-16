@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Assertions;
 using Random = UnityEngine.Random;
 
 public abstract class EnemyBrain : ScriptableObject
@@ -14,7 +15,7 @@ public abstract class EnemyBrain : ScriptableObject
 
     protected bool CanMove(Vector3 currentPosition, Vector3 myVector)
     {
-        if (Physics2D.OverlapPoint(currentPosition + myVector + Vector3.one * 0.5f, layerMask))
+        if (Physics2D.OverlapPoint(currentPosition + myVector , layerMask))
         {
             // Debug.Log("Cant'Move");    
             
@@ -77,11 +78,12 @@ public abstract class EnemyBrain : ScriptableObject
 
     public void CheckGround(Transform thinkerTransform)
     {
-        Collider2D hit = Physics2D.OverlapPoint(thinkerTransform.position + Vector3.one * 0.5f, layerMaskGround);
+        Collider2D hit = Physics2D.OverlapPoint(thinkerTransform.position, layerMaskGround);
         
         //Debug.Log(hit.name + " "+hit.gameObject.GetComponent<SpriteRenderer>().enabled);
+        //Debug.Log(thinkerTransform);
+        thinkerTransform.GetComponent<SpriteRenderer>().enabled = hit.gameObject.GetComponent<SpriteRenderer>().enabled; // dlaczego nie działasz ;_;
 
-        thinkerTransform.GetComponent<SpriteRenderer>().enabled = hit.gameObject.GetComponent<SpriteRenderer>().enabled;
     }
 
 }

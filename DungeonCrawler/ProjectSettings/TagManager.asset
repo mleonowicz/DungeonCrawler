@@ -10,6 +10,7 @@ TagManager:
   - Floor
   - Wall
   - Item Database
+  - Item
   layers:
   - Default
   - TransparentFX

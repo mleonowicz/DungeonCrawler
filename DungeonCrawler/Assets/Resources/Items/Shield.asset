@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Shield
   m_EditorClassIdentifier: 
   Name: Shield
-  ItemDesc: Created for tough guys
+  ItemDesc: Adds 15 armor
   ItemIcon: {fileID: 21300336, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
-  AttackItem: 0
-  MyItemType: 0
+  ItemPower: 15
+  MyItemType: 2

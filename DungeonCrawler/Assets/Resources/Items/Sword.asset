@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   Name: Sword
-  ItemDesc: Slice your enemies
+  ItemDesc: Adds 20 DMG
   ItemIcon: {fileID: 21300144, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
-  AttackItem: 5
+  ItemPower: 20
   MyItemType: 0

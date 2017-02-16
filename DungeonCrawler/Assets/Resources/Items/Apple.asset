@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: 
   Name: Apple
-  ItemDesc: Eat me
+  ItemDesc: Heals for 100HP
   ItemIcon: {fileID: 21300006, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
-  AttackItem: 0
+  ItemPower: 100
   MyItemType: 1

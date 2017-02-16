@@ -11,18 +11,14 @@ public class InventoryUI : MonoBehaviour
 {
 
     public GameObject Prefab;
-
     public List<Transform> Slots;
-
     public GridLayoutGroup LayoutGroup;
-
     public Vector2 Size;
-
     public void Start()
     {
         LayoutGroup = GetComponent<GridLayoutGroup>();
 
-        SetSize();
+        //SetSize();
     }
     public void GenerateSlots()
     {
@@ -59,5 +55,4 @@ public class InventoryUI : MonoBehaviour
         LayoutGroup.constraintCount = Mathf.RoundToInt(Size.x>Size.y?Size.x:Size.y);
         GenerateSlots();
     }
-
 }

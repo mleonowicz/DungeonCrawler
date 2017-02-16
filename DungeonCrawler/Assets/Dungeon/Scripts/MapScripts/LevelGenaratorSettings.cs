@@ -5,7 +5,7 @@ public class LevelGenaratorSettings : ScriptableObject
 {
     public int Seed;
 
-    [Header("Prefabs")]
+    [Header("Prefabs")] 
     public GameObject[] FloorTiles;
     public GameObject[] WallTiles;
     public GameObject[] Potions;
@@ -19,6 +19,7 @@ public class LevelGenaratorSettings : ScriptableObject
     public int TileSize;
     public int NumberOfPotions;
     public int NumberOfEnemies;
+    public int NumberOfItems;
 
     [Header("Move Chance")]
 
@@ -36,5 +37,4 @@ public class LevelGenaratorSettings : ScriptableObject
     {
         Seed = Random.Range(0, int.MaxValue);
     }
-
 }

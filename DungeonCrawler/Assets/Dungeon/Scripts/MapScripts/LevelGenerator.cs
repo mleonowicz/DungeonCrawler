@@ -26,6 +26,8 @@ public class LevelGenerator : MonoBehaviour
     public GameObject TileParent;
     public GameObject ItemParent;
     public GameObject EnemyParent;
+    public GameObject Item;
+    private ItemDatabase itemDatabase;
 
     public GameObject Player;
 
@@ -45,6 +47,8 @@ public class LevelGenerator : MonoBehaviour
 
     void Awake()
     {
+        itemDatabase = GameObject.FindGameObjectWithTag("Item Database").GetComponent<ItemDatabase>();
+
         CreatedTiles = new List<Vector3>();
         Borders = new List<Vector3>();
 
@@ -63,6 +67,8 @@ public class LevelGenerator : MonoBehaviour
         GeneratePotions();
         GenerateEnemies();
         SettingCameraPosition();
+        GenerateItems();
+        
         // Destroy(gameObject);
     }
 
@@ -168,7 +174,7 @@ public class LevelGenerator : MonoBehaviour
                 {
                     GameObject g;
                                 
-                    if (Physics2D.OverlapPoint(pos + Vector3.down + Vector3.one * 0.5f, myLayer))                     
+                    if (Physics2D.OverlapPoint(pos + Vector3.down  , myLayer))                     
                         g = Instantiate(Settings.WallTiles[Random.Range(0, Settings.WallTiles.Length)],
                         pos, Quaternion.identity) as GameObject;
                     else
@@ -224,6 +230,19 @@ public class LevelGenerator : MonoBehaviour
             var x = Instantiate(Settings.Potions[Random.Range(0, Settings.Potions.Length)], CreatedTiles[Random.Range(0, CreatedTiles.Count)],
                 Quaternion.identity) as GameObject;
 
+            x.transform.SetParent(ItemParent.transform);
+        }
+    }
+
+    void GenerateItems()
+    {
+        for (int i = 0; i < Settings.NumberOfItems; i++)
+        {
+            var it = Item;
+            var x = Instantiate(it, CreatedTiles[Random.Range(0, CreatedTiles.Count)],
+                Quaternion.identity) as GameObject;
+
+            x.GetComponent<ItemHolder>().SetProperties(itemDatabase.Items.ElementAt(Random.Range(0, itemDatabase.Items.Count)).Value);
             x.transform.SetParent(ItemParent.transform);
         }
     }

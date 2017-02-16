@@ -40,7 +40,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-
         if (IsOnExit && Input.GetKeyDown(KeyCode.H))
         {
             Debug.Log("You Win");
@@ -54,8 +53,6 @@ public class Player : MonoBehaviour
             Inventory.SetActive(!Inventory.activeSelf);
         }
     }
-
-
 
     //    private void CameraToMinimap()
     //    {
@@ -122,7 +119,7 @@ public class Player : MonoBehaviour
 
     private bool CanMove(Vector3 myVector)
     {
-        if (Physics2D.OverlapPoint(transform.localPosition + (myVector * 0.5f) + Vector3.one * 0.5f, layerMask))
+        if (Physics2D.OverlapPoint(transform.localPosition + (myVector)  , layerMask))
         // if (Physics2D.Raycast(transform.localPosition + Vector3.up * 0.5f, myVector, 0.5f))
         {
             // Debug.Log("Nie moszna");
@@ -148,9 +145,7 @@ public class Player : MonoBehaviour
             if (CurrentHP < 0)
             {
                 // Debug.Log("- 30");
-            }
-
-            
+            }     
         }
         if (other.tag == "Exit")
         {
@@ -174,8 +169,8 @@ public class Player : MonoBehaviour
             for (int y = -2; y <= 2; y++)
             {
                 Collider2D[] hitColliders =
-                   Physics2D.OverlapPointAll(new Vector3(transform.position.x - x + 0.5f,
-                       transform.position.y - y + 0.5f,
+                   Physics2D.OverlapPointAll(new Vector3(transform.position.x - x ,
+                       transform.position.y - y,
                        0));
                 
                 //Debug.DrawLine(pos,pos+Vector3.forward,Color.blue,2f);

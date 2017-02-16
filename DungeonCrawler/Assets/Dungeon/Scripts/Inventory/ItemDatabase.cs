@@ -6,7 +6,9 @@ using UnityEngine;
 //[CreateAssetMenu]
 public class ItemDatabase : MonoBehaviour
 {
-    public void Start()
+    public bool IsLoaded = false;
+
+    public void Awake()
     {
         Initialize();
     }
@@ -23,6 +25,7 @@ public class ItemDatabase : MonoBehaviour
         {
             Items.Add(entity.name, entity);
         }
+        IsLoaded = true;
     }
 
     public Item GetItem(string name)

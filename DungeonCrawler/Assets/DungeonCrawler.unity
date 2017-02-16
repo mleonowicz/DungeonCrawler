@@ -121,10 +121,10 @@ RectTransform:
   - {fileID: 677292956}
   m_Father: {fileID: 2013057101}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: -125}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117726722
 MonoBehaviour:
@@ -250,9 +250,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.5, y: 0.5}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.8}
+  m_Size: {x: 1, y: 1}
 --- !u!114 &294018967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,7 +689,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -15}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 113}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &761100389
 MonoBehaviour:
@@ -800,6 +800,7 @@ MonoBehaviour:
   TileParent: {fileID: 2138756560}
   ItemParent: {fileID: 1654902381}
   EnemyParent: {fileID: 1699368699}
+  Item: {fileID: 1000011473175988, guid: 64b989d74ceef4640b355cdd93f36a10, type: 2}
   Player: {fileID: 294018964}
   MinimapCameraOrthographicSize: 0
   MinimapCameraPosition: {x: 0, y: 0, z: 0}
@@ -1122,6 +1123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f967977685c6774599f589b99b865f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsLoaded: 0
   SubFolder: Items
 --- !u!1 &1699368699
 GameObject:
@@ -1170,7 +1172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2013057101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1189,7 +1191,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 150, y: -150}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 150, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2013057102
 MonoBehaviour:
@@ -1238,7 +1240,7 @@ MonoBehaviour:
   Prefab: {fileID: 117726720}
   Slots: []
   LayoutGroup: {fileID: 2013057105}
-  Size: {x: 6, y: 6}
+  Size: {x: 2, y: 5}
 --- !u!114 &2013057105
 MonoBehaviour:
   m_ObjectHideFlags: 0
