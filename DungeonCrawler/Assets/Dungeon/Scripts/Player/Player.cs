@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 [Serializable]
@@ -15,14 +16,17 @@ public struct LikeControlScheme
 
 public class Player : MonoBehaviour
 {
-    public GameObject Inventory;
+    public UnityAction PickUpItem;
+
+    public GameObject InventoryUI;
     private bool isMoving = false;
     int layerMask = 1 << 8;
     public LikeControlScheme[] ControlSchemes;
     public PlayerData PlayerData;
 
-    //  private Vector3 miniCameraPos;
 
+    //  private Vector3 miniCameraPos;
+    private bool IsOnItem;
     private bool IsOnExit;
     public int CurrentHP;
     public int CurrentMP;
@@ -50,7 +54,12 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            Inventory.SetActive(!Inventory.activeSelf);
+            InventoryUI.SetActive(!InventoryUI.activeSelf);
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (PickUpItem != null) 
+                PickUpItem.Invoke();
         }
     }
 
@@ -119,7 +128,7 @@ public class Player : MonoBehaviour
 
     private bool CanMove(Vector3 myVector)
     {
-        if (Physics2D.OverlapPoint(transform.localPosition + (myVector)  , layerMask))
+        if (Physics2D.OverlapPoint(transform.localPosition + (myVector), layerMask))
         // if (Physics2D.Raycast(transform.localPosition + Vector3.up * 0.5f, myVector, 0.5f))
         {
             // Debug.Log("Nie moszna");
@@ -127,6 +136,8 @@ public class Player : MonoBehaviour
         }
         return true;
     }
+
+    public UnityEvent OnEnemyKilled; // Do dźwięków :) i do różnych innych rzeczy które chcę wywołać w prosty sposób
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -138,18 +149,29 @@ public class Player : MonoBehaviour
             other.gameObject.SetActive(false);
         }
 
-        if (other.tag == "Enemy")
+        else if (other.tag == "Enemy")
         {
             other.gameObject.SetActive(false);
+            OnEnemyKilled.Invoke();
             CurrentHP -= 30;
             if (CurrentHP < 0)
             {
                 // Debug.Log("- 30");
-            }     
+            }
         }
-        if (other.tag == "Exit")
+        else if (other.tag == "Exit")
         {
             IsOnExit = true;
+        }
+        else if (other.tag == "Item")
+        {
+            var x = other.GetComponent<ItemHolder>().ItemProperties;
+            PickUpItem = () =>
+            {
+                GetComponent<Inventory>().AddItem(x);
+                other.gameObject.SetActive(false);
+                PickUpItem = null;
+            };
         }
     }
 
@@ -158,6 +180,11 @@ public class Player : MonoBehaviour
         if (other.tag == "Exit")
         {
             IsOnExit = false;
+        }
+
+        else if (other.tag == "Item")
+        {
+            PickUpItem = null;
         }
     }
 
@@ -169,10 +196,10 @@ public class Player : MonoBehaviour
             for (int y = -2; y <= 2; y++)
             {
                 Collider2D[] hitColliders =
-                   Physics2D.OverlapPointAll(new Vector3(transform.position.x - x ,
+                   Physics2D.OverlapPointAll(new Vector3(transform.position.x - x,
                        transform.position.y - y,
                        0));
-                
+
                 //Debug.DrawLine(pos,pos+Vector3.forward,Color.blue,2f);
                 if (hitColliders != null)
                 {

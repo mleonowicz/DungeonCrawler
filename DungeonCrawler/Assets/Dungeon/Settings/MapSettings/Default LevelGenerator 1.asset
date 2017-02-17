@@ -29,7 +29,7 @@ MonoBehaviour:
   TileSize: 1
   NumberOfPotions: 0
   NumberOfEnemies: 10
-  NumberOfItems: 10
+  NumberOfItems: 3
   ChanceUp: 0.25
   ChanceRight: 0.5
   ChanceDown: 0.75

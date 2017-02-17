@@ -252,7 +252,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 0.5}
 --- !u!114 &294018967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4e29f7526eb7748b49e5688faf2cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Inventory: {fileID: 2013057100}
+  InventoryUI: {fileID: 2013057100}
   ControlSchemes:
   - Left: 97
     Right: 100
@@ -277,6 +277,11 @@ MonoBehaviour:
   PlayerData: {fileID: 11400000, guid: ee28956dee44d714aa19d26d33ab5350, type: 2}
   CurrentHP: 0
   CurrentMP: 0
+  OnEnemyKilled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!50 &294018968
 Rigidbody2D:
   serializedVersion: 2
@@ -319,6 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd449150f47d1644a5a1755ca4bcaf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerInventory: []
   UIInventory: {fileID: 2013057104}
 --- !u!1 &495424315
 GameObject:

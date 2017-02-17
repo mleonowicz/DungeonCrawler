@@ -9,7 +9,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(GridLayoutGroup))]
 public class InventoryUI : MonoBehaviour
 {
-
     public GameObject Prefab;
     public List<Transform> Slots;
     public GridLayoutGroup LayoutGroup;

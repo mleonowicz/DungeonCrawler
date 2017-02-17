@@ -188,7 +188,7 @@ public class LevelGenerator : MonoBehaviour
 
     void GenerateSeed()
     {
-        CurrentSeed = Settings.Seed == 0 ? Random.Range(Int32.MinValue, Int32.MaxValue) : Settings.Seed;
+        CurrentSeed = Settings.Seed == 0 ? Random.Range(int.MinValue, int.MaxValue) : Settings.Seed;
         Random.InitState(CurrentSeed);
 
     }
@@ -255,7 +255,14 @@ public class LevelGenerator : MonoBehaviour
         var gm = FindObjectOfType<GameManager>();
         for (int i = 0; i < Settings.NumberOfEnemies; i++)
         {
-            var x = Instantiate(Settings.Enemies[Random.Range(0, Settings.Enemies.Length)], CreatedTiles[Random.Range(0, CreatedTiles.Count)],
+            Vector3 pos;
+
+            do
+            {
+                pos = CreatedTiles[Random.Range(0, CreatedTiles.Count)];
+            } while (Vector3.Distance(pos, PlayerPosition) < 10);
+
+            var x = Instantiate(Settings.Enemies[Random.Range(0, Settings.Enemies.Length)], pos,
                 Quaternion.identity) as GameObject;
 
             // x.name = i + "Hearth";
