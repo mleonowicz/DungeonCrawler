@@ -2,56 +2,61 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Assertions;
+using UnityEngine.Networking;
 using Random = UnityEngine.Random;
 
 public abstract class EnemyBrain : ScriptableObject
 {
     public float PlayerDetectionRange;
 
+    public Vector3[] Directions = { Vector3.right, Vector3.down, Vector3.left, Vector3.up }; // List for chosing directions for enemies
     public abstract void Think(Enemy enemy, Player myPlayer);
 
-    public LayerMask layerMask = 1 << 8;
+    public LayerMask layerMask;
     public LayerMask layerMaskGround = 1 << 11;
 
     protected bool CanMove(Vector3 currentPosition, Vector3 myVector)
     {
-        if (Physics2D.OverlapPoint(currentPosition + myVector , layerMask))
+        if (Physics2D.OverlapPoint(currentPosition + myVector, layerMask))
         {
             // Debug.Log("Cant'Move");    
-            
-            return false; 
+            GameManager.instance.EnemiesMovement.Add(currentPosition);
+            return false;
         }
+
+        //Debug.Log("Moves: "+GameManager.instance.EnemiesMovement.Count);
+
+        foreach (var vector3 in GameManager.instance.EnemiesMovement)
+        {
+            //Debug.Log(vector3);
+            if (vector3 == (currentPosition + myVector))
+            {
+                Debug.Log("Nie moge");
+
+                return false;
+            }
+        }
+
+        GameManager.instance.EnemiesMovement.Add(currentPosition + myVector);
+
+
+        //Debug.Log(currentPosition + myVector);
         return true;
     }
 
     protected void Movement(Transform thinkerTransform)
     {
-        int d = Random.Range(1, 5);
+        int RandomDir = Random.Range(0, 4);
+
         // Debug.Log(d); // TODO naprawić dać courutiny
-		
-		// EASTEREGG JAK SIĘ WPISZE FINSKI SNIPER TO WYSKAKUJE MASTERMIND
-        switch (d)
+
+        var x = Directions[RandomDir];
+
+        if (CanMove(thinkerTransform.position, x))
         {
-            case 1:
-                if (CanMove(thinkerTransform.position, Vector3.left))
-                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.left, thinkerTransform));
 
-                break;
-
-            case 2:
-                if (CanMove(thinkerTransform.position, Vector3.right))
-                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.right, thinkerTransform));
-                break;
-
-            case 3:
-                if (CanMove(thinkerTransform.position, Vector3.up))
-                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.up, thinkerTransform));
-                break;
-
-            case 4:
-                if (CanMove(thinkerTransform.position, Vector3.down))
-                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.down, thinkerTransform));
-                break;
+            // GameManager.instance.EnemiesMovement.Add(thinkerTransform.position + Vector3.left);
+            LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(x, thinkerTransform));
         }
     }
 
@@ -68,22 +73,21 @@ public abstract class EnemyBrain : ScriptableObject
             thinkerTransform.position = Vector3.Lerp(startPos, endPos, time);
 
             yield return new WaitForEndOfFrame();
+
         }
+        CheckGround(thinkerTransform);
 
         // if(callback!=null)callback.Invoke();
         //transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
-
-        CheckGround(thinkerTransform);
     }
 
     public void CheckGround(Transform thinkerTransform)
     {
         Collider2D hit = Physics2D.OverlapPoint(thinkerTransform.position, layerMaskGround);
-        
+
         //Debug.Log(hit.name + " "+hit.gameObject.GetComponent<SpriteRenderer>().enabled);
         //Debug.Log(thinkerTransform);
-        thinkerTransform.GetComponent<SpriteRenderer>().enabled = hit.gameObject.GetComponent<SpriteRenderer>().enabled; // dlaczego nie działasz ;_;
-
+        thinkerTransform.GetComponent<SpriteRenderer>().enabled = hit.gameObject.GetComponent<SpriteRenderer>().enabled;
+        // dlaczego nie działasz ;_;
     }
-
 }

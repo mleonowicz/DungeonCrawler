@@ -15,7 +15,7 @@ public class FleeingBrain : EnemyBrain
 
         if (!(Vector3.Distance(myPlayer.transform.position, enemy.transform.position) < PlayerDetectionRange))
         {
-            Movement(enemy.transform);
+            Movement(enemy.transform);          
         }
         else
         {

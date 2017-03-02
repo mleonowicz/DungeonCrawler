@@ -15,9 +15,18 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Text MP;
 
+    public static GameManager instance;
+
+    public List<Vector3> EnemiesMovement;
     public List<GameObject> Enemies;
 
     private int TurnCount = 1;
+
+    void Awake()
+    {
+        instance = this;
+        EnemiesMovement = new List<Vector3>();
+    }
 
     void Start()
     {
@@ -30,14 +39,15 @@ public class GameManager : MonoBehaviour
         if (myPlayer.Movement())
         {
             TurnCount++;
-            
+            EnemiesMovement = new List<Vector3>();
+
             foreach (var enemy in Enemies)
             {
                 enemy.GetComponent<Enemy>().MakeTurn(myPlayer);
             }
-
         }
         UpdateUI();
+        
     }
     void UpdateUI()
     {

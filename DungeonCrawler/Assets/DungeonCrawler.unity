@@ -90,6 +90,34 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &95646400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 95646401}
+  m_Layer: 0
+  m_Name: Potions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &95646401
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 95646400}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &117726720
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,10 +149,10 @@ RectTransform:
   - {fileID: 677292956}
   m_Father: {fileID: 2013057101}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 75, y: -125}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117726722
 MonoBehaviour:
@@ -201,7 +229,7 @@ Prefab:
     - target: {fileID: 212000013597204010, guid: d4efbe9956dfca340a440f2859a1e39b,
         type: 2}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 50000012628327640, guid: d4efbe9956dfca340a440f2859a1e39b,
         type: 2}
@@ -387,7 +415,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &559205919
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +682,7 @@ RectTransform:
   - {fileID: 2013057101}
   - {fileID: 627954077}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -695,7 +723,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -15}
-  m_SizeDelta: {x: 0, y: 113}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &761100389
 MonoBehaviour:
@@ -797,11 +825,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Settings: {fileID: 11400000, guid: c5fd48ca6ad15d84897f0543c8525904, type: 2}
+  LayerForItems:
+    serializedVersion: 2
+    m_Bits: 13824
+  LayerForEnemies:
+    serializedVersion: 2
+    m_Bits: 512
   CreatedTiles: []
   Borders: []
   myLayer:
     serializedVersion: 2
     m_Bits: 2048
+  PotionParent: {fileID: 95646400}
   WallParent: {fileID: 1121843171}
   TileParent: {fileID: 2138756560}
   ItemParent: {fileID: 1654902381}
@@ -958,6 +993,7 @@ MonoBehaviour:
   Turn: {fileID: 559205921}
   HP: {fileID: 2094422257}
   MP: {fileID: 1375396896}
+  EnemiesMovement: []
   Enemies: []
 --- !u!4 &1512848022
 Transform:
@@ -973,7 +1009,7 @@ Transform:
   - {fileID: 795265873}
   - {fileID: 1690288834}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1520721956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,7 +1214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2013057101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1197,7 +1233,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 150, y: -150}
-  m_SizeDelta: {x: 150, y: 200}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2013057102
 MonoBehaviour:
@@ -1205,7 +1241,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2013057100}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -1246,7 +1282,7 @@ MonoBehaviour:
   Prefab: {fileID: 117726720}
   Slots: []
   LayoutGroup: {fileID: 2013057105}
-  Size: {x: 2, y: 5}
+  Size: {x: 5, y: 5}
 --- !u!114 &2013057105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,4 +1420,4 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5

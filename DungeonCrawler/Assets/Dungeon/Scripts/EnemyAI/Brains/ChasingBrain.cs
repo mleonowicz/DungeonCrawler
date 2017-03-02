@@ -6,6 +6,8 @@ public class ChasingBrain : EnemyBrain
 {
     public override void Think(Enemy enemy, Player myPlayer)
     {
+        Vector3 dir = Vector3.up;
+
         // var disc = Vector3.Distance(myPlayer.transform.position, enemy.transform.position);
     
         if (enemy.transform.position == myPlayer.transform.position)
@@ -20,9 +22,11 @@ public class ChasingBrain : EnemyBrain
         }
         else
         {
-            var dir = myPlayer.transform.position - enemy.transform.position;
+            dir = myPlayer.transform.position - enemy.transform.position;
             dir = dir.normalized;
 
+
+            // TODO 
 
             /* 
             var cpV = new Vector3(Mathf.Abs(v.x), Mathf.Abs(v.y)); // Made using Sinus <3
@@ -40,12 +44,17 @@ public class ChasingBrain : EnemyBrain
                 else if (Vector3.Distance(myPlayer.transform.position, enemy.transform.position + Vector3.up) >=
                     Vector3.Distance(myPlayer.transform.position, enemy.transform.position + Vector3.down))
                 {
-                    dir = Vector3.down;
                     if (CanMove(enemy.transform.position, dir))
+                    {
+                        dir = Vector3.down;
                         LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(dir, enemy.transform));
+                    }
                 }
                 else if (CanMove(enemy.transform.position, Vector3.up))
-                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.up, enemy.transform));
+                {
+                    dir = Vector3.up;
+                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(dir, enemy.transform));
+                }
             }
             else
             {
@@ -60,8 +69,16 @@ public class ChasingBrain : EnemyBrain
                         LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(dir, enemy.transform));
                 }
                 else if (CanMove(enemy.transform.position, Vector3.left))
-                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.left, enemy.transform));            
+                {
+                    dir = Vector3.left;
+                    
+                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(dir, enemy.transform));
+
+                }
             }
         }
+
+        
+//        GameManager.instance.EnemiesMovement.Add(enemy.transform.position + dir);
     }
 }

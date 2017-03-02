@@ -12,6 +12,8 @@ using Random = UnityEngine.Random;
 public class LevelGenerator : MonoBehaviour
 {
     public LevelGenaratorSettings Settings;
+    public LayerMask LayerForItems;
+    public LayerMask LayerForEnemies;
 
     public List<Vector3> CreatedTiles;
     public List<Vector3> Borders;
@@ -22,6 +24,7 @@ public class LevelGenerator : MonoBehaviour
     private Vector3 ExitPosition;
     private Vector3 minimapCameraPosition;
 
+    public GameObject PotionParent;
     public GameObject WallParent;
     public GameObject TileParent;
     public GameObject ItemParent;
@@ -230,7 +233,7 @@ public class LevelGenerator : MonoBehaviour
             var x = Instantiate(Settings.Potions[Random.Range(0, Settings.Potions.Length)], CreatedTiles[Random.Range(0, CreatedTiles.Count)],
                 Quaternion.identity) as GameObject;
 
-            x.transform.SetParent(ItemParent.transform);
+            x.transform.SetParent(PotionParent.transform);
         }
     }
 
@@ -239,11 +242,16 @@ public class LevelGenerator : MonoBehaviour
         for (int i = 0; i < Settings.NumberOfItems; i++)
         {
             var it = Item;
-            var x = Instantiate(it, CreatedTiles[Random.Range(0, CreatedTiles.Count)],
-                Quaternion.identity) as GameObject;
+            var pos = CreatedTiles[Random.Range(0, CreatedTiles.Count)];
 
-            x.GetComponent<ItemHolder>().SetProperties(itemDatabase.Items.ElementAt(Random.Range(0, itemDatabase.Items.Count)).Value);
-            x.transform.SetParent(ItemParent.transform);
+            if (!Physics2D.OverlapPoint(pos, LayerForItems))
+            {
+                var x = Instantiate(it, pos, Quaternion.identity) as GameObject;
+
+                x.GetComponent<ItemHolder>().SetProperties(itemDatabase.Items.ElementAt(Random.Range(0, itemDatabase.Items.Count)).Value);
+                x.transform.SetParent(ItemParent.transform);
+            }
+            else Settings.NumberOfItems++;
         }
     }
 
@@ -251,23 +259,27 @@ public class LevelGenerator : MonoBehaviour
     /// Generates random enemies
     /// </summary>
     void GenerateEnemies()
-    {
-        var gm = FindObjectOfType<GameManager>();
+    {   
         for (int i = 0; i < Settings.NumberOfEnemies; i++)
         {
-            Vector3 pos;
+            Vector3 pos = CreatedTiles[Random.Range(0, CreatedTiles.Count)];
+            GameObject x;  
+            // Zrobić by na podstawie maksymalnej wielkośći sprawdzało dystans miedzy przeciwnikami a graczem
 
-            do
+            //do
+            //{
+            //} while (Vector3.Distance(pos, PlayerPosition) < 10);
+
+            if (!Physics2D.OverlapPoint(pos, LayerForEnemies))
             {
-                pos = CreatedTiles[Random.Range(0, CreatedTiles.Count)];
-            } while (Vector3.Distance(pos, PlayerPosition) < 10);
+                x = Instantiate(Settings.Enemies[Random.Range(0, Settings.Enemies.Length)], pos, Quaternion.identity) as GameObject;
 
-            var x = Instantiate(Settings.Enemies[Random.Range(0, Settings.Enemies.Length)], pos,
-                Quaternion.identity) as GameObject;
-
-            // x.name = i + "Hearth";
-            x.transform.SetParent(EnemyParent.transform);
-            gm.Enemies.Add(x);
+                
+                x.transform.SetParent(EnemyParent.transform);
+                GameManager.instance.Enemies.Add(x);
+            }
+            else Settings.NumberOfEnemies++;
+            
         }
     }
 
