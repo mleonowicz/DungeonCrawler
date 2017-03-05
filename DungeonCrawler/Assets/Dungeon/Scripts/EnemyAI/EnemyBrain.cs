@@ -12,6 +12,7 @@ public abstract class EnemyBrain : ScriptableObject
     public Vector3[] Directions = { Vector3.right, Vector3.down, Vector3.left, Vector3.up }; // List for chosing directions for enemies
     public abstract void Think(Enemy enemy, Player myPlayer);
 
+
     public LayerMask layerMask;
     public LayerMask layerMaskGround = 1 << 11;
 
@@ -19,45 +20,39 @@ public abstract class EnemyBrain : ScriptableObject
     {
         if (Physics2D.OverlapPoint(currentPosition + myVector, layerMask))
         {
-            // Debug.Log("Cant'Move");    
-            GameManager.instance.EnemiesMovement.Add(currentPosition);
             return false;
         }
 
-        //Debug.Log("Moves: "+GameManager.instance.EnemiesMovement.Count);
-
         foreach (var vector3 in GameManager.instance.EnemiesMovement)
         {
-            //Debug.Log(vector3);
             if (vector3 == (currentPosition + myVector))
             {
-                Debug.Log("Nie moge");
-
+                //Debug.Log("Nie moge");
+                
                 return false;
             }
         }
-
-        GameManager.instance.EnemiesMovement.Add(currentPosition + myVector);
-
-
-        //Debug.Log(currentPosition + myVector);
         return true;
     }
 
     protected void Movement(Transform thinkerTransform)
     {
-        int RandomDir = Random.Range(0, 4);
-
-        // Debug.Log(d); // TODO naprawić dać courutiny
-
-        var x = Directions[RandomDir];
-
-        if (CanMove(thinkerTransform.position, x))
+        for (int i = 0; i < 4; i++)
         {
+            int RandomDir = Random.Range(0, 4);
+            var x = Directions[RandomDir];
 
-            // GameManager.instance.EnemiesMovement.Add(thinkerTransform.position + Vector3.left);
-            LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(x, thinkerTransform));
+            if (CanMove(thinkerTransform.position, x))
+            {
+                GameManager.instance.EnemiesMovement.Add(thinkerTransform.position + x);
+                
+                LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(x, thinkerTransform));
+                return;
+            }
         }
+
+        GameManager.instance.EnemiesMovement.Add(thinkerTransform.position);
+
     }
 
     public IEnumerator EnemyMoveAnim(Vector3 dir, Transform thinkerTransform)
@@ -68,7 +63,7 @@ public abstract class EnemyBrain : ScriptableObject
 
         while (time < 1)
         {
-            //Debug.Log(startPos + " " + endPos);
+            
             time += Time.deltaTime * 5;
             thinkerTransform.position = Vector3.Lerp(startPos, endPos, time);
 
@@ -76,17 +71,13 @@ public abstract class EnemyBrain : ScriptableObject
 
         }
         CheckGround(thinkerTransform);
-
-        // if(callback!=null)callback.Invoke();
-        //transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
+    
     }
 
     public void CheckGround(Transform thinkerTransform)
     {
         Collider2D hit = Physics2D.OverlapPoint(thinkerTransform.position, layerMaskGround);
 
-        //Debug.Log(hit.name + " "+hit.gameObject.GetComponent<SpriteRenderer>().enabled);
-        //Debug.Log(thinkerTransform);
         thinkerTransform.GetComponent<SpriteRenderer>().enabled = hit.gameObject.GetComponent<SpriteRenderer>().enabled;
         // dlaczego nie działasz ;_;
     }

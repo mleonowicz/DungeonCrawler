@@ -4,10 +4,10 @@ using System.Collections;
 [CreateAssetMenu]
 public class FleeingBrain : EnemyBrain
 {
-
     public override void Think(Enemy enemy, Player myPlayer)
     {
-        // var disc = Vector3.Distance(myPlayer.transform.position, enemy.transform.position);
+        Vector3 dir = Vector3.zero;
+
         if (enemy.transform.position == myPlayer.transform.position)
         {
             return;
@@ -19,7 +19,7 @@ public class FleeingBrain : EnemyBrain
         }
         else
         {
-            var dir = myPlayer.transform.position - enemy.transform.position;
+            dir = myPlayer.transform.position - enemy.transform.position;
             dir = dir.normalized;
             /* 
             var cpV = new Vector3(Mathf.Abs(v.x), Mathf.Abs(v.y)); // Made using Sinus <3
@@ -35,9 +35,17 @@ public class FleeingBrain : EnemyBrain
                 if (CanMove(enemy.transform.position, dir))
                     LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(dir, enemy.transform));
                 else if (CanMove(enemy.transform.position, Vector3.up))
-                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.up, enemy.transform));
+                {
+                    dir = Vector3.up;
+                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(dir, enemy.transform));
+
+                }
                 else if (CanMove(enemy.transform.position, Vector3.down))
-                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.down, enemy.transform));
+                {
+                    dir = Vector3.down;
+                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(dir, enemy.transform));
+                }
+                else dir = Vector3.zero;
             }
             else
             {
@@ -45,10 +53,20 @@ public class FleeingBrain : EnemyBrain
                 if (CanMove(enemy.transform.position, dir))
                     LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(dir, enemy.transform));
                 else if (CanMove(enemy.transform.position, Vector3.left))
-                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.left, enemy.transform));
+                {
+                    dir = Vector3.left;
+                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(dir, enemy.transform));
+
+                }
                 else if (CanMove(enemy.transform.position, Vector3.right))
-                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(Vector3.right, enemy.transform));
+                {
+                    dir = Vector3.right;
+                    LevelGenerator.instance.StartCoroutine(EnemyMoveAnim(dir, enemy.transform));
+                }
+                else dir = Vector3.zero;
             }
         }
+
+        GameManager.instance.EnemiesMovement.Add(new Vector3(Mathf.Round(enemy.transform.position.x), Mathf.Round(enemy.transform.position.y), 0) + dir);
     }
 }

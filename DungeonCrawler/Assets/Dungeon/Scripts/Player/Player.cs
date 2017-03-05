@@ -108,7 +108,6 @@ public class Player : MonoBehaviour
             if (Move(ControlScheme.Right, Vector3.right)) return true;
             if (Move(ControlScheme.Up, Vector3.up)) return true;
             if (Move(ControlScheme.Down, Vector3.down)) return true;
-            // return false;
         }
         return false;
     }
@@ -129,11 +128,7 @@ public class Player : MonoBehaviour
     private bool CanMove(Vector3 myVector)
     {
         if (Physics2D.OverlapPoint(transform.localPosition + (myVector), layerMask))
-        // if (Physics2D.Raycast(transform.localPosition + Vector3.up * 0.5f, myVector, 0.5f))
-        {
-            // Debug.Log("Nie moszna");
             return false;
-        }
         return true;
     }
 
@@ -200,18 +195,15 @@ public class Player : MonoBehaviour
                        transform.position.y - y,
                        0));
 
-                //Debug.DrawLine(pos,pos+Vector3.forward,Color.blue,2f);
+                
                 if (hitColliders != null)
                 {
-                    // Gizmos.DrawSphere(new Vector3(transform.position.x - x + 0.5f, transform.position.y - y + 0.5f, 0), 0.2f);
+                    
                     foreach (var d in hitColliders)
-                    {
-                        //if (d.GetComponent<Enemy>())
-                        //    d.GetComponent<Enemy>().isVisible = true;
+                    {                       
                         d.gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     }
                 }
-                //Gizmos.DrawSphere(new Vector3(x, y, 0), 0.2f);
             }
         }
     }
@@ -224,12 +216,10 @@ public class Player : MonoBehaviour
 
         while (time < 1)
         {
-            //Debug.Log(startPos + " " + endPos);
             time += Time.deltaTime * 5;
             transform.position = Vector3.Lerp(startPos, endPos, time);
             yield return new WaitForEndOfFrame();
         }
         isMoving = false;
-        //transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), transform.position.z);
     }
 }

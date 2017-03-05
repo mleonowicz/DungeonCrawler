@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
         UpdateUI();
         
     }
+
     void UpdateUI()
     {
         Turn.text = "Turn: " + TurnCount;

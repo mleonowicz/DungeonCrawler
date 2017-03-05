@@ -40,7 +40,6 @@ public class InventoryUI : MonoBehaviour
         //}
 
     }
-    //[ContextMenu("Regenerate")]
 
     public void Generate(Action callback)
     {

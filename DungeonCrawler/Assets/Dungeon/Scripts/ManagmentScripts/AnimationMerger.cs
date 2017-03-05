@@ -47,8 +47,6 @@ public class AnimationMerger : EditorWindow
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
         }
-
     }
-
 }
 #endif

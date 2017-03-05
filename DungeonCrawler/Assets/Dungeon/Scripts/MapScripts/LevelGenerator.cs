@@ -72,7 +72,6 @@ public class LevelGenerator : MonoBehaviour
         SettingCameraPosition();
         GenerateItems();
         
-        // Destroy(gameObject);
     }
 
     void GenerateLevel()
@@ -132,7 +131,6 @@ public class LevelGenerator : MonoBehaviour
                 break;
         }
         lastPosition = rnd;
-        // Debug.Log(rnd);
     }
 
     void WallsGenerator()
@@ -159,9 +157,9 @@ public class LevelGenerator : MonoBehaviour
         }
 
         maxWallsX = (maxX - minX) + Settings.ExtraWallX;
-        //Debug.Log("Szerokosc " + maxWallsX);
+
         maxWallsY = (maxY - minY) + Settings.ExtraWallY;
-        //Debug.Log("Dlugosc " + maxWallsY);
+        
 
     }
 
@@ -213,7 +211,6 @@ public class LevelGenerator : MonoBehaviour
         ExitPosition = sortedList[0];
 
         Player.transform.position = PlayerPosition;
-        //Instantiate(Player, PlayerPosition, Quaternion.identity);
         Instantiate(Settings.Exit, ExitPosition, Quaternion.identity);
     }
 
@@ -296,18 +293,7 @@ public class LevelGenerator : MonoBehaviour
         if (maxWallsY * aspect  > maxWallsX)
             MinimapCameraOrthographicSize = maxWallsY / 2 - 0.5f;
         else MinimapCameraOrthographicSize = maxWallsX / (aspect * 2.0f) - 0.3f;
-
-        //Minimap.texture = GenerateAndSetMinimapTexture(MinimapCamera);
-        //LayoutMinimap.sizeDelta= new Vector2(Minimap.texture.width, Minimap.texture.height);
     }
-
-    //public RenderTexture GenerateAndSetMinimapTexture(Camera c)
-    //{
-    //    RenderTexture MiniMapTexture = new RenderTexture(Screen.width,Screen.height,16);
-    //    c.targetTexture = MiniMapTexture;
-
-    //    return MiniMapTexture;
-    //}
 
 #if UNITY_EDITOR
     [ContextMenu("Save Seed")]
@@ -323,7 +309,6 @@ public class LevelGenerator : MonoBehaviour
         if (Settings.Seed == 0)
         {
             EditorApplication.isPlaying = false;
-            //    EditorApplication.isPlaying = true;
         }
     }
 #endif

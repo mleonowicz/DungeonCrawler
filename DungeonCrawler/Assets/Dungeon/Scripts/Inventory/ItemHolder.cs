@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ItemHolder : MonoBehaviour
 {
-
     // Use this for initialization
     public Item ItemProperties;
     private SpriteRenderer mySpriteRenderer;
@@ -11,7 +10,6 @@ public class ItemHolder : MonoBehaviour
     void Start()
     {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
-        //        SetProperties(ItemProperties);
     }
 
     public void SetProperties(Item i)
@@ -21,6 +19,5 @@ public class ItemHolder : MonoBehaviour
 
         ItemProperties = i;
         mySpriteRenderer.sprite = ItemProperties.ItemIcon;
-
     }
 }
