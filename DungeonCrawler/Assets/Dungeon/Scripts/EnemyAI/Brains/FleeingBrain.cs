@@ -27,7 +27,7 @@ public class FleeingBrain : EnemyBrain
             var sin1 = Vector3.Angle(new Vector3(0, 1), cpV);
             var sin2 = Vector3.Angle(new Vector3(1, 0), cpV); */
 
-            // Using LevelGenerator Instanse because this class inheritates from ScriptableObject and it doenst have "Start Courutine" Function
+            // Using LevelGenerator Instance because this class inheritates from ScriptableObject and it doesnt have "Start Courutine" Function
 
             if (Mathf.Abs(dir.x) >= Mathf.Abs(dir.y))
             {

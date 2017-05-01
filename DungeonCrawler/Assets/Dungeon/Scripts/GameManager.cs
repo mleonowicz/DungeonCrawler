@@ -1,11 +1,22 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using UnityEngine.UI;
 
+[Serializable]
+public struct LikeControlScheme
+{
+    public KeyCode Left;
+    public KeyCode Right;
+    public KeyCode Up;
+    public KeyCode Down;
+}
+
 public class GameManager : MonoBehaviour
 {
+    public LikeControlScheme[] ControlSchemes;
     [SerializeField]
     private Player myPlayer;
     [SerializeField]

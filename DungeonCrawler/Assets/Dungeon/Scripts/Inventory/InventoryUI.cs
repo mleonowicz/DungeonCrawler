@@ -13,12 +13,15 @@ public class InventoryUI : MonoBehaviour
     public List<Transform> Slots;
     public GridLayoutGroup LayoutGroup;
     public Vector2 Size;
+    public Image SelectedItem;
+
     public void Start()
     {
         LayoutGroup = GetComponent<GridLayoutGroup>();
 
         //SetSize();
     }
+
     public void GenerateSlots()
     {
         Slots.Add(Prefab.transform);
@@ -49,8 +52,8 @@ public class InventoryUI : MonoBehaviour
 
     public void SetSize()
     {
-        LayoutGroup.constraint = Size.x<Size.y?GridLayoutGroup.Constraint.FixedRowCount : GridLayoutGroup.Constraint.FixedColumnCount;
-        LayoutGroup.constraintCount = Mathf.RoundToInt(Size.x>Size.y?Size.x:Size.y);
+        LayoutGroup.constraint = Size.x  < Size.y ? GridLayoutGroup.Constraint.FixedRowCount : GridLayoutGroup.Constraint.FixedColumnCount;
+        LayoutGroup.constraintCount = Mathf.RoundToInt(Size.x > Size.y ? Size.x : Size.y);
         GenerateSlots();
     }
 }

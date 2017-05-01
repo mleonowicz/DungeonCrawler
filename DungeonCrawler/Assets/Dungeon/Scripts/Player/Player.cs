@@ -5,15 +5,6 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-[Serializable]
-public struct LikeControlScheme
-{
-    public KeyCode Left;
-    public KeyCode Right;
-    public KeyCode Up;
-    public KeyCode Down;
-}
-
 public class Player : MonoBehaviour
 {
     public UnityAction PickUpItem;
@@ -21,7 +12,6 @@ public class Player : MonoBehaviour
     public GameObject InventoryUI;
     private bool isMoving = false;
     int layerMask = 1 << 8;
-    public LikeControlScheme[] ControlSchemes;
     public PlayerData PlayerData;
 
 
@@ -100,9 +90,12 @@ public class Player : MonoBehaviour
         if (minimapController.minimapIsActive)
             return false;
 
+        if (InventoryUI.activeSelf)
+            return false;
+
         CreatingLight();
 
-        foreach (var ControlScheme in ControlSchemes)
+        foreach (var ControlScheme in GameManager.instance.ControlSchemes)
         {
             if (Move(ControlScheme.Left, Vector3.left)) return true;
             if (Move(ControlScheme.Right, Vector3.right)) return true;
@@ -158,6 +151,7 @@ public class Player : MonoBehaviour
         {
             IsOnExit = true;
         }
+
         else if (other.tag == "Item")
         {
             var x = other.GetComponent<ItemHolder>().ItemProperties;
@@ -194,8 +188,7 @@ public class Player : MonoBehaviour
                    Physics2D.OverlapPointAll(new Vector3(transform.position.x - x,
                        transform.position.y - y,
                        0));
-
-                
+    
                 if (hitColliders != null)
                 {
                     
