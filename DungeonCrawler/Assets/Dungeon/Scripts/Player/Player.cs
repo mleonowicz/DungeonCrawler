@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
 
 
     //  private Vector3 miniCameraPos;
-    private bool IsOnItem;
     private bool IsOnExit;
     public int CurrentHP;
     public int CurrentMP;
@@ -91,7 +90,10 @@ public class Player : MonoBehaviour
             return false;
 
         if (InventoryUI.activeSelf)
+        {
+            GetComponent<Inventory>().DoIfActive();
             return false;
+        }
 
         CreatingLight();
 

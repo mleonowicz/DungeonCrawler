@@ -12,9 +12,10 @@ public class Item : ScriptableObject
 
     public enum ItemType
     {
-        Weapon, 
-        Consumable,
-        Armor
+        LeftHand, 
+        RightHand,
+        Helmet,
+        Chest
     }
 
 	// Use this for initialization

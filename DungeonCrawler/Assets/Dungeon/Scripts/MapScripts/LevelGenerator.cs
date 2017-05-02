@@ -70,8 +70,7 @@ public class LevelGenerator : MonoBehaviour
         GeneratePotions();
         GenerateEnemies();
         SettingCameraPosition();
-        GenerateItems();
-        
+        GenerateItems();      
     }
 
     void GenerateLevel()
