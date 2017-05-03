@@ -13,7 +13,7 @@ public class InventoryUI : MonoBehaviour
     public List<Transform> Slots;
     public GridLayoutGroup LayoutGroup;
     public Vector2 Size;
-    public Image SelectedItem;
+    public Image SelectedItemImage;
 
     public void Start()
     {

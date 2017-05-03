@@ -43,12 +43,18 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
+            var i = GetComponent<Inventory>();
+
             InventoryUI.SetActive(!InventoryUI.activeSelf);
+
+            if (i.SelectionIndex + 1 <= i.PlayerInventory.Count)
+                i.SelectedItem = i.PlayerInventory[i.SelectionIndex];
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (PickUpItem != null) 
-                PickUpItem.Invoke();
+            if (!InventoryUI.activeSelf)
+                if (PickUpItem != null) 
+                    PickUpItem.Invoke();
         }
     }
 

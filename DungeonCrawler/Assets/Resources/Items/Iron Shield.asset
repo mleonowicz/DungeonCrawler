@@ -8,11 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c498a6b62ef12544592873afde0598b7, type: 3}
+  m_Script: {fileID: 11500000, guid: b0915b495195d04438c9bf6885beaf7a, type: 3}
   m_Name: Iron Shield
   m_EditorClassIdentifier: 
   Name: Iron Shield
-  ItemDesc: 
+  ItemDesc: It's made from iron...
   ItemIcon: {fileID: 21300350, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
-  ItemPower: 20
+  ItemStatistics: {fileID: 11400000, guid: 57eddba25b05d794e95d363819b9ab6e, type: 2}
   MyItemType: 0

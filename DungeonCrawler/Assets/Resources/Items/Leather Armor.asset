@@ -8,11 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c498a6b62ef12544592873afde0598b7, type: 3}
+  m_Script: {fileID: 11500000, guid: b0915b495195d04438c9bf6885beaf7a, type: 3}
   m_Name: Leather Armor
   m_EditorClassIdentifier: 
   Name: Leather Armor
-  ItemDesc: 
+  ItemDesc: Is that artificial leather ?
   ItemIcon: {fileID: 21300368, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
-  ItemPower: 0
+  ItemStatistics: {fileID: 11400000, guid: e90ba35c608974a44a4e0fca354a08a9, type: 2}
   MyItemType: 3
