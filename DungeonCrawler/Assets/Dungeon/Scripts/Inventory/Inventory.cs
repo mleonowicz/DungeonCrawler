@@ -18,10 +18,13 @@ public class Inventory : MonoBehaviour
 
     public List<Item> PlayerEquipment;
 
-    public ItemEquipmentSlot LeftHand;
-    public ItemEquipmentSlot Chest;
-    public ItemEquipmentSlot RightHand;
-    public ItemEquipmentSlot Helmet;
+
+    public List<ItemEquipmentSlot> Slots;
+
+    //    public ItemEquipmentSlot LeftHand;
+    //    public ItemEquipmentSlot Chest;
+    //    public ItemEquipmentSlot RightHand;
+    //    public ItemEquipmentSlot Helmet;
 
     [Header("Selection")]
     public Vector2 SelectionPos;
@@ -93,8 +96,8 @@ public class Inventory : MonoBehaviour
 
         foreach (var v in UIInventory.Slots)
         {
-            v.GetChild(0).GetComponent<Image>().enabled = false;
-            UIInventory.Slots[i].GetChild(0).GetComponent<Image>().sprite = null;
+
+            v.GetChild(0).GetComponent<Image>().sprite = null;
         }
 
         foreach (var item in PlayerInventory)
@@ -113,7 +116,7 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
             if (SelectedItem != null)
                 if (isInEq)
-                    UnequipItemSwitch();         
+                    UnequipItemSwitch();
                 else EquipItemSwitch();
 
         if (Input.GetKeyDown(KeyCode.O))
@@ -155,38 +158,27 @@ public class Inventory : MonoBehaviour
 
     void MoveSelectionEquipmentSwitch(KeyCode kc, int i)
     {
+
         if (Input.GetKeyDown(kc))
         {
             SelectionIndex += i;
-            switch (SelectionIndex)
+            if (SelectionIndex == 4) SelectionIndex--;
+            if (SelectionIndex == -1)
             {
-                case -1:
-                    SelectionIndex = LastSelectionIndex;
+                SelectionIndex = LastSelectionIndex;
 
-                    if (SelectionIndex + 1 <= PlayerInventory.Count)
-                        SelectedItem = PlayerInventory[SelectionIndex];
-                    else SelectedItem = null;
+                if (SelectionIndex + 1 <= PlayerInventory.Count)
+                    SelectedItem = PlayerInventory[SelectionIndex];
+                else SelectedItem = null;
 
-                    isInEq = false;
-                    UIInventory.SelectedItemImage.transform.position = LastSelectionPosition;
+                isInEq = false;
+                UIInventory.SelectedItemImage.transform.position = LastSelectionPosition;
+                return;
+            }
+            else
+            {
+                MoveSelectionEquipment(Slots[SelectionIndex]);
 
-                    break;
-                case 0:
-                    MoveSelectionEquipment(LeftHand);
-                    break;
-                case 1:
-                    MoveSelectionEquipment(Chest);
-                    break;
-                case 2:
-                    MoveSelectionEquipment(Helmet);
-
-                    break;
-                case 3:
-                    MoveSelectionEquipment(RightHand);
-                    break;           
-                case 4:
-                    SelectionIndex = 3;
-                    break;
             }
         }
     }
@@ -215,7 +207,7 @@ public class Inventory : MonoBehaviour
                     LastSelectionIndex = SelectionIndex;
                     SelectionIndex = 0;
                     isInEq = true;
-                    MoveSelectionEquipmentSwitch(kc, 0);                   
+                    MoveSelectionEquipmentSwitch(kc, 0);
                 }
         }
         return false;
@@ -245,40 +237,12 @@ public class Inventory : MonoBehaviour
 
     public void EquipItemSwitch()
     {
-        switch (SelectedItem.MyItemType)
-        {
-            case Item.ItemType.LeftHand:
-                EquipItem(LeftHand);
-                break;
-            case Item.ItemType.Chest:
-                EquipItem(Chest);
-                break;
-            case Item.ItemType.RightHand:
-                EquipItem(RightHand);
-                break;
-            case Item.ItemType.Helmet:
-                EquipItem(Helmet);
-                break;
-        }
+        EquipItem(Slots[(int)SelectedItem.Slot]);
     }
 
     private void UnequipItemSwitch()
     {
-        switch (SelectedItem.MyItemType)
-        {
-            case Item.ItemType.LeftHand:
-                UnequipItem(LeftHand);
-                break;
-            case Item.ItemType.Chest:
-                UnequipItem(Chest);
-                break;
-            case Item.ItemType.RightHand:
-                UnequipItem(RightHand);
-                break;
-            case Item.ItemType.Helmet:
-                UnequipItem(Helmet);
-                break;
-        }
+        UnequipItem(Slots[(int)SelectedItem.Slot]);
     }
 
     private void UnequipItem(ItemEquipmentSlot lh)
@@ -286,7 +250,7 @@ public class Inventory : MonoBehaviour
         PlayerInventory.Add(SelectedItem);
 
         lh.GetComponent<Image>().sprite = MaskSprite;
-        
+
         SelectedItem = null;
         lh.ItemProperties = null;
 
@@ -327,35 +291,6 @@ public class Inventory : MonoBehaviour
         ItemName.text = SelectedItem.Name;
         ItemDesc.text = "\"" + SelectedItem.ItemDesc + "\"";
 
-        switch (SelectedItem.MyItemType)
-        {
-            case Item.ItemType.RightHand:
-                var r = SelectedItem.ItemStatistics as RightHandItem;
-                if (r != null)
-                    ItemStats.text = "    Attack Damage: " + r.AttacDamage + "\n" + "    Attack Speed: " + r.AttackSpeed;
-
-                break;
-
-            case Item.ItemType.LeftHand:
-                var l = SelectedItem.ItemStatistics as LeftHandItem;
-                if (l != null)
-                    ItemStats.text = "    Armor: " + l.Armor + "\n" + "    Block Chance: " + l.BlockChance + "%";
-
-                break;
-
-            case Item.ItemType.Helmet:
-                var h = SelectedItem.ItemStatistics as HelmetItem;
-                if (h != null)
-                    ItemStats.text = "    Armor: " + h.Armor;
-
-                break;
-
-            case Item.ItemType.Chest:
-                var c = SelectedItem.ItemStatistics as ChestItem;
-                if (c != null)
-                    ItemStats.text = "    Armor: " + c.Armor;
-
-                break;
-        }
+        ItemStats.text = SelectedItem.GetStats();
     }
 }

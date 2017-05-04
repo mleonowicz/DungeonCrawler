@@ -14,5 +14,7 @@ MonoBehaviour:
   Name: Iron Sword
   ItemDesc: I can swing my sword!
   ItemIcon: {fileID: 21300140, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
-  ItemStatistics: {fileID: 11400000, guid: c9506f8e954b7cb4cb15cfe73fbc23fe, type: 2}
-  MyItemType: 1
+  Stats:
+  - stat: 1
+    value: 5
+  Slot: 3

@@ -1,5 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
+[Serializable]
+public enum Slot
+{
+    head, chest, leftHand, rightHand
+}
 
 [CreateAssetMenu]
 public class Item : ScriptableObject
@@ -8,15 +16,18 @@ public class Item : ScriptableObject
     public string ItemDesc;
     public Sprite ItemIcon;
 
-    public ItemStatistics ItemStatistics;
+    public List<Stat> Stats;
 
-    public ItemType MyItemType;
+    public Slot Slot;
 
-    public enum ItemType
+    public string GetStats()
     {
-        LeftHand,
-        RightHand,
-        Helmet,
-        Chest
+        string s = "";
+        foreach (var stat in Stats)
+        {
+            s += stat.ToString();
+        }
+        return s;
     }
+
 }

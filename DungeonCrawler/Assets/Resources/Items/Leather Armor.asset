@@ -14,5 +14,7 @@ MonoBehaviour:
   Name: Leather Armor
   ItemDesc: Is that artificial leather ?
   ItemIcon: {fileID: 21300368, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
-  ItemStatistics: {fileID: 11400000, guid: e90ba35c608974a44a4e0fca354a08a9, type: 2}
-  MyItemType: 3
+  Stats:
+  - stat: 0
+    value: 20
+  Slot: 1

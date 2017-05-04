@@ -14,5 +14,7 @@ MonoBehaviour:
   Name: Iron Shield
   ItemDesc: It's made from iron...
   ItemIcon: {fileID: 21300350, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
-  ItemStatistics: {fileID: 11400000, guid: 57eddba25b05d794e95d363819b9ab6e, type: 2}
-  MyItemType: 0
+  Stats:
+  - stat: 0
+    value: 10
+  Slot: 2

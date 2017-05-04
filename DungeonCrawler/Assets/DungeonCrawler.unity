@@ -429,10 +429,11 @@ MonoBehaviour:
   UIInventory: {fileID: 2013057104}
   PlayerInventory: []
   PlayerEquipment: []
-  LeftHand: {fileID: 1819126559}
-  Chest: {fileID: 72621121}
-  RightHand: {fileID: 795497854}
-  Helmet: {fileID: 1209054603}
+  Slots:
+  - {fileID: 1819126559}
+  - {fileID: 72621121}
+  - {fileID: 1209054603}
+  - {fileID: 795497854}
   SelectionPos: {x: 0, y: 0}
   SelectedItem: {fileID: 0}
   SelectionIndex: 0
