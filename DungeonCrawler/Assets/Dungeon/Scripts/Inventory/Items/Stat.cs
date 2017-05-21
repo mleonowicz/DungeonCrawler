@@ -17,6 +17,6 @@ public struct Stat
 
     public override string ToString()
     {
-        return "     " + stat + ":" + value + "\n";
+        return "     " + stat + ": " + value + "\n";
     }
 }

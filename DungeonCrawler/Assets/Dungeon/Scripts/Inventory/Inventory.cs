@@ -30,8 +30,10 @@ public class Inventory : MonoBehaviour
     public Vector2 SelectionPos;
     public Item SelectedItem;
     public int SelectionIndex;
-    private int LastSelectionIndex;
-    private Vector2 LastSelectionPosition;
+    public int LastSelectionIndex;
+    public Vector2 LastSelectionPosition;
+
+    private Item ShownItem;
 
     public Text ItemName;
     public Text ItemStats;
@@ -82,8 +84,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-
     public void AddItem(Item item)
     {
         PlayerInventory.Add(item);
@@ -95,23 +95,18 @@ public class Inventory : MonoBehaviour
         int i = 0;
 
         foreach (var v in UIInventory.Slots)
-        {
-
             v.GetChild(0).GetComponent<Image>().sprite = null;
-        }
 
         foreach (var item in PlayerInventory)
         {
             UIInventory.Slots[i].GetChild(0).GetComponent<Image>().enabled = true;
-            UIInventory.Slots[i].GetChild(0).GetComponent<Image>().sprite = item
-                .ItemIcon;
+            UIInventory.Slots[i].GetChild(0).GetComponent<Image>().sprite = item.ItemIcon;
             i++;
         }
     }
 
     public void DoIfActive()
     {
-
 
         if (Input.GetKeyDown(KeyCode.P))
             if (SelectedItem != null)
@@ -120,49 +115,57 @@ public class Inventory : MonoBehaviour
                 else EquipItemSwitch();
 
         if (Input.GetKeyDown(KeyCode.O))
-            if (SelectedItem != null)
+        {
+            if (SelectedItem == null || (ShownItem == SelectedItem && ItemStatisticsObject.gameObject.activeSelf))
+            {
+                ItemStatisticsObject.gameObject.SetActive(false);
+            }
+            else
             {
                 ItemStatisticsObject.gameObject.SetActive(true);
                 ShowStatistics();
             }
-            else
-                ItemStatisticsObject.gameObject.SetActive(false);
+        }
 
         if (isInEq)
             EquipmentSelectionMovement();
-        else if (InventorySelectionMovement())
-            SelectNewItem();
+        else
+        {
+            InventorySelectionMovement();
+            if (!isInEq)
+                SelectNewItem();
+        }
 
     }
 
-    private bool InventorySelectionMovement()
+    private void InventorySelectionMovement()
     {
         foreach (var ControlScheme in GameManager.instance.ControlSchemes)
         {
-            if (MoveSelectionX(ControlScheme.Left, -1)) return true;
-            if (MoveSelectionX(ControlScheme.Right, 1)) return true;
-            if (MoveSelectionY(ControlScheme.Up, 1)) return true;
-            if (MoveSelectionY(ControlScheme.Down, -1)) return true;
+            if (MoveSelectionX(ControlScheme.Left, -1)) return;
+            if (MoveSelectionX(ControlScheme.Right, 1)) return;
+            if (MoveSelectionY(ControlScheme.Up, 1)) return;
+            if (MoveSelectionY(ControlScheme.Down, -1)) return;
         }
-        return false;
     }
 
     private void EquipmentSelectionMovement()
     {
         foreach (var ControlScheme in GameManager.instance.ControlSchemes)
         {
-            MoveSelectionEquipmentSwitch(ControlScheme.Left, -1);
-            MoveSelectionEquipmentSwitch(ControlScheme.Right, 1);
+            if (MoveSelectionEquipmentSwitch(ControlScheme.Left, -1)) return;
+            if (MoveSelectionEquipmentSwitch(ControlScheme.Right, 1)) return;
         }
     }
 
-    void MoveSelectionEquipmentSwitch(KeyCode kc, int i)
+    bool MoveSelectionEquipmentSwitch(KeyCode kc, int i)
     {
-
         if (Input.GetKeyDown(kc))
         {
             SelectionIndex += i;
+            
             if (SelectionIndex == 4) SelectionIndex--;
+
             if (SelectionIndex == -1)
             {
                 SelectionIndex = LastSelectionIndex;
@@ -173,14 +176,14 @@ public class Inventory : MonoBehaviour
 
                 isInEq = false;
                 UIInventory.SelectedItemImage.transform.position = LastSelectionPosition;
-                return;
             }
             else
-            {
                 MoveSelectionEquipment(Slots[SelectionIndex]);
 
-            }
+
+            return true;
         }
+        return false;
     }
 
     void MoveSelectionEquipment(ItemEquipmentSlot lh)
@@ -205,9 +208,10 @@ public class Inventory : MonoBehaviour
                 {
                     LastSelectionPosition = UIInventory.SelectedItemImage.transform.position;
                     LastSelectionIndex = SelectionIndex;
-                    SelectionIndex = 0;
                     isInEq = true;
+                    SelectionIndex = 0;
                     MoveSelectionEquipmentSwitch(kc, 0);
+                    return true;
                 }
         }
         return false;
@@ -247,6 +251,8 @@ public class Inventory : MonoBehaviour
 
     private void UnequipItem(ItemEquipmentSlot lh)
     {
+        UnequipItemStats(SelectedItem);
+
         PlayerInventory.Add(SelectedItem);
 
         lh.GetComponent<Image>().sprite = MaskSprite;
@@ -259,7 +265,9 @@ public class Inventory : MonoBehaviour
 
     private void EquipItem(ItemEquipmentSlot lh)
     {
-        if (lh.ItemProperties == null)
+        EquipItemStats(SelectedItem);
+
+        if (lh.ItemProperties == null) // Sprawdzam czy jest coś założone
         {
             lh.SetProperties(SelectedItem);
 
@@ -274,23 +282,53 @@ public class Inventory : MonoBehaviour
                 SelectedItem = PlayerInventory[SelectionIndex];
             }
         }
-
         else
         {
             var tem = lh.ItemProperties;
-
+            UnequipItemStats(tem);
             lh.SetProperties(PlayerInventory[SelectionIndex]);
             PlayerInventory[SelectionIndex] = tem;
             SelectedItem = tem;
         }
+
         RefreshInventory();
     }
 
     private void ShowStatistics()
     {
+        ShownItem = SelectedItem;
+
         ItemName.text = SelectedItem.Name;
         ItemDesc.text = "\"" + SelectedItem.ItemDesc + "\"";
 
         ItemStats.text = SelectedItem.GetStats();
+    }
+
+    private void EquipItemStats(Item i)
+    {
+        foreach (var v in i.Stats)
+            switch (v.stat)
+            {
+                case StatType.Armor:
+                    GetComponent<Player>().CurrentArmor += v.value;
+                    break;
+                case StatType.Damage:
+                    GetComponent<Player>().CurrentDamage += v.value;
+                    break;
+            }
+    }
+
+    private void UnequipItemStats(Item i)
+    {
+        foreach (var v in i.Stats)
+            switch (v.stat)
+            {
+                case StatType.Armor:
+                    GetComponent<Player>().CurrentArmor -= v.value;
+                    break;
+                case StatType.Damage:
+                    GetComponent<Player>().CurrentDamage -= v.value;
+                    break;
+            }
     }
 }

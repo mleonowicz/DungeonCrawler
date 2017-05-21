@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
     public int CurrentHP;
     public int CurrentMP;
 
+    public int CurrentDamage;
+    public int CurrentArmor;
+
     private MinimapController minimapController;
 
     //    private float miniCameraSize;
@@ -43,12 +46,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            var i = GetComponent<Inventory>();
-
             InventoryUI.SetActive(!InventoryUI.activeSelf);
-
-            if (i.SelectionIndex + 1 <= i.PlayerInventory.Count)
-                i.SelectedItem = i.PlayerInventory[i.SelectionIndex];
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -198,8 +196,7 @@ public class Player : MonoBehaviour
                        0));
     
                 if (hitColliders != null)
-                {
-                    
+                {                
                     foreach (var d in hitColliders)
                     {                       
                         d.gameObject.GetComponent<SpriteRenderer>().enabled = true;
