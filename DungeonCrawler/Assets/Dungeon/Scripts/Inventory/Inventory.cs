@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    private Player myPlayer;
     public Sprite MaskSprite;
     private bool isInEq;
 
@@ -15,9 +16,6 @@ public class Inventory : MonoBehaviour
 
     [Header("Inventory")]
     public List<Item> PlayerInventory;
-
-    public List<Item> PlayerEquipment;
-
 
     public List<ItemEquipmentSlot> Slots;
 
@@ -42,6 +40,7 @@ public class Inventory : MonoBehaviour
 
     void Awake()
     {
+        myPlayer = GetComponent<Player>();
         //itemDatabase = GameObject.FindGameObjectWithTag("Item Database").GetComponent<ItemDatabase>();
         PlayerInventory = new List<Item>();
         SelectionPos = Vector2.zero;
@@ -107,12 +106,14 @@ public class Inventory : MonoBehaviour
 
     public void DoIfActive()
     {
+        if (Input.GetKeyDown(KeyCode.X))
+            DestroyItem();
 
         if (Input.GetKeyDown(KeyCode.P))
             if (SelectedItem != null)
                 if (isInEq)
-                    UnequipItemSwitch();
-                else EquipItemSwitch();
+                    UnequipItemChoice();
+                else UseItemChoice();
 
         if (Input.GetKeyDown(KeyCode.O))
         {
@@ -180,7 +181,6 @@ public class Inventory : MonoBehaviour
             else
                 MoveSelectionEquipment(Slots[SelectionIndex]);
 
-
             return true;
         }
         return false;
@@ -239,12 +239,20 @@ public class Inventory : MonoBehaviour
         else SelectedItem = null;
     }
 
-    public void EquipItemSwitch()
-    {
-        EquipItem(Slots[(int)SelectedItem.Slot]);
+    public void UseItemChoice()
+    {  
+        if (!SelectedItem.Consumable)
+            EquipItem(Slots[(int)SelectedItem.Slot]);
+        else
+        {
+            EquipItemStats(SelectedItem);
+            PlayerInventory.RemoveAt(SelectionIndex);
+            SelectedItem = null;
+            RefreshInventory();
+        }
     }
 
-    private void UnequipItemSwitch()
+    private void UnequipItemChoice()
     {
         UnequipItem(Slots[(int)SelectedItem.Slot]);
     }
@@ -298,10 +306,13 @@ public class Inventory : MonoBehaviour
     {
         ShownItem = SelectedItem;
 
+        
         ItemName.text = SelectedItem.Name;
         ItemDesc.text = "\"" + SelectedItem.ItemDesc + "\"";
 
-        ItemStats.text = SelectedItem.GetStats();
+        if (SelectedItem.ShowStats)
+            ItemStats.text = SelectedItem.GetStats();
+        else ItemStats.text = "     ???";
     }
 
     private void EquipItemStats(Item i)
@@ -310,10 +321,13 @@ public class Inventory : MonoBehaviour
             switch (v.stat)
             {
                 case StatType.Armor:
-                    GetComponent<Player>().CurrentArmor += v.value;
+                    myPlayer.CurrentArmor += v.value;
                     break;
                 case StatType.Damage:
-                    GetComponent<Player>().CurrentDamage += v.value;
+                    myPlayer.CurrentDamage += v.value;
+                    break;
+                case StatType.Heal:
+                    myPlayer.CurrentHP += v.value;
                     break;
             }
     }
@@ -324,11 +338,21 @@ public class Inventory : MonoBehaviour
             switch (v.stat)
             {
                 case StatType.Armor:
-                    GetComponent<Player>().CurrentArmor -= v.value;
+                    myPlayer.CurrentArmor -= v.value;
                     break;
                 case StatType.Damage:
-                    GetComponent<Player>().CurrentDamage -= v.value;
+                    myPlayer.CurrentDamage -= v.value;
                     break;
             }
+    }
+
+    private void DestroyItem()
+    {
+        if (!isInEq)
+        {
+            PlayerInventory.RemoveAt(SelectionIndex);
+            SelectedItem = null;
+            RefreshInventory();
+        }
     }
 }

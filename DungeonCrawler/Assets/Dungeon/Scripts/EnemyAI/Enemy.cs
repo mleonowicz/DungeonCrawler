@@ -9,8 +9,8 @@ public class Enemy : MonoBehaviour
 
     public void Start()
     {
-        CurrentHP = EnemyData.MaxHp;
-        this.transform.name = EnemyData.Name;
+        CurrentHP = EnemyData.Hp;
+        transform.name = EnemyData.Name;
     }
 
     public void MakeTurn(Player myPlayer)

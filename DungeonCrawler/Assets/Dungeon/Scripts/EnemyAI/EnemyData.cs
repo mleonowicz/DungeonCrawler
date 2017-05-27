@@ -7,5 +7,7 @@ public class EnemyData : ScriptableObject
     public EnemyBrain Brain;
 
     public string Name;
-    public int MaxHp;
+    public int Hp;
+
+    public int Damage;
 }

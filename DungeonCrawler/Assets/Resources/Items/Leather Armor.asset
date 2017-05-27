@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Name: Leather Armor
   m_EditorClassIdentifier: 
   Name: Leather Armor
-  ItemDesc: Is that artificial leather ?
+  ItemDesc: Is that artificial leather?
   ItemIcon: {fileID: 21300368, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
+  Consumable: 0
+  ShowStats: 1
   Stats:
   - stat: 0
     value: 20

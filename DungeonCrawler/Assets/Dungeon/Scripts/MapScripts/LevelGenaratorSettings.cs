@@ -16,7 +16,6 @@ public class LevelGenaratorSettings : ScriptableObject
     [Header("Object Ammount")]
 
     public int NumberOfTiles;
-    public int TileSize;
     public int NumberOfPotions;
     public int NumberOfEnemies;
     public int NumberOfItems;

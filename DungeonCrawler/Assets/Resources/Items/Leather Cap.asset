@@ -14,6 +14,8 @@ MonoBehaviour:
   Name: Leather Cap
   ItemDesc: Hey, that's pretty good!
   ItemIcon: {fileID: 21300384, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
+  Consumable: 0
+  ShowStats: 1
   Stats:
   - stat: 0
     value: 5

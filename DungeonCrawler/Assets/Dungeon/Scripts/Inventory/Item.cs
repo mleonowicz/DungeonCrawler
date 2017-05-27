@@ -6,7 +6,7 @@ using System.Collections.Generic;
 [Serializable]
 public enum Slot
 {
-    leftHand, chest, helmet, rightHand
+    leftHand, chest, helmet, rightHand, consumable
 }
 
 [CreateAssetMenu]
@@ -15,6 +15,8 @@ public class Item : ScriptableObject
     public string Name;
     public string ItemDesc;
     public Sprite ItemIcon;
+    public bool Consumable;
+    public bool ShowStats;
 
     public List<Stat> Stats;
 

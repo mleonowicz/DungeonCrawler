@@ -162,7 +162,7 @@ public class Player : MonoBehaviour
         {
             var x = other.GetComponent<ItemHolder>().ItemProperties;
             PickUpItem = () =>
-            {
+            {               
                 GetComponent<Inventory>().AddItem(x);
                 other.gameObject.SetActive(false);
                 PickUpItem = null;

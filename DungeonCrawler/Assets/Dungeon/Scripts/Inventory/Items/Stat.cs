@@ -6,7 +6,7 @@ using System.Text;
 [Serializable]
 public enum StatType
 {
-    Armor, Damage
+    Armor, Damage, Heal
 }
 
 [Serializable]

@@ -11,6 +11,8 @@ using Random = UnityEngine.Random;
 
 public class LevelGenerator : MonoBehaviour
 {
+    public Vector3[] Directions = { Vector3.right, Vector3.down, Vector3.left, Vector3.up }; // List for chosing directions for generator
+
     public LevelGenaratorSettings Settings;
     public LayerMask LayerForItems;
     public LayerMask LayerForEnemies;
@@ -111,25 +113,12 @@ public class LevelGenerator : MonoBehaviour
         if (lastPosition * -1 == rnd)
             return;
 
-        switch (rnd)
-        {
-            case 1:
-                transform.position = new Vector3(transform.position.x, transform.position.y + Settings.TileSize);
-                break;
+        int RandomDir = Random.Range(0, 4);
+        var x = Directions[RandomDir];
 
-            case 2:
-                transform.position = new Vector3(transform.position.x + Settings.TileSize, transform.position.y);
-                break;
+        transform.position += x;
 
-            case -1:
-                transform.position = new Vector3(transform.position.x, transform.position.y - Settings.TileSize);
-                break;
-
-            case -2:
-                transform.position = new Vector3(transform.position.x - Settings.TileSize, transform.position.y);
-                break;
-        }
-        lastPosition = rnd;
+        lastPosition = RandomDir;
     }
 
     void WallsGenerator()
@@ -158,8 +147,6 @@ public class LevelGenerator : MonoBehaviour
         maxWallsX = (maxX - minX) + Settings.ExtraWallX;
 
         maxWallsY = (maxY - minY) + Settings.ExtraWallY;
-        
-
     }
 
     void CreatingWalls()
