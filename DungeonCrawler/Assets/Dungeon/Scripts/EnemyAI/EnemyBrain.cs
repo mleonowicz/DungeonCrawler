@@ -12,7 +12,6 @@ public abstract class EnemyBrain : ScriptableObject
     public Vector3[] Directions = { Vector3.right, Vector3.down, Vector3.left, Vector3.up }; // List for chosing directions for enemies
     public abstract void Think(Enemy enemy, Player myPlayer);
 
-
     public LayerMask layerMask;
     public LayerMask layerMaskGround = 1 << 11;
 

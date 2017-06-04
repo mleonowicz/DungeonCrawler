@@ -2,10 +2,8 @@
 using System.Collections;
 
 [CreateAssetMenu]
-public class EnemyData : ScriptableObject
+public  class Skill : ScriptableObject
 {
-    public EnemyBrain Brain;
-
     public string Name;
-    public int Hp;
+    public int Cost;
 }
