@@ -17,12 +17,7 @@ public class Inventory : MonoBehaviour
     [Header("Inventory")]
     public List<Item> PlayerInventory;
 
-    public List<ItemEquipmentSlot> Slots;
-
-    //    public ItemEquipmentSlot LeftHand;
-    //    public ItemEquipmentSlot Chest;
-    //    public ItemEquipmentSlot RightHand;
-    //    public ItemEquipmentSlot Helmet;
+    public List<ItemEquipmentSlot> EquipmentSlots;
 
     [Header("Selection")]
     public Vector2 SelectionPos;
@@ -41,12 +36,11 @@ public class Inventory : MonoBehaviour
     void Awake()
     {
         myPlayer = GetComponent<Player>();
-        //itemDatabase = GameObject.FindGameObjectWithTag("Item Database").GetComponent<ItemDatabase>();
+        
         PlayerInventory = new List<Item>();
         SelectionPos = Vector2.zero;
     }
 
-    // Use this for initialization  
     void Start()
     {
         StartCoroutine(GenerateInventory());
@@ -66,6 +60,7 @@ public class Inventory : MonoBehaviour
         UIInventory.Generate(() =>
         {
             int i = 0;
+
             foreach (var item in PlayerInventory)
             {
                 UIInventory.Slots[i].GetChild(0).GetComponent<Image>().enabled = true;
@@ -112,7 +107,7 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
             if (SelectedItem != null)
                 if (isInEq)
-                    UnequipItemChoice();
+                    UnequipItem(EquipmentSlots[(int)SelectedItem.Slot]);
                 else UseItemChoice();
 
         if (Input.GetKeyDown(KeyCode.O))
@@ -136,7 +131,6 @@ public class Inventory : MonoBehaviour
             if (!isInEq)
                 SelectNewItem();
         }
-
     }
 
     private void InventorySelectionMovement()
@@ -154,12 +148,12 @@ public class Inventory : MonoBehaviour
     {
         foreach (var ControlScheme in GameManager.instance.ControlSchemes)
         {
-            if (MoveSelectionEquipmentSwitch(ControlScheme.Left, -1)) return;
-            if (MoveSelectionEquipmentSwitch(ControlScheme.Right, 1)) return;
+            if (MoveSelectionEquipment(ControlScheme.Left, -1)) return;
+            if (MoveSelectionEquipment(ControlScheme.Right, 1)) return;
         }
     }
 
-    bool MoveSelectionEquipmentSwitch(KeyCode kc, int i)
+    bool MoveSelectionEquipment(KeyCode kc, int i)
     {
         if (Input.GetKeyDown(kc))
         {
@@ -179,7 +173,7 @@ public class Inventory : MonoBehaviour
                 UIInventory.SelectedItemImage.transform.position = LastSelectionPosition;
             }
             else
-                MoveSelectionEquipment(Slots[SelectionIndex]);
+                MoveSelectionEquipment(EquipmentSlots[SelectionIndex]);
 
             return true;
         }
@@ -210,7 +204,7 @@ public class Inventory : MonoBehaviour
                     LastSelectionIndex = SelectionIndex;
                     isInEq = true;
                     SelectionIndex = 0;
-                    MoveSelectionEquipmentSwitch(kc, 0);
+                    MoveSelectionEquipment(kc, 0);
                     return true;
                 }
         }
@@ -242,33 +236,29 @@ public class Inventory : MonoBehaviour
     public void UseItemChoice()
     {  
         if (!SelectedItem.Consumable)
-            EquipItem(Slots[(int)SelectedItem.Slot]);
+            EquipItem(EquipmentSlots[(int)SelectedItem.Slot]);
         else
         {
             EquipItemStats(SelectedItem);
-            PlayerInventory.RemoveAt(SelectionIndex);
-            SelectedItem = null;
-            RefreshInventory();
+            DestroyItem();
         }
     }
 
-    private void UnequipItemChoice()
-    {
-        UnequipItem(Slots[(int)SelectedItem.Slot]);
-    }
 
     private void UnequipItem(ItemEquipmentSlot lh)
     {
-        UnequipItemStats(SelectedItem);
+        if (!CheckIfFull())
+        {
+            UnequipItemStats(SelectedItem);
+            PlayerInventory.Add(SelectedItem);
 
-        PlayerInventory.Add(SelectedItem);
+            lh.GetComponent<Image>().sprite = MaskSprite;
 
-        lh.GetComponent<Image>().sprite = MaskSprite;
+            SelectedItem = null;
+            lh.ItemProperties = null;
 
-        SelectedItem = null;
-        lh.ItemProperties = null;
-
-        RefreshInventory();
+            RefreshInventory();
+        }
     }
 
     private void EquipItem(ItemEquipmentSlot lh)
@@ -305,8 +295,7 @@ public class Inventory : MonoBehaviour
     private void ShowStatistics()
     {
         ShownItem = SelectedItem;
-
-        
+ 
         ItemName.text = SelectedItem.Name;
         ItemDesc.text = "\"" + SelectedItem.ItemDesc + "\"";
 
@@ -354,5 +343,12 @@ public class Inventory : MonoBehaviour
             SelectedItem = null;
             RefreshInventory();
         }
+    }
+
+    public bool CheckIfFull()
+    {
+        if (UIInventory.Slots.Count <= PlayerInventory.Count)
+            return true;
+        return false;
     }
 }

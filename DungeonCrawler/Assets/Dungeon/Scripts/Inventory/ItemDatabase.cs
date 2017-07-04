@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-//[CreateAssetMenu]
+
 public class ItemDatabase : MonoBehaviour
 {
     public bool IsLoaded = false;
+
+    public Dictionary<string, Item> Items;
+    public string SubFolder;
 
     public void Awake()
     {
         Initialize();
     }
 
-    public Dictionary<string, Item> Items;
-    public string SubFolder;
-
-    //  public abstract void Load();
     [ContextMenu("Initialize")]
     public void Initialize()
     {
@@ -30,18 +29,6 @@ public class ItemDatabase : MonoBehaviour
 
     public Item GetItem(string name)
     {
-        return Items[name]; //.FirstOrDefault(t => t.Value.name == name).Value;
+        return Items[name]; 
     }
-
-    //    public TileInfo GetTile(string name)
-    //    {
-    //        return Items[name].Tile;
-    //    }
-
-    //    public TileEntity GetEntity(TileInfo element)
-    //    {
-    //        return Items.FirstOrDefault(t => t.Value.Tile == element).Value;
-    //    }
-
-
 }

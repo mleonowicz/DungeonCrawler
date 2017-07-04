@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters;
 using UnityEngine.UI;
 
-
 [RequireComponent(typeof(GridLayoutGroup))]
+
 public class InventoryUI : MonoBehaviour
 {
     public GameObject Prefab;
@@ -18,8 +18,6 @@ public class InventoryUI : MonoBehaviour
     public void Start()
     {
         LayoutGroup = GetComponent<GridLayoutGroup>();
-
-        //SetSize();
     }
 
     public void GenerateSlots()
@@ -34,14 +32,6 @@ public class InventoryUI : MonoBehaviour
             s.transform.SetParent(transform);
             Slots.Add(s.transform);
         }
-
-        //if (currentChildCount <= slots) return; TODO :)
-
-        //for (int i = transform.childCount; i > slots; i--)
-        //{
-        //    Destroy(transform.GetChild(0).gameObject);
-        //}
-
     }
 
     public void Generate(Action callback)

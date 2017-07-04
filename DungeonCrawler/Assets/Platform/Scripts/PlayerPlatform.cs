@@ -33,7 +33,6 @@ public class PlayerPlatform : MonoBehaviour
 
         Flip(horizontal);
         HandleInput(horizontal);
-        // Debug.Log(isGrounded);
     }
 
     void FixedUpdate()
@@ -53,30 +52,15 @@ public class PlayerPlatform : MonoBehaviour
             {
                 myRigidbody2D.velocity = new Vector2(myRigidbody2D.velocity.x, 0);
                 var jForce = jumpForce;
+
                 if (canDoubleJump)
                 {
                     jForce /= 1.1f;
                     canDoubleJump = false;
                 }
+
                 myRigidbody2D.AddForce(Vector2.up * jForce, ForceMode2D.Impulse);
-
             }
-            /*
-            if (isGrounded)
-            {
-                myRigidbody2D.velocity = new Vector2(myRigidbody2D.velocity.x, 0);
-                myRigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                
-            }
-            else if (canDoubleJump)
-            {
-                myRigidbody2D.velocity = new Vector2(myRigidbody2D.velocity.x, 0);
-                myRigidbody2D.AddForce(Vector2.up * jumpForce / 1.1f, ForceMode2D.Impulse);
-                canDoubleJump = false;
-            }*/
-
-
-
         }
 
         if (Input.GetKeyDown(KeyCode.C) && !myAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
@@ -92,6 +76,7 @@ public class PlayerPlatform : MonoBehaviour
         //Debug.Log(transform.position.x - myBoxCollider2D.size.x);
 
         myAnimator.SetBool("Jumping", false);
+
         if (Physics2D.Raycast(myBoxCollider2D.bounds.min, Vector2.down, 0.1f, myLayerMask) ||
             Physics2D.Raycast(new Vector2(myBoxCollider2D.bounds.center.x, myBoxCollider2D.bounds.min.y), Vector2.down,
                 0.1f, myLayerMask) ||
