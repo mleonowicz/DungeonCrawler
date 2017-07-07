@@ -7,5 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/DungeonCrawler.unity
-  - enabled: 0
+    guid: d776b30c4fe615749b82eb66b683b820
+  - enabled: 1
     path: Assets/Platform.unity
+    guid: 6b17c29221a8ce240b7fdf7e4e4a8a7b

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerPlatform : MonoBehaviour
 {
+    public PlayerStats MyPlayerStats;
+
     private Rigidbody2D myRigidbody2D;
     private BoxCollider2D myBoxCollider2D;
     private Animator myAnimator;
@@ -22,6 +24,8 @@ public class PlayerPlatform : MonoBehaviour
 
     void Start()
     {
+        MyPlayerStats = GameData.MyPlayerStats; // wczytywanie statystyk
+
         myBoxCollider2D = GetComponent<BoxCollider2D>();
         myRigidbody2D = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
@@ -30,7 +34,7 @@ public class PlayerPlatform : MonoBehaviour
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
-
+        
         Flip(horizontal);
         HandleInput(horizontal);
     }

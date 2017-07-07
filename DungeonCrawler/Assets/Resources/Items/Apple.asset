@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0915b495195d04438c9bf6885beaf7a, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
-  Name: Aple
+  Name: Apple
   ItemDesc: One apple a day, keeps the doctor away.
   ItemIcon: {fileID: 21300006, guid: 8c90a5af5c77f0542a6679704091893c, type: 3}
   Consumable: 1

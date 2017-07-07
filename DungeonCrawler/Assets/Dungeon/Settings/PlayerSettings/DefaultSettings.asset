@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: DefaultSettings
   m_EditorClassIdentifier: 
   Name: Wonziu
-  MaxHP: 10
-  MaxMP: 30
-  Str: 5
-  Int: 5
+  StartHP: 20
+  StartMP: 0
+  StartDamage: 5
+  StartAttackSpeed: 1
+  StartArmor: 10

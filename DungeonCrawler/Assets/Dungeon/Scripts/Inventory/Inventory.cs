@@ -89,7 +89,7 @@ public class Inventory : MonoBehaviour
         int i = 0;
 
         foreach (var v in UIInventory.Slots)
-            v.GetChild(0).GetComponent<Image>().sprite = null;
+            v.GetChild(0).GetComponent<Image>().enabled = false;
 
         foreach (var item in PlayerInventory)
         {
@@ -310,13 +310,13 @@ public class Inventory : MonoBehaviour
             switch (v.stat)
             {
                 case StatType.Armor:
-                    myPlayer.CurrentArmor += v.value;
+                    myPlayer.PlayerStats.CurrentArmor += v.value;
                     break;
                 case StatType.Damage:
-                    myPlayer.CurrentDamage += v.value;
+                    myPlayer.PlayerStats.CurrentDamage += v.value;
                     break;
                 case StatType.Heal:
-                    myPlayer.CurrentHP += v.value;
+                    myPlayer.PlayerStats.CurrentHP += v.value;
                     break;
             }
     }
@@ -327,10 +327,10 @@ public class Inventory : MonoBehaviour
             switch (v.stat)
             {
                 case StatType.Armor:
-                    myPlayer.CurrentArmor -= v.value;
+                    myPlayer.PlayerStats.CurrentArmor -= v.value;
                     break;
                 case StatType.Damage:
-                    myPlayer.CurrentDamage -= v.value;
+                    myPlayer.PlayerStats.CurrentDamage -= v.value;
                     break;
             }
     }

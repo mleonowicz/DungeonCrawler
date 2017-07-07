@@ -4,12 +4,10 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     public EnemyData EnemyData;
-
-    public int CurrentHP;
+    public EnemyStats EnemyStats;
 
     public void Start()
     {
-        CurrentHP = EnemyData.Hp;
         transform.name = EnemyData.Name;
     }
 

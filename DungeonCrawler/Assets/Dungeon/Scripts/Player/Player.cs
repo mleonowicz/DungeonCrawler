@@ -3,39 +3,38 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public UnityAction PickUpItem;
-
+    
     public GameObject InventoryUI;
     private bool isMoving = false;
     int layerMask = 1 << 8;
+    
     public PlayerData PlayerData;
+    public PlayerStats PlayerStats = new PlayerStats();
 
-
-    //  private Vector3 miniCameraPos;
     private bool IsOnExit;
-    public int CurrentHP;
-    public int CurrentMP;
-
-    public int CurrentDamage;
-    public int CurrentArmor;
-
+  
     private MinimapController minimapController;
 
     //    private float miniCameraSize;
 
-    void Start()
+    void Awake()
     {
         minimapController = GetComponent<MinimapController>();
-        CurrentHP = PlayerData.MaxHP * PlayerData.Str;
-        CurrentMP = PlayerData.MaxMP * PlayerData.Int;
+    }
+
+    void Start()
+    {
+        SetStartStats();
     }
 
     void Update()
-    {
+    {      
         if (IsOnExit && Input.GetKeyDown(KeyCode.H))
         {
             Debug.Log("You Win");
@@ -137,21 +136,20 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "Hearth")
         {
-            CurrentHP += 50;
-            if (CurrentHP > PlayerData.MaxHP)
-                CurrentHP = PlayerData.MaxHP * PlayerData.Str;
+            PlayerStats.CurrentHP += 20;
+            
             other.gameObject.SetActive(false);
         }
 
         else if (other.tag == "Enemy")
         {
-            other.gameObject.SetActive(false);
-            OnEnemyKilled.Invoke();
-            CurrentHP -= 30;
-            if (CurrentHP < 0)
-            {
-                // Debug.Log("- 30");
-            }
+            GameData.MyEnemyStats = other.GetComponent<Enemy>().EnemyStats;
+            GameData.MyPlayerStats = PlayerStats;
+
+            Destroy(other.gameObject);
+
+            StartCoroutine(GameManager.instance.FadeOutAnimation());
+
         }
         else if (other.tag == "Exit")
         {
@@ -223,4 +221,14 @@ public class Player : MonoBehaviour
         }
         isMoving = false;
     }
+
+    private void SetStartStats()
+    {
+        PlayerStats.CurrentHP = PlayerData.StartHP;
+        PlayerStats.CurrentMP = PlayerData.StartMP;
+        PlayerStats.CurrentAttackSpeed = PlayerData.StartAttackSpeed;
+        PlayerStats.CurrentDamage = PlayerData.StartDamage;
+        PlayerStats.CurrentArmor = PlayerData.StartArmor;
+    }
+
 }

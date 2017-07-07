@@ -197,7 +197,9 @@ public class LevelGenerator : MonoBehaviour
         ExitPosition = sortedList[0];
 
         Player.transform.position = PlayerPosition;
-        Instantiate(Settings.Exit, ExitPosition, Quaternion.identity);
+        var e = Instantiate(Settings.Exit, ExitPosition, Quaternion.identity);
+
+        e.transform.SetParent(WallParent.transform, false);
     }
 
     void GettingBorders()
@@ -222,6 +224,8 @@ public class LevelGenerator : MonoBehaviour
 
     void GenerateItems()
     {
+        var n = Settings.NumberOfItems;
+
         for (int i = 0; i < Settings.NumberOfItems; i++)
         {
             var it = Item;
@@ -236,6 +240,7 @@ public class LevelGenerator : MonoBehaviour
             }
             else Settings.NumberOfItems++;
         }
+        Settings.NumberOfItems = n;
     }
 
     /// <summary>

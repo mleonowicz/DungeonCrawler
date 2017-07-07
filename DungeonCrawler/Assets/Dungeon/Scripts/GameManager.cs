@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [Serializable]
@@ -17,14 +18,18 @@ public struct LikeControlScheme
 public class GameManager : MonoBehaviour
 {
     public LikeControlScheme[] ControlSchemes;
+
     [SerializeField]
     private Player myPlayer;
-    [SerializeField]
-    private Text Turn;
-    [SerializeField]
-    private Text HP;
-    [SerializeField]
-    private Text MP;
+
+    public GameObject CanvasObject;
+
+    public Text Turn;
+    public Text HP;
+    public Text MP;
+
+    public GUITexture Overlay;
+    public GameObject SceneObject;
 
     public static GameManager instance;
 
@@ -41,10 +46,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Overlay.pixelInset = new Rect(0, 0, Screen.width, Screen.height);
         UpdateUI();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (myPlayer.Movement())
@@ -58,15 +63,14 @@ public class GameManager : MonoBehaviour
             }
         }
         UpdateUI();
-        
     }
 
     void UpdateUI()
     {
         Turn.text = "Turn: " + TurnCount;
         myPlayer.transform.name = myPlayer.PlayerData.Name;
-        HP.text = myPlayer.CurrentHP.ToString();
-        MP.text = myPlayer.CurrentMP.ToString();
+        HP.text = myPlayer.PlayerStats.CurrentHP.ToString();
+        MP.text = myPlayer.PlayerStats.CurrentMP.ToString();
     }
 
     //public void OnDrawGizmos()
@@ -79,4 +83,44 @@ public class GameManager : MonoBehaviour
     //        Gizmos.DrawSphere(enemy.transform.localPosition + (Vector3.right) + Vector3.one * 0.5f, 0.2f);
     //    }
     //}
+
+    public IEnumerator FadeOutAnimation()
+    {
+        CanvasObject.SetActive(false);
+        
+        Overlay.color = Color.clear;
+        float progress = 0.0f;
+        while (progress < 1.0f)
+        {
+            Overlay.color = Color.Lerp(Color.clear, Color.black, progress);
+            progress += Time.deltaTime;
+            yield return null;
+        }
+        Overlay.color = Color.black;
+
+        LoadPlatformScene();
+    }
+
+    private void LoadPlatformScene()
+    {      
+        GameData.SceneObject = SceneObject;
+        SceneObject.SetActive(false);
+
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);        
+    }
+
+    public IEnumerator FadeInAnimation()
+    {
+        Overlay.color = Color.black;
+        float progress = 0.0f;
+        while (progress < 1.0f)
+        {
+            Overlay.color = Color.Lerp(Color.black, Color.clear, progress);
+            progress += Time.deltaTime;
+            yield return null;
+        }
+        Overlay.color = Color.clear;
+
+        CanvasObject.SetActive(true);
+    }
 }
