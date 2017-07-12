@@ -9,13 +9,14 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public UnityAction PickUpItem;
-    
+    public string Name;
     public GameObject InventoryUI;
     private bool isMoving = false;
     int layerMask = 1 << 8;
+
+    public PlayerStats StartingPlayerStats;
+    public PlayerStats PlayerStats;
     
-    public PlayerData PlayerData;
-    public PlayerStats PlayerStats = new PlayerStats();
 
     private bool IsOnExit;
   
@@ -26,11 +27,12 @@ public class Player : MonoBehaviour
     void Awake()
     {
         minimapController = GetComponent<MinimapController>();
+        PlayerStats = Instantiate(StartingPlayerStats);
     }
 
     void Start()
     {
-        SetStartStats();
+        
     }
 
     void Update()
@@ -136,7 +138,7 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "Hearth")
         {
-            PlayerStats.CurrentHP += 20;
+            PlayerStats.HP += 20;
             
             other.gameObject.SetActive(false);
         }
@@ -146,10 +148,10 @@ public class Player : MonoBehaviour
             GameData.MyEnemyStats = other.GetComponent<Enemy>().EnemyStats;
             GameData.MyPlayerStats = PlayerStats;
 
-            Destroy(other.gameObject);
+            GameManager.instance.Enemies.Remove(other.gameObject);
+            other.gameObject.SetActive(false);
 
             StartCoroutine(GameManager.instance.FadeOutAnimation());
-
         }
         else if (other.tag == "Exit")
         {
@@ -221,14 +223,4 @@ public class Player : MonoBehaviour
         }
         isMoving = false;
     }
-
-    private void SetStartStats()
-    {
-        PlayerStats.CurrentHP = PlayerData.StartHP;
-        PlayerStats.CurrentMP = PlayerData.StartMP;
-        PlayerStats.CurrentAttackSpeed = PlayerData.StartAttackSpeed;
-        PlayerStats.CurrentDamage = PlayerData.StartDamage;
-        PlayerStats.CurrentArmor = PlayerData.StartArmor;
-    }
-
 }

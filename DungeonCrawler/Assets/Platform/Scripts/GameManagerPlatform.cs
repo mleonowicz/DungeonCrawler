@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameManagerPlatform : MonoBehaviour
 {
     public PlayerPlatform MyPlayer;
+    public EnemyPlatform MyEnemy;
 
     [SerializeField]
     private Text HP;
@@ -21,11 +22,11 @@ public class GameManagerPlatform : MonoBehaviour
 
     void Update()
     {
-        UpdateUI();
+        //UpdateUI();
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            MyPlayer.MyPlayerStats.CurrentHP -= 2;
+            MyPlayer.MyPlayerStats.HP -= 2;
         }
 
         if (Input.GetKeyDown(KeyCode.B))
@@ -36,8 +37,8 @@ public class GameManagerPlatform : MonoBehaviour
 
     void UpdateUI()
     {
-        HP.text = MyPlayer.MyPlayerStats.CurrentHP.ToString();
-        MP.text = MyPlayer.MyPlayerStats.CurrentMP.ToString();
+        HP.text = MyPlayer.MyPlayerStats.HP.ToString();
+        MP.text = MyPlayer.MyPlayerStats.MP.ToString();
     }
 
     void ReturnToDungeon()

@@ -402,8 +402,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f4e29f7526eb7748b49e5688faf2cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Mateusz
   InventoryUI: {fileID: 1076028117}
-  PlayerData: {fileID: 11400000, guid: ee28956dee44d714aa19d26d33ab5350, type: 2}
+  StartingPlayerStats: {fileID: 11400000, guid: 16c2b98bb5a163d4eaad9c940917ee1a,
+    type: 2}
+  PlayerStats: {fileID: 0}
   OnEnemyKilled:
     m_PersistentCalls:
       m_Calls: []

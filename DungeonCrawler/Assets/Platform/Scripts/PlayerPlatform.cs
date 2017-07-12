@@ -1,34 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerPlatform : MonoBehaviour
+public class PlayerPlatform : CharacterPlatform
 {
     public PlayerStats MyPlayerStats;
-
-    private Rigidbody2D myRigidbody2D;
-    private BoxCollider2D myBoxCollider2D;
-    private Animator myAnimator;
+    public Animator myAnimator;
 
     [SerializeField]
     private LayerMask myLayerMask;
 
     [SerializeField]
-    private float movementSpeed;
-    [SerializeField]
     private float jumpForce;
 
     private bool isGrounded;
     private bool canDoubleJump;
-    private bool facingRight = true;
 
 
     void Start()
     {
-        MyPlayerStats = GameData.MyPlayerStats; // wczytywanie statystyk
-
-        myBoxCollider2D = GetComponent<BoxCollider2D>();
-        myRigidbody2D = GetComponent<Rigidbody2D>();
+        //MyPlayerStats = GameData.MyPlayerStats; // wczytywanie statystyk
         myAnimator = GetComponent<Animator>();
+
+        base.Start();
     }
 
     void Update()
@@ -48,7 +41,7 @@ public class PlayerPlatform : MonoBehaviour
     {
         myAnimator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-        myRigidbody2D.velocity = new Vector2(horizontal * movementSpeed, myRigidbody2D.velocity.y);
+        myRigidbody2D.velocity = new Vector2(horizontal * MyPlayerStats.MovementSpeeed, myRigidbody2D.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.X)) // jumping and double jumping
         {
@@ -102,8 +95,7 @@ public class PlayerPlatform : MonoBehaviour
     {
         if ((horizontal > 0 && !facingRight || horizontal < 0 && facingRight))
         {
-            facingRight = !facingRight;
-            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+            ChangeDirection();
         }
     }
 

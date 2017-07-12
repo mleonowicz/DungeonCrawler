@@ -68,9 +68,9 @@ public class GameManager : MonoBehaviour
     void UpdateUI()
     {
         Turn.text = "Turn: " + TurnCount;
-        myPlayer.transform.name = myPlayer.PlayerData.Name;
-        HP.text = myPlayer.PlayerStats.CurrentHP.ToString();
-        MP.text = myPlayer.PlayerStats.CurrentMP.ToString();
+        myPlayer.transform.name = myPlayer.Name;
+        HP.text = myPlayer.PlayerStats.HP.ToString();
+        MP.text = myPlayer.PlayerStats.MP.ToString();
     }
 
     //public void OnDrawGizmos()

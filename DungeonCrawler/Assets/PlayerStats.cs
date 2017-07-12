@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStats
+[CreateAssetMenu]
+public class PlayerStats : ScriptableObject
 {
-    public int CurrentHP;
-    public int CurrentMP;
+    public int HP;
+    public int MP;
 
-    public int CurrentDamage;
-    public int CurrentArmor;
-    public int CurrentAttackSpeed;
+    public int Damage;
+    public int Armor;
+    public int AttackSpeed;
+    public int MovementSpeeed;
 }

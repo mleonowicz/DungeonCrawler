@@ -310,13 +310,13 @@ public class Inventory : MonoBehaviour
             switch (v.stat)
             {
                 case StatType.Armor:
-                    myPlayer.PlayerStats.CurrentArmor += v.value;
+                    myPlayer.PlayerStats.Armor += v.value;
                     break;
                 case StatType.Damage:
-                    myPlayer.PlayerStats.CurrentDamage += v.value;
+                    myPlayer.PlayerStats.Damage += v.value;
                     break;
                 case StatType.Heal:
-                    myPlayer.PlayerStats.CurrentHP += v.value;
+                    myPlayer.PlayerStats.HP += v.value;
                     break;
             }
     }
@@ -327,10 +327,10 @@ public class Inventory : MonoBehaviour
             switch (v.stat)
             {
                 case StatType.Armor:
-                    myPlayer.PlayerStats.CurrentArmor -= v.value;
+                    myPlayer.PlayerStats.Armor -= v.value;
                     break;
                 case StatType.Damage:
-                    myPlayer.PlayerStats.CurrentDamage -= v.value;
+                    myPlayer.PlayerStats.Damage -= v.value;
                     break;
             }
     }

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5ba31055bbb2340ade20a258c8ceeb, type: 3}
   m_Name: GoblinStats
   m_EditorClassIdentifier: 
-  Name: Goblin
   Hp: 15
   Damage: 10
   AttackSpeed: 1
+  MovementSpeed: 5

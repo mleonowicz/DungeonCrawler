@@ -8,4 +8,5 @@ public class EnemyStats : ScriptableObject
     public int Hp;
     public int Damage;
     public int AttackSpeed;
+    public int MovementSpeed;
 }
