@@ -6,18 +6,17 @@ public class EnemyPlatform : CharacterPlatform {
 
     public EnemyStats MyEnemyStats;
     private IEnemyState currentState;
-    
 
+    public GameObject Target;
 
     void Start ()
     {
-        facingRight = false;
-        //MyEnemyStats = GameData.MyEnemyStats;
+        base.Start();
+        MyEnemyStats = GameData.MyEnemyStats;
         ChangeState(new PatrolState());
     }
-	
 
-	void Update ()
+	private void Update ()
     {
 		currentState.Execute();
 	}
@@ -39,5 +38,22 @@ public class EnemyPlatform : CharacterPlatform {
     public Vector2 GetDirection()
     {
         return facingRight ? Vector2.right : Vector2.left;
+    }
+
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        
+        currentState.OnCollisionEnter(coll);
+    }
+
+    public void LookAtTarget()
+    {
+        if (Target != null)
+        {
+            float x = Target.transform.position.x - transform.position.x;
+
+            if (facingRight && x < 0 || !facingRight && x > 0)
+                ChangeDirection();
+        }
     }
 }

@@ -15,13 +15,14 @@ public class PlayerPlatform : CharacterPlatform
     private bool isGrounded;
     private bool canDoubleJump;
 
-
+    private bool canMove;
     void Start()
     {
-        //MyPlayerStats = GameData.MyPlayerStats; // wczytywanie statystyk
+        MyPlayerStats = GameData.MyPlayerStats; // wczytywanie statystyk
         myAnimator = GetComponent<Animator>();
-
         base.Start();
+
+        canMove = true;
     }
 
     void Update()
@@ -30,6 +31,9 @@ public class PlayerPlatform : CharacterPlatform
         
         Flip(horizontal);
         HandleInput(horizontal);
+
+        //if (Input.GetKeyDown(KeyCode.S))
+        //    myRigidbody2D.AddForce(Vector2.up * 1300, ForceMode2D.Impulse);
     }
 
     void FixedUpdate()
@@ -40,8 +44,9 @@ public class PlayerPlatform : CharacterPlatform
     void HandleInput(float horizontal)
     {
         myAnimator.SetFloat("Speed", Mathf.Abs(horizontal));
-
-        myRigidbody2D.velocity = new Vector2(horizontal * MyPlayerStats.MovementSpeeed, myRigidbody2D.velocity.y);
+        
+        if (canMove)
+            myRigidbody2D.velocity = new Vector2(horizontal * MyPlayerStats.MovementSpeeed, myRigidbody2D.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.X)) // jumping and double jumping
         {
@@ -107,4 +112,34 @@ public class PlayerPlatform : CharacterPlatform
     //    Gizmos.DrawRay(new Vector2(myBoxCollider2D.bounds.center.x, myBoxCollider2D.bounds.min.y), Vector2.down);
     //    Gizmos.DrawRay(new Vector2(myBoxCollider2D.bounds.max.x, myBoxCollider2D.bounds.min.y), Vector2.down);
     //}
+
+    private void TakeDamage(int d)
+    {
+        MyPlayerStats.HP -= d;
+
+        if (MyPlayerStats.HP <= 0)
+            Debug.Log("Przegrana");
+    }
+
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.tag == "Enemy")
+        {
+            var x = coll.transform.position.x - transform.position.x;
+            TakeDamage(coll.transform.parent.GetComponent<EnemyPlatform>().MyEnemyStats.Damage);
+            StartCoroutine(Knockback(x));
+        }
+    }
+
+    IEnumerator Knockback(float x)
+    {
+        canMove = false;
+
+        var v = x < 0 ? Vector2.right : Vector2.left;
+
+        myRigidbody2D.AddForce((v + Vector2.up) * jumpForce, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(0.2f);
+        canMove = true;
+    }
 }

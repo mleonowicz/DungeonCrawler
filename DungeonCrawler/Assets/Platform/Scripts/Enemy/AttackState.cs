@@ -4,23 +4,26 @@ using UnityEngine;
 
 public class AttackState : IEnemyState
 {
+    private EnemyPlatform enemy;
+
     public void Execute()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("atakuje");
+        enemy.LookAtTarget();
     }
 
     public void Enter(EnemyPlatform enemy)
     {
-        throw new System.NotImplementedException();
+        this.enemy = enemy;
     }
 
     public void Exit()
     {
-        throw new System.NotImplementedException();
+       
     }
 
-    public void OnTriggerEnter(Collider2D coll)
+    public void OnCollisionEnter(Collision2D coll)
     {
-        throw new System.NotImplementedException();
+        
     }
 }

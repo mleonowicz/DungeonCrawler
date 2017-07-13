@@ -22,7 +22,7 @@ public class GameManagerPlatform : MonoBehaviour
 
     void Update()
     {
-        //UpdateUI();
+        UpdateUI();
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

@@ -9,6 +9,9 @@ public class PatrolState : IEnemyState
     public void Execute()
     {
         enemy.Move();
+
+        if (enemy.Target != null)
+            enemy.ChangeState(new AttackState());
     }
 
     public void Enter(EnemyPlatform enemy)
@@ -21,8 +24,9 @@ public class PatrolState : IEnemyState
         
     }
 
-    public void OnTriggerEnter(Collider2D coll)
+    public void OnCollisionEnter(Collision2D coll)
     {
-        
+        if (coll.collider.tag == "Wall")
+            enemy.ChangeDirection();
     }
 }

@@ -7,5 +7,5 @@ public interface IEnemyState
     void Execute();
     void Enter(EnemyPlatform enemy);
     void Exit();
-    void OnTriggerEnter(Collider2D coll);
+    void OnCollisionEnter(Collision2D coll);
 }
