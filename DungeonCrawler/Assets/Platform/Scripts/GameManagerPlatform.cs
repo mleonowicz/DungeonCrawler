@@ -16,7 +16,7 @@ public class GameManagerPlatform : MonoBehaviour
 
     void Start()
     {
-        
+        Physics2D.IgnoreCollision(MyPlayer.GetComponent<BoxCollider2D>(), MyEnemy.GetComponent<BoxCollider2D>(), true);
     }
 
 

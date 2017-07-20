@@ -10,8 +10,7 @@ public class EnemySight : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Enemy.Target = other.gameObject;
-            Debug.Log("Gotya");
+            Enemy.Target = other.GetComponent<PlayerPlatform>();
         }
     }
 }

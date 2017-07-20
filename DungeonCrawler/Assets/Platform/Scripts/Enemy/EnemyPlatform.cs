@@ -7,11 +7,12 @@ public class EnemyPlatform : CharacterPlatform {
     public EnemyStats MyEnemyStats;
     private IEnemyState currentState;
 
-    public GameObject Target;
+    public PlayerPlatform Target;
 
     void Start ()
     {
         base.Start();
+        
         MyEnemyStats = GameData.MyEnemyStats;
         ChangeState(new PatrolState());
     }
@@ -20,6 +21,11 @@ public class EnemyPlatform : CharacterPlatform {
     {
 		currentState.Execute();
 	}
+
+    private void FixedUpdate()
+    {
+        GroundCheck();
+    }
 
     public void ChangeState(IEnemyState newState)
     {
@@ -42,7 +48,6 @@ public class EnemyPlatform : CharacterPlatform {
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
-        
         currentState.OnCollisionEnter(coll);
     }
 
@@ -55,5 +60,20 @@ public class EnemyPlatform : CharacterPlatform {
             if (facingRight && x < 0 || !facingRight && x > 0)
                 ChangeDirection();
         }
+    }
+
+    public void Jump()
+    {
+        if (isGrounded)
+        {
+            myRigidbody2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+            isGrounded = false;
+        }
+    }
+
+    public void GroundCheck()
+    {
+        if (GroundCheckRayCast())
+            isGrounded = true;
     }
 }

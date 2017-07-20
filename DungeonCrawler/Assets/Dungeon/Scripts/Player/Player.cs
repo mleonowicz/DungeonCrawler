@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public string Name;
     public GameObject InventoryUI;
     private bool isMoving = false;
+    public bool inFight = false;
     int layerMask = 1 << 8;
 
     public PlayerStats StartingPlayerStats;
@@ -100,6 +101,9 @@ public class Player : MonoBehaviour
             return false;
         }
 
+        if (inFight)
+            return false;
+
         CreatingLight();
 
         foreach (var ControlScheme in GameManager.instance.ControlSchemes)
@@ -145,6 +149,7 @@ public class Player : MonoBehaviour
 
         else if (other.tag == "Enemy")
         {
+            inFight = true;
             GameData.MyEnemyStats = other.GetComponent<Enemy>().EnemyStats;
             GameData.MyPlayerStats = PlayerStats;
 

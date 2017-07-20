@@ -6,13 +6,7 @@ public class PlayerPlatform : CharacterPlatform
     public PlayerStats MyPlayerStats;
     public Animator myAnimator;
 
-    [SerializeField]
-    private LayerMask myLayerMask;
-
-    [SerializeField]
-    private float jumpForce;
-
-    private bool isGrounded;
+    
     private bool canDoubleJump;
 
     private bool canMove;
@@ -53,7 +47,7 @@ public class PlayerPlatform : CharacterPlatform
             if (isGrounded || canDoubleJump)
             {
                 myRigidbody2D.velocity = new Vector2(myRigidbody2D.velocity.x, 0);
-                var jForce = jumpForce;
+                var jForce = JumpForce;
 
                 if (canDoubleJump)
                 {
@@ -79,16 +73,11 @@ public class PlayerPlatform : CharacterPlatform
 
         myAnimator.SetBool("Jumping", false);
 
-        if (Physics2D.Raycast(myBoxCollider2D.bounds.min, Vector2.down, 0.1f, myLayerMask) ||
-            Physics2D.Raycast(new Vector2(myBoxCollider2D.bounds.center.x, myBoxCollider2D.bounds.min.y), Vector2.down,
-                0.1f, myLayerMask) ||
-            Physics2D.Raycast(new Vector2(myBoxCollider2D.bounds.max.x, myBoxCollider2D.bounds.min.y), Vector2.down,
-                0.1f, myLayerMask))
+        if (GroundCheckRayCast())
         {
             isGrounded = true;
             canDoubleJump = true;
         }
-
         else
         {
             isGrounded = false;
@@ -98,10 +87,8 @@ public class PlayerPlatform : CharacterPlatform
 
     void Flip(float horizontal)
     {
-        if ((horizontal > 0 && !facingRight || horizontal < 0 && facingRight))
-        {
+        if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
             ChangeDirection();
-        }
     }
 
     //void OnDrawGizmosSelected()
@@ -125,21 +112,21 @@ public class PlayerPlatform : CharacterPlatform
     {
         if (coll.tag == "Enemy")
         {
-            var x = coll.transform.position.x - transform.position.x;
+            //var x = coll.transform.position.x - transform.position.x;
             TakeDamage(coll.transform.parent.GetComponent<EnemyPlatform>().MyEnemyStats.Damage);
-            StartCoroutine(Knockback(x));
+            //StartCoroutine(Knockback(x));
         }
     }
 
-    IEnumerator Knockback(float x)
-    {
-        canMove = false;
+    //IEnumerator Knockback(float x)
+    //{
+    //    canMove = false;
 
-        var v = x < 0 ? Vector2.right : Vector2.left;
+    //    var v = x < 0 ? Vector2.right : Vector2.left;
 
-        myRigidbody2D.AddForce((v + Vector2.up) * jumpForce, ForceMode2D.Impulse);
+    //    myRigidbody2D.AddForce((v + Vector2.up) * JumpForce / 1.5f, ForceMode2D.Impulse);
 
-        yield return new WaitForSeconds(0.2f);
-        canMove = true;
-    }
+    //    yield return new WaitForSeconds(0.2f);
+    //    canMove = true;
+    //}
 }

@@ -121,6 +121,7 @@ public class GameManager : MonoBehaviour
         }
         Overlay.color = Color.clear;
 
+        myPlayer.inFight = false;
         CanvasObject.SetActive(true);
     }
 }
