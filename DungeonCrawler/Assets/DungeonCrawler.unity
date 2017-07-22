@@ -404,6 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Mateusz
   InventoryUI: {fileID: 1076028117}
+  inFight: 0
   StartingPlayerStats: {fileID: 11400000, guid: 16c2b98bb5a163d4eaad9c940917ee1a,
     type: 2}
   PlayerStats: {fileID: 0}
@@ -1956,10 +1957,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ControlSchemes:
-  - Left: 97
-    Right: 100
-    Up: 119
-    Down: 115
+  - Left: 276
+    Right: 275
+    Up: 273
+    Down: 274
   myPlayer: {fileID: 294018967}
   CanvasObject: {fileID: 750289221}
   Turn: {fileID: 559205921}

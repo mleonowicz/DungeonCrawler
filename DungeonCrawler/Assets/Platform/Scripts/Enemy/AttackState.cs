@@ -12,12 +12,8 @@ public class AttackState : IEnemyState
             enemy.ChangeState(new PatrolState());
 
         enemy.LookAtTarget();
-        enemy.Move();
 
-        if (enemy.Target.myBoxCollider2D.bounds.min.y > enemy.myBoxCollider2D.bounds.min.y)
-            if (Physics2D.Raycast(enemy.myBoxCollider2D.bounds.center, Vector2.up, 5, enemy.myLayerMask)) 
-                enemy.Jump();
-     
+        enemy.ChaseEnemy();
     }
 
     public void Enter(EnemyPlatform enemy)

@@ -7,6 +7,7 @@ public class PlayerPlatform : CharacterPlatform
     public Animator myAnimator;
 
     
+    
     private bool canDoubleJump;
 
     private bool canMove;
@@ -25,9 +26,9 @@ public class PlayerPlatform : CharacterPlatform
         
         Flip(horizontal);
         HandleInput(horizontal);
-
+        
         //if (Input.GetKeyDown(KeyCode.S))
-        //    myRigidbody2D.AddForce(Vector2.up * 1300, ForceMode2D.Impulse);
+        //    MyRigidbody2D.AddForce(Vector2.up * 1300, ForceMode2D.Impulse);
     }
 
     void FixedUpdate()
@@ -40,13 +41,13 @@ public class PlayerPlatform : CharacterPlatform
         myAnimator.SetFloat("Speed", Mathf.Abs(horizontal));
         
         if (canMove)
-            myRigidbody2D.velocity = new Vector2(horizontal * MyPlayerStats.MovementSpeeed, myRigidbody2D.velocity.y);
+            MyRigidbody2D.velocity = new Vector2(horizontal * MyPlayerStats.MovementSpeeed, MyRigidbody2D.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.X)) // jumping and double jumping
         {
-            if (isGrounded || canDoubleJump)
+            if (IsGrounded || canDoubleJump)
             {
-                myRigidbody2D.velocity = new Vector2(myRigidbody2D.velocity.x, 0);
+                MyRigidbody2D.velocity = new Vector2(MyRigidbody2D.velocity.x, 0);
                 var jForce = JumpForce;
 
                 if (canDoubleJump)
@@ -55,7 +56,7 @@ public class PlayerPlatform : CharacterPlatform
                     canDoubleJump = false;
                 }
 
-                myRigidbody2D.AddForce(Vector2.up * jForce, ForceMode2D.Impulse);
+                MyRigidbody2D.AddForce(Vector2.up * jForce, ForceMode2D.Impulse);
             }
         }
 
@@ -64,30 +65,34 @@ public class PlayerPlatform : CharacterPlatform
             myAnimator.SetTrigger("Attack");
         }
 
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            JumpDown();
+        }
     }
 
     void GroundCheck()
     {
-        //Debug.Log(myRigidbody2D.position);
-        //Debug.Log(transform.position.x - myBoxCollider2D.size.x);
+        //Debug.Log(MyRigidbody2D.position);
+        //Debug.Log(transform.position.x - MyBoxCollider2D.size.x);
 
         myAnimator.SetBool("Jumping", false);
 
         if (GroundCheckRayCast())
         {
-            isGrounded = true;
+            IsGrounded = true;
             canDoubleJump = true;
         }
         else
         {
-            isGrounded = false;
+            IsGrounded = false;
             myAnimator.SetBool("Jumping", true);
         }
     }
 
     void Flip(float horizontal)
     {
-        if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
+        if (horizontal > 0 && !FacingRight || horizontal < 0 && FacingRight)
             ChangeDirection();
     }
 
@@ -95,17 +100,17 @@ public class PlayerPlatform : CharacterPlatform
     //{
     //    Gizmos.color = Color.red;
 
-    //    Gizmos.DrawRay(myBoxCollider2D.bounds.min, Vector2.down);
-    //    Gizmos.DrawRay(new Vector2(myBoxCollider2D.bounds.center.x, myBoxCollider2D.bounds.min.y), Vector2.down);
-    //    Gizmos.DrawRay(new Vector2(myBoxCollider2D.bounds.max.x, myBoxCollider2D.bounds.min.y), Vector2.down);
+    //    Gizmos.DrawRay(MyBoxCollider2D.bounds.min, Vector2.down);
+    //    Gizmos.DrawRay(new Vector2(MyBoxCollider2D.bounds.center.x, MyBoxCollider2D.bounds.min.y), Vector2.down);
+    //    Gizmos.DrawRay(new Vector2(MyBoxCollider2D.bounds.max.x, MyBoxCollider2D.bounds.min.y), Vector2.down);
     //}
 
     private void TakeDamage(int d)
     {
         MyPlayerStats.HP -= d;
 
-        if (MyPlayerStats.HP <= 0)
-            Debug.Log("Przegrana");
+        //if (MyPlayerStats.HP <= 0)
+            //Debug.Log("Przegrana");
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
@@ -118,13 +123,21 @@ public class PlayerPlatform : CharacterPlatform
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.collider.tag == "Platform")
+        {
+            lastPlatformCollider = coll.collider;
+        }
+    }
+
     //IEnumerator Knockback(float x)
     //{
     //    canMove = false;
 
     //    var v = x < 0 ? Vector2.right : Vector2.left;
 
-    //    myRigidbody2D.AddForce((v + Vector2.up) * JumpForce / 1.5f, ForceMode2D.Impulse);
+    //    MyRigidbody2D.AddForce((v + Vector2.up) * JumpForce / 1.5f, ForceMode2D.Impulse);
 
     //    yield return new WaitForSeconds(0.2f);
     //    canMove = true;

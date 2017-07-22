@@ -14,4 +14,4 @@ MonoBehaviour:
   Hp: 10
   Damage: 5
   AttackSpeed: 1
-  MovementSpeed: 3
+  MovementSpeed: 5

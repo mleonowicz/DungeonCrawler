@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - Item Database
   - Item
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Ground
   - Potion
   - Item
-  - 
+  - Platform
   - 
   - 
   - 

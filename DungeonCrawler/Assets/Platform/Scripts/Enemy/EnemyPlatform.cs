@@ -2,25 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPlatform : CharacterPlatform {
+public class EnemyPlatform : CharacterPlatform
+{
 
     public EnemyStats MyEnemyStats;
     private IEnemyState currentState;
 
     public PlayerPlatform Target;
 
-    void Start ()
+    public bool CanJump = true;
+
+    void Start()
     {
         base.Start();
-        
+
         MyEnemyStats = GameData.MyEnemyStats;
         ChangeState(new PatrolState());
     }
 
-	private void Update ()
+    private void Update()
     {
-		currentState.Execute();
-	}
+        currentState.Execute();
+    }
 
     private void FixedUpdate()
     {
@@ -43,12 +46,17 @@ public class EnemyPlatform : CharacterPlatform {
 
     public Vector2 GetDirection()
     {
-        return facingRight ? Vector2.right : Vector2.left;
+        return FacingRight ? Vector2.right : Vector2.left;
     }
 
     private void OnCollisionEnter2D(Collision2D coll)
     {
         currentState.OnCollisionEnter(coll);
+
+        if (coll.collider.tag == "Platform")
+        {
+            lastPlatformCollider = coll.collider;
+        }
     }
 
     public void LookAtTarget()
@@ -57,23 +65,58 @@ public class EnemyPlatform : CharacterPlatform {
         {
             float x = Target.transform.position.x - transform.position.x;
 
-            if (facingRight && x < 0 || !facingRight && x > 0)
+            if (FacingRight && x < 0 || !FacingRight && x > 0)
                 ChangeDirection();
         }
     }
 
     public void Jump()
     {
-        if (isGrounded)
+        if (IsGrounded)
         {
-            myRigidbody2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
-            isGrounded = false;
+            IsGrounded = false;
+
+            MyRigidbody2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+
+            StartCoroutine(JumpCooldown());
         }
     }
 
     public void GroundCheck()
     {
-        if (GroundCheckRayCast())
-            isGrounded = true;
+        IsGrounded = GroundCheckRayCast();
+    }
+
+    public IEnumerator JumpCooldown()
+    {
+        CanJump = false;
+
+        float timeStamp = 0;
+
+        while (timeStamp < 1f)
+        {
+            timeStamp += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        CanJump = true;
+    }
+
+    public void ChaseEnemy()
+    {
+        Move();
+
+        if (CanJump)
+        {
+            if (Target.MyBoxCollider2D.bounds.min.y > MyBoxCollider2D.bounds.min.y)
+            {
+                if (Physics2D.Raycast(MyBoxCollider2D.bounds.center, Vector2.up, 5, MyLayerMask))
+                    Jump();
+            }
+            else if (Target.MyBoxCollider2D.bounds.min.y < MyBoxCollider2D.bounds.min.y)
+            {
+                JumpDown();
+                StartCoroutine(JumpCooldown());
+            }
+        }
     }
 }

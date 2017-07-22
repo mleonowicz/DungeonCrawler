@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 304462518}
   m_Layer: 11
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -620,7 +620,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.362778, y: 0.02766478}
+  m_Size: {x: 9.362778, y: 0.004}
   m_EdgeRadius: 0
 --- !u!4 &442303970 stripped
 Transform:
@@ -1331,16 +1331,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa38cc2403dbb042a17e2bdffabe8e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 800
-  myRigidbody2D: {fileID: 0}
-  myBoxCollider2D: {fileID: 0}
-  myLayerMask:
+  JumpForce: 1500
+  MyRigidbody2D: {fileID: 0}
+  MyBoxCollider2D: {fileID: 0}
+  MyLayerMask:
     serializedVersion: 2
     m_Bits: 2048
-  facingRight: 1
-  isGrounded: 0
+  FacingRight: 1
+  IsGrounded: 0
+  lastPlatformCollider: {fileID: 0}
   MyEnemyStats: {fileID: 11400000, guid: 606812e98cf6095428d3f5733f9703ae, type: 2}
   Target: {fileID: 0}
+  CanJump: 1
 --- !u!4 &911047241 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012732887580, guid: cacecf8cf0b93cc4e9f6f22a4ecfa2d0,
@@ -1634,7 +1636,7 @@ GameObject:
   - component: {fileID: 1105267615}
   m_Layer: 11
   m_Name: Platform (2)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1680,7 +1682,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.674247, y: 0.070381165}
+  m_Size: {x: 4.674247, y: 0.004}
   m_EdgeRadius: 0
 --- !u!4 &1105267617
 Transform:
@@ -2508,7 +2510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1606671923}
   - component: {fileID: 1606671922}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlatformRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2673,6 +2675,11 @@ Prefab:
         type: 2}
       propertyPath: JumpForce
       value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011084020518, guid: 424d141627a4ec5458984c64f81a0eda,
+        type: 2}
+      propertyPath: MyLayerMask.m_Bits
+      value: 2048
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 424d141627a4ec5458984c64f81a0eda, type: 2}
@@ -3205,7 +3212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1891883383}
   - component: {fileID: 1891883384}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlatformRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3274,7 +3281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1897816273}
   - component: {fileID: 1897816274}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlatformRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3478,7 +3485,7 @@ GameObject:
   - component: {fileID: 1984485635}
   m_Layer: 11
   m_Name: Platform (1)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3524,7 +3531,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.674247, y: 0.070381165}
+  m_Size: {x: 4.674247, y: 0.004}
   m_EdgeRadius: 0
 --- !u!4 &1984485637
 Transform:
