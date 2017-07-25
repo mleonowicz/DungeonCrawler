@@ -3,10 +3,7 @@ using System.Collections;
 
 public class PlayerPlatform : CharacterPlatform
 {
-    public PlayerStats MyPlayerStats;
-    public Animator myAnimator;
-
-    
+    public PlayerStats MyPlayerStats; 
     
     private bool canDoubleJump;
 
@@ -14,7 +11,6 @@ public class PlayerPlatform : CharacterPlatform
     void Start()
     {
         MyPlayerStats = GameData.MyPlayerStats; // wczytywanie statystyk
-        myAnimator = GetComponent<Animator>();
         base.Start();
 
         canMove = true;
@@ -38,7 +34,7 @@ public class PlayerPlatform : CharacterPlatform
 
     void HandleInput(float horizontal)
     {
-        myAnimator.SetFloat("Speed", Mathf.Abs(horizontal));
+        MyAnimator.SetFloat("Speed", Mathf.Abs(horizontal));
         
         if (canMove)
             MyRigidbody2D.velocity = new Vector2(horizontal * MyPlayerStats.MovementSpeeed, MyRigidbody2D.velocity.y);
@@ -60,9 +56,9 @@ public class PlayerPlatform : CharacterPlatform
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.C) && !myAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        if (Input.GetKeyDown(KeyCode.C) && !MyAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
-            myAnimator.SetTrigger("Attack");
+            MyAnimator.SetTrigger("Attack");
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -76,7 +72,7 @@ public class PlayerPlatform : CharacterPlatform
         //Debug.Log(MyRigidbody2D.position);
         //Debug.Log(transform.position.x - MyBoxCollider2D.size.x);
 
-        myAnimator.SetBool("Jumping", false);
+        MyAnimator.SetBool("Jumping", false);
 
         if (GroundCheckRayCast())
         {
@@ -86,7 +82,7 @@ public class PlayerPlatform : CharacterPlatform
         else
         {
             IsGrounded = false;
-            myAnimator.SetBool("Jumping", true);
+            MyAnimator.SetBool("Jumping", true);
         }
     }
 

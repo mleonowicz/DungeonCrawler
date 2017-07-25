@@ -11,6 +11,8 @@ public class EnemyPlatform : CharacterPlatform
     public PlayerPlatform Target;
 
     public bool CanJump = true;
+    private float attackTimer = 0;
+    private bool canAttack;
 
     void Start()
     {
@@ -117,6 +119,22 @@ public class EnemyPlatform : CharacterPlatform
                 JumpDown();
                 StartCoroutine(JumpCooldown());
             }
+        }
+    }
+
+    public void Attack()
+    {
+        attackTimer += Time.deltaTime;
+
+        if (attackTimer >= MyEnemyStats.AttackSpeed)
+        {
+            canAttack = true;
+            attackTimer = 0;
+        }
+
+        if (canAttack)
+        {
+            canAttack = false;
         }
     }
 }

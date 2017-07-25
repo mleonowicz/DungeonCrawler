@@ -8,7 +8,7 @@ public abstract class CharacterPlatform : MonoBehaviour
 
     public Rigidbody2D MyRigidbody2D;
     public BoxCollider2D MyBoxCollider2D;
-    
+    public Animator MyAnimator;
 
     public LayerMask MyLayerMask;
     public bool FacingRight = true;
@@ -19,6 +19,7 @@ public abstract class CharacterPlatform : MonoBehaviour
     {
         MyBoxCollider2D = GetComponent<BoxCollider2D>();
         MyRigidbody2D = GetComponent<Rigidbody2D>();
+        MyAnimator = GetComponent<Animator>();
     }
 
     public void ChangeDirection()
