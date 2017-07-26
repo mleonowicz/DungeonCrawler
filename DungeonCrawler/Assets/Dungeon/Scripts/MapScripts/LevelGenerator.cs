@@ -72,7 +72,7 @@ public class LevelGenerator : MonoBehaviour
         GeneratePotions();
         GenerateEnemies();
         SettingCameraPosition();
-        GenerateItems();      
+        GenerateItems();     
     }
 
     void GenerateLevel()
@@ -161,7 +161,7 @@ public class LevelGenerator : MonoBehaviour
                 {
                     GameObject g;
                                 
-                    if (Physics2D.OverlapPoint(pos + Vector3.down  , myLayer))                     
+                    if (Physics2D.OverlapPoint(pos + Vector3.down, myLayer))                     
                         g = Instantiate(Settings.WallTiles[Random.Range(0, Settings.WallTiles.Length)],
                         pos, Quaternion.identity) as GameObject;
                     else

@@ -1,12 +1,16 @@
 fileFormatVersion: 2
-guid: 12305c983fdc3784db042f0a6fee8515
-timeCreated: 1501006011
+guid: fb739fb7858274d4c93b54fb2710d4b0
+timeCreated: 1501058888
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: EnemyWalk_0
-    21300002: EnemyWalk_1
-    21300004: EnemyWalk_2
+    21300000: EnemyMove_0
+    21300002: EnemyMove_1
+    21300004: EnemyMove_2
+    21300006: EnemyMove_3
+    21300008: EnemyMove_4
+    21300010: EnemyMove_5
+    21300012: EnemyMove_6
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -31,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -81,41 +85,93 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemyWalk_0
+      name: EnemyMove_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnemyMove_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnemyMove_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnemyMove_3
       rect:
         serializedVersion: 2
         x: 0
         y: 100
         width: 100
         height: 100
-      alignment: 9
-      pivot: {x: 0.3, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: EnemyWalk_1
+      name: EnemyMove_4
       rect:
         serializedVersion: 2
         x: 100
         y: 100
         width: 100
         height: 100
-      alignment: 9
-      pivot: {x: 0.3, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: EnemyWalk_2
+      name: EnemyMove_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnemyMove_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 100
         height: 100
-      alignment: 9
-      pivot: {x: 0.3, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

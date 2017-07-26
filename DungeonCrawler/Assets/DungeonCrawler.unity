@@ -1328,6 +1328,8 @@ MonoBehaviour:
   Player: {fileID: 294018964}
   MinimapCameraOrthographicSize: 0
   MinimapCameraPosition: {x: 0, y: 0, z: 0}
+  maxWallsX: 0
+  maxWallsY: 0
   CurrentSeed: 0
 --- !u!4 &795265873
 Transform:
