@@ -10,6 +10,5 @@ public class PlayerStats : ScriptableObject
 
     public int Damage;
     public int Armor;
-    public int AttackSpeed;
     public int MovementSpeeed;
 }

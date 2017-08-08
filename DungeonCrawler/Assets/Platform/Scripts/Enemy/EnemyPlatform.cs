@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class EnemyPlatform : CharacterPlatform
 {
-
     public EnemyStats MyEnemyStats;
     private IEnemyState currentState;
-
+    public int HP;
     public PlayerPlatform Target;
 
     public bool CanJump = true;
@@ -19,6 +18,7 @@ public class EnemyPlatform : CharacterPlatform
         base.Start();
 
         MyEnemyStats = GameData.MyEnemyStats;
+        HP = MyEnemyStats.Hp;
         ChangeState(new PatrolState());
     }
 
@@ -136,5 +136,13 @@ public class EnemyPlatform : CharacterPlatform
         {
             canAttack = false;
         }
+    }
+
+    public void TakeDamage(int d)
+    {
+        HP -= d;
+
+        if (HP <= 0)
+            Destroy(gameObject);
     }
 }

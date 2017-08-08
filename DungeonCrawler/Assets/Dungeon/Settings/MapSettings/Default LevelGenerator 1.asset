@@ -26,7 +26,7 @@ MonoBehaviour:
   Ceiling: {fileID: 1000010619461834, guid: c90542e9063b60d40a6ff45e03abdfb5, type: 2}
   NumberOfTiles: 25
   NumberOfPotions: 0
-  NumberOfEnemies: 1
+  NumberOfEnemies: 2
   NumberOfItems: 1
   ChanceUp: 0.25
   ChanceRight: 0.5

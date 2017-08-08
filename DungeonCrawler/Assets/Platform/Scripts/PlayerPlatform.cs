@@ -3,11 +3,13 @@ using System.Collections;
 
 public class PlayerPlatform : CharacterPlatform
 {
-    public PlayerStats MyPlayerStats; 
-    
-    private bool canDoubleJump;
+    public PlayerStats MyPlayerStats;
+    public Collider2D AttackTrigger;
 
+    private bool canDoubleJump;
     private bool canMove;
+    private bool attacking;
+
     void Start()
     {
         MyPlayerStats = GameData.MyPlayerStats; // wczytywanie statystyk
@@ -22,9 +24,6 @@ public class PlayerPlatform : CharacterPlatform
         
         Flip(horizontal);
         HandleInput(horizontal);
-        
-        //if (Input.GetKeyDown(KeyCode.S))
-        //    MyRigidbody2D.AddForce(Vector2.up * 1300, ForceMode2D.Impulse);
     }
 
     void FixedUpdate()
@@ -39,7 +38,7 @@ public class PlayerPlatform : CharacterPlatform
         if (canMove)
             MyRigidbody2D.velocity = new Vector2(horizontal * MyPlayerStats.MovementSpeeed, MyRigidbody2D.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.X)) // jumping and double jumping
+        if (Input.GetKeyDown(KeyCode.X))
         {
             if (IsGrounded || canDoubleJump)
             {
@@ -56,22 +55,16 @@ public class PlayerPlatform : CharacterPlatform
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.C) && !MyAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-        {
-            MyAnimator.SetTrigger("Attack");
-        }
+        if (Input.GetKeyDown(KeyCode.C))
+            if (!attacking)                
+                StartCoroutine(Attack());      
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
             JumpDown();
-        }
     }
 
     void GroundCheck()
     {
-        //Debug.Log(MyRigidbody2D.position);
-        //Debug.Log(transform.position.x - MyBoxCollider2D.size.x);
-
         MyAnimator.SetBool("Jumping", false);
 
         if (GroundCheckRayCast())
@@ -101,24 +94,6 @@ public class PlayerPlatform : CharacterPlatform
     //    Gizmos.DrawRay(new Vector2(MyBoxCollider2D.bounds.max.x, MyBoxCollider2D.bounds.min.y), Vector2.down);
     //}
 
-    private void TakeDamage(int d)
-    {
-        MyPlayerStats.HP -= d;
-
-        //if (MyPlayerStats.HP <= 0)
-            //Debug.Log("Przegrana");
-    }
-
-    private void OnTriggerEnter2D(Collider2D coll)
-    {
-        if (coll.tag == "Enemy")
-        {
-            //var x = coll.transform.position.x - transform.position.x;
-            TakeDamage(coll.transform.parent.GetComponent<EnemyPlatform>().MyEnemyStats.Damage);
-            //StartCoroutine(Knockback(x));
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.collider.tag == "Platform")
@@ -127,6 +102,21 @@ public class PlayerPlatform : CharacterPlatform
         }
     }
 
+    private IEnumerator Attack()
+    {
+        SetAttackValues(true);
+
+        yield return new WaitForSeconds(0.2f);
+
+        SetAttackValues(false);
+    }
+
+    private void SetAttackValues(bool b)
+    {
+        MyAnimator.SetBool("Attacking", b);
+        attacking = b;
+        AttackTrigger.enabled = b;
+    }
     //IEnumerator Knockback(float x)
     //{
     //    canMove = false;

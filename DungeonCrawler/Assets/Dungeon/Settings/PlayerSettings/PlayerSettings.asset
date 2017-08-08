@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 5
   MP: 0
-  Damage: 5
+  Damage: 10
   Armor: 3
   AttackSpeed: 1
   MovementSpeeed: 12
